@@ -1,6 +1,6 @@
 import { CardData } from 'src/services/cards/types';
 
-export const joker = {
+export const fool = {
     name: 'ШУТ',
     subTitle: 'Дух',
     image: require('./images/joker.jpg'),
