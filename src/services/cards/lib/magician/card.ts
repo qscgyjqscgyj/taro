@@ -1,6 +1,6 @@
 import { CardData } from 'src/services/cards/types';
 
-export const joker = {
+export const magician = {
     name: 'МАГ',
     altNames: ['маг', 'волшебник'],
     subTitle: 'Сила воли',
