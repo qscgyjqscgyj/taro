@@ -4,7 +4,7 @@ export const fool = {
     name: 'ШУТ',
     altNames: ['шут', 'глупец', 'дурак', 'безумец'],
     subTitle: 'Дух',
-    image: require('./images/joker.jpg'),
+    image: require('./images/fool.png'),
     description: [
         {
             category: 'Общее',
