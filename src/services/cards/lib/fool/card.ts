@@ -1,8 +1,9 @@
 import { CardData } from 'src/services/cards/types';
 
-export const fool = {
+export const fool: CardData = {
     name: 'ШУТ',
     altNames: ['шут', 'глупец', 'дурак', 'безумец'],
+    arcana: { type: 'major', suit: undefined },
     subTitle: 'Дух',
     image: require('./images/fool.png'),
     description: [
@@ -79,4 +80,4 @@ export const fool = {
             textData: ['Нepaзбepиxа, xaoc и cумбуp'],
         },
     ],
-} as CardData;
+};

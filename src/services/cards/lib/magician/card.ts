@@ -1,8 +1,9 @@
 import { CardData } from 'src/services/cards/types';
 
-export const magician = {
+export const magician: CardData = {
     name: 'МАГ',
     altNames: ['маг', 'волшебник'],
+    arcana: { type: 'major', suit: undefined },
     subTitle: 'Сила воли',
     image: require('./images/magician.png'),
     description: [
@@ -76,4 +77,4 @@ export const magician = {
             ],
         },
     ],
-} as CardData;
+};

@@ -1,8 +1,21 @@
 import { ImageSourcePropType } from 'react-native';
 
+export type ArcanaType =
+    | {
+          type: 'major';
+          suit: undefined;
+      }
+    | {
+          type: 'minor';
+          suit: SuitType;
+      };
+
+export type SuitType = 'wands' | 'cups' | 'swords' | 'pentacles';
+
 export interface CardData {
     name: string;
     altNames: string[];
+    arcana: ArcanaType;
     subTitle: string;
     image: ImageSourcePropType;
     description: CardDescription[];

@@ -1,8 +1,9 @@
 import { CardData } from 'src/services/cards/types';
 
-export const highPriestess = {
+export const highPriestess: CardData = {
     name: 'ВЕРХОВНАЯ ЖРИЦА',
     altNames: ['верховная жрица', 'монахиня', 'папесса'],
+    arcana: { type: 'major', suit: undefined },
     subTitle: 'Тайное знание',
     image: require('./images/highPriestess.png'),
     description: [
@@ -93,4 +94,4 @@ export const highPriestess = {
             textData: ['Множество сокрытых мотивов', 'Сомнение и неуверенность в себе'],
         },
     ],
-} as CardData;
+};
