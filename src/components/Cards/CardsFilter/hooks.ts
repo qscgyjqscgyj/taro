@@ -9,7 +9,7 @@ export const SUITS: SuitType[] = ['cups', 'pentacles', 'swords', 'wands'];
 export function useCardsFilter(props: CardsFilterHookProps): CardsFilterHookData {
     const { cards } = props;
 
-    const [arcanaFilter, setArcanaFilter] = useState<ArcanaType['type']>('major');
+    const [arcanaFilter, setArcanaFilter] = useState<ArcanaType['type']>('minor');
     const [suitFilter, setSuitFilter] = useState<SuitType>(SUITS[0]);
 
     const toggleArcanaTypeFilter = useCallback(() => {
