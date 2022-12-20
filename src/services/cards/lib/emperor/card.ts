@@ -2,7 +2,7 @@ import { CardData } from 'src/services/cards/types';
 
 export const emperor: CardData = {
     name: 'ИМПЕРАТОР',
-    altNames: ['император', 'хозяИН'],
+    altNames: ['император', 'хозяин'],
     arcana: { type: 'major', suit: undefined },
     subTitle: 'Контроль через интеллект',
     image: require('./images/emperor.png'),
