@@ -12,6 +12,10 @@ import { wheelOfFortune } from './lib/wheelOfFortune/card';
 import { justice } from './lib/justice/card';
 import { hangedMan } from './lib/hangedMan/card';
 import { death } from './lib/death/card';
+import { temperance } from './lib/temperance/card';
+import { devil } from './lib/devil/card';
+import { tower } from './lib/tower/card';
+import { star } from './lib/star/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -30,5 +34,9 @@ export function initializeGardsData(): CardData[] {
         justice,
         hangedMan,
         death,
+        temperance,
+        devil,
+        tower,
+        star,
     ];
 }
