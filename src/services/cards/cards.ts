@@ -8,6 +8,10 @@ import { lovers } from './lib/lovers/card';
 import { chariot } from './lib/chariot/card';
 import { strength } from './lib/strength/card';
 import { hermit } from './lib/hermit/card';
+import { wheelOfFortune } from './lib/wheelOfFortune/card';
+import { justice } from './lib/justice/card';
+import { hangedMan } from './lib/hangedMan/card';
+import { death } from './lib/death/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -22,5 +26,9 @@ export function initializeGardsData(): CardData[] {
         chariot,
         strength,
         hermit,
+        wheelOfFortune,
+        justice,
+        hangedMan,
+        death,
     ];
 }
