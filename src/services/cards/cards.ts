@@ -16,6 +16,10 @@ import { temperance } from './lib/temperance/card';
 import { devil } from './lib/devil/card';
 import { tower } from './lib/tower/card';
 import { star } from './lib/star/card';
+import { moon } from './lib/moon/card';
+import { sun } from './lib/sun/card';
+import { judgement } from './lib/judgement/card';
+import { world } from './lib/world/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -38,5 +42,9 @@ export function initializeGardsData(): CardData[] {
         devil,
         tower,
         star,
+        moon,
+        sun,
+        judgement,
+        world,
     ];
 }
