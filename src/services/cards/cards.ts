@@ -20,6 +20,14 @@ import { moon } from './lib/moon/card';
 import { sun } from './lib/sun/card';
 import { judgement } from './lib/judgement/card';
 import { world } from './lib/world/card';
+import { pentacleAce } from './lib/pentacleAce/card';
+import { pentacleTwo } from './lib/pentacleTwo/card';
+import { pentacleThree } from './lib/pentacleThree/card';
+import { pentacleFour } from './lib/pentacleFour/card';
+import { pentacleFive } from './lib/pentacleFive/card';
+import { pentacleSix } from './lib/pentacleSix/card';
+import { pentacleSeven } from './lib/pentacleSeven/card';
+import { pentacleEight } from './lib/pentacleEight/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -46,5 +54,13 @@ export function initializeGardsData(): CardData[] {
         sun,
         judgement,
         world,
+        pentacleAce,
+        pentacleTwo,
+        pentacleThree,
+        pentacleFour,
+        pentacleFive,
+        pentacleSix,
+        pentacleSeven,
+        pentacleEight,
     ];
 }
