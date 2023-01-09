@@ -40,6 +40,14 @@ import { wandsThree } from './lib/wandsThree/card';
 import { wandsFour } from './lib/wandsFour/card';
 import { wandsFive } from './lib/wandsFive/card';
 import { wandsSix } from './lib/wandsSix/card';
+import { wandsSeven } from './lib/wandsSeven/card';
+import { wandsEight } from './lib/wandsEight/card';
+import { wandsNine } from './lib/wandsNine/card';
+import { wandsTen } from './lib/wandsTen/card';
+import { wandsPage } from './lib/wandsPage/card';
+import { wandsKnight } from './lib/wandsKnight/card';
+import { wandsQueen } from './lib/wandsQueen/card';
+import { wandsKing } from './lib/wandsKing/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -86,5 +94,13 @@ export function initializeGardsData(): CardData[] {
         wandsFour,
         wandsFive,
         wandsSix,
+        wandsSeven,
+        wandsEight,
+        wandsNine,
+        wandsTen,
+        wandsPage,
+        wandsKnight,
+        wandsQueen,
+        wandsKing,
     ];
 }
