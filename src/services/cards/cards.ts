@@ -28,6 +28,18 @@ import { pentacleFive } from './lib/pentacleFive/card';
 import { pentacleSix } from './lib/pentacleSix/card';
 import { pentacleSeven } from './lib/pentacleSeven/card';
 import { pentacleEight } from './lib/pentacleEight/card';
+import { pentacleNine } from './lib/pentacleNine/card';
+import { pentacleTen } from './lib/pentacleTen/card';
+import { pentaclePage } from './lib/pentaclePage/card';
+import { pentacleKnight } from './lib/pentacleKnight/card';
+import { pentacleQueen } from './lib/pentacleQueen/card';
+import { pentacleKing } from './lib/pentacleKing/card';
+import { wandsAce } from './lib/wandsAce/card';
+import { wandsTwo } from './lib/wandsTwo/card';
+import { wandsThree } from './lib/wandsThree/card';
+import { wandsFour } from './lib/wandsFour/card';
+import { wandsFive } from './lib/wandsFive/card';
+import { wandsSix } from './lib/wandsSix/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -62,5 +74,17 @@ export function initializeGardsData(): CardData[] {
         pentacleSix,
         pentacleSeven,
         pentacleEight,
+        pentacleNine,
+        pentacleTen,
+        pentaclePage,
+        pentacleKnight,
+        pentacleQueen,
+        pentacleKing,
+        wandsAce,
+        wandsTwo,
+        wandsThree,
+        wandsFour,
+        wandsFive,
+        wandsSix,
     ];
 }
