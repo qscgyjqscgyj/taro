@@ -4,7 +4,7 @@ import { ArcanaType, SuitType } from 'src/services/cards/types';
 
 import { CardsFilterHookData, CardsFilterHookProps } from './types';
 
-export const SUITS: SuitType[] = ['cups', 'pentacles', 'swords', 'wands'];
+export const SUITS: SuitType[] = ['cups', 'pentacless', 'swords', 'wands'];
 
 export function useCardsFilter(props: CardsFilterHookProps): CardsFilterHookData {
     const { cards } = props;

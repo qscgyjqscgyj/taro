@@ -20,20 +20,20 @@ import { moon } from './lib/moon/card';
 import { sun } from './lib/sun/card';
 import { judgement } from './lib/judgement/card';
 import { world } from './lib/world/card';
-import { pentacleAce } from './lib/pentacleAce/card';
-import { pentacleTwo } from './lib/pentacleTwo/card';
-import { pentacleThree } from './lib/pentacleThree/card';
-import { pentacleFour } from './lib/pentacleFour/card';
-import { pentacleFive } from './lib/pentacleFive/card';
-import { pentacleSix } from './lib/pentacleSix/card';
-import { pentacleSeven } from './lib/pentacleSeven/card';
-import { pentacleEight } from './lib/pentacleEight/card';
-import { pentacleNine } from './lib/pentacleNine/card';
-import { pentacleTen } from './lib/pentacleTen/card';
-import { pentaclePage } from './lib/pentaclePage/card';
-import { pentacleKnight } from './lib/pentacleKnight/card';
-import { pentacleQueen } from './lib/pentacleQueen/card';
-import { pentacleKing } from './lib/pentacleKing/card';
+import { pentaclesKing } from './lib/pentaclesKing/card';
+import { pentaclesAce } from './lib/pentaclesAce/card';
+import { pentaclesTwo } from './lib/pentaclesTwo/card';
+import { pentaclesThree } from './lib/pentaclesThree/card';
+import { pentaclesFour } from './lib/pentaclesFour/card';
+import { pentaclesFive } from './lib/pentaclesFive/card';
+import { pentaclesSix } from './lib/pentaclesSix/card';
+import { pentaclesSeven } from './lib/pentaclesSeven/card';
+import { pentaclesEight } from './lib/pentaclesEight/card';
+import { pentaclesNine } from './lib/pentaclesNine/card';
+import { pentaclesTen } from './lib/pentaclesTen/card';
+import { pentaclesPage } from './lib/pentaclesPage/card';
+import { pentaclesQueen } from './lib/pentaclesQueen/card';
+import { pentaclesKnight } from './lib/pentaclesKnight/card';
 import { wandsAce } from './lib/wandsAce/card';
 import { wandsTwo } from './lib/wandsTwo/card';
 import { wandsThree } from './lib/wandsThree/card';
@@ -74,20 +74,20 @@ export function initializeGardsData(): CardData[] {
         sun,
         judgement,
         world,
-        pentacleAce,
-        pentacleTwo,
-        pentacleThree,
-        pentacleFour,
-        pentacleFive,
-        pentacleSix,
-        pentacleSeven,
-        pentacleEight,
-        pentacleNine,
-        pentacleTen,
-        pentaclePage,
-        pentacleKnight,
-        pentacleQueen,
-        pentacleKing,
+        pentaclesAce,
+        pentaclesTwo,
+        pentaclesThree,
+        pentaclesFour,
+        pentaclesFive,
+        pentaclesSix,
+        pentaclesSeven,
+        pentaclesEight,
+        pentaclesNine,
+        pentaclesTen,
+        pentaclesPage,
+        pentaclesKnight,
+        pentaclesQueen,
+        pentaclesKing,
         wandsAce,
         wandsTwo,
         wandsThree,
