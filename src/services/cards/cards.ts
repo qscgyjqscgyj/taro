@@ -48,6 +48,14 @@ import { wandsPage } from './lib/wandsPage/card';
 import { wandsKnight } from './lib/wandsKnight/card';
 import { wandsQueen } from './lib/wandsQueen/card';
 import { wandsKing } from './lib/wandsKing/card';
+import { swordsAce } from './lib/swordsAce/card';
+import { swordsTwo } from './lib/swordsTwo/card';
+import { swordsThree } from './lib/swordsThree/card';
+import { swordsFour } from './lib/swordsFour/card';
+import { swordsFive } from './lib/swordsFive/card';
+import { swordsSix } from './lib/swordsSix/card';
+import { swordsSeven } from './lib/swordsSeven/card';
+import { swordsEight } from './lib/swordsEight/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -102,5 +110,13 @@ export function initializeGardsData(): CardData[] {
         wandsKnight,
         wandsQueen,
         wandsKing,
+        swordsAce,
+        swordsTwo,
+        swordsThree,
+        swordsFour,
+        swordsFive,
+        swordsSix,
+        swordsSeven,
+        swordsEight,
     ];
 }
