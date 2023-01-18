@@ -1,7 +1,7 @@
 import { CardData } from 'src/services/cards/types';
 
 export const swordsEight: CardData = {
-    name: 'ВОСьМЁРКА МЕЧЕЙ',
+    name: 'ВОСЬМЁРКА МЕЧЕЙ',
     altNames: ['восьмёрка мечей', 'восьмёрка шпаг', 'восьмерка мечей', 'восьмерка шпаг'],
     arcana: { type: 'minor', suit: 'swords' },
     subTitle: 'Ограничения',
