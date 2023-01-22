@@ -62,6 +62,10 @@ import { swordsPage } from './lib/swordsPage/card';
 import { swordsKnight } from './lib/swordsKnight/card';
 import { swordsQueen } from './lib/swordsQueen/card';
 import { swordsKing } from './lib/swordsKing/card';
+import { cupsAce } from './lib/cupsAce/card';
+import { cupsTwo } from './lib/cupsTwo/card';
+import { cupsThree } from './lib/cupsThree/card';
+import { cupsFour } from './lib/cupsFour/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -130,5 +134,9 @@ export function initializeGardsData(): CardData[] {
         swordsKnight,
         swordsQueen,
         swordsKing,
+        cupsAce,
+        cupsTwo,
+        cupsThree,
+        cupsFour,
     ];
 }
