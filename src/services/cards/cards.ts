@@ -66,6 +66,10 @@ import { cupsAce } from './lib/cupsAce/card';
 import { cupsTwo } from './lib/cupsTwo/card';
 import { cupsThree } from './lib/cupsThree/card';
 import { cupsFour } from './lib/cupsFour/card';
+import { cupsFive } from './lib/cupsFive/card';
+import { cupsSix } from './lib/cupsSix/card';
+import { cupsSeven } from './lib/cupsSeven/card';
+import { cupsEight } from './lib/cupsEight/card';
 import { CardData } from './types';
 
 export function initializeGardsData(): CardData[] {
@@ -138,5 +142,9 @@ export function initializeGardsData(): CardData[] {
         cupsTwo,
         cupsThree,
         cupsFour,
+        cupsFive,
+        cupsSix,
+        cupsSeven,
+        cupsEight,
     ];
 }
