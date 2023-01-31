@@ -19,6 +19,7 @@ export interface CardData {
     subTitle: string;
     image: ImageSourcePropType;
     description: CardDescription[];
+    number?: number;
 }
 
 interface CardDescription {

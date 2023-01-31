@@ -6,6 +6,7 @@ export const magician: CardData = {
     arcana: { type: 'major', suit: undefined },
     subTitle: 'Сила воли',
     image: require('./images/magician.png'),
+    number: 1,
     description: [
         {
             category: 'Общее',

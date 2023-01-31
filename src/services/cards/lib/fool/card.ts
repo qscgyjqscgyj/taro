@@ -6,6 +6,7 @@ export const fool: CardData = {
     arcana: { type: 'major', suit: undefined },
     subTitle: 'Дух',
     image: require('./images/fool.png'),
+    number: 0,
     description: [
         {
             category: 'Общее',
