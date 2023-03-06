@@ -1,4 +1,4 @@
-import { RemoteData, success } from 'aidbox-react';
+import { RemoteData, success } from 'shared/types/remoteData';
 
 const PORT = process.env.PORT ?? 4000;
 

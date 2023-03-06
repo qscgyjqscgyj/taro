@@ -1,4 +1,4 @@
-import { RemoteData } from 'aidbox-react';
+import { RemoteData } from 'shared/types/remoteData';
 
 import { ArcanaType, CardData, SuitType } from 'shared/types/cards';
 

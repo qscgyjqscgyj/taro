@@ -1,7 +1,7 @@
-import { isSuccess } from 'aidbox-react';
 import { useCallback, useMemo, useState } from 'react';
 
 import { ArcanaType, SuitType } from 'shared/types/cards';
+import { isSuccess } from 'shared/types/remoteData';
 
 import { CardsFilterHookData, CardsFilterHookProps } from './types';
 

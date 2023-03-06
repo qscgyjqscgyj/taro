@@ -9,9 +9,18 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"],
+      "src/*": ["./src/*"],
       "shared/*": ["../shared/*"]
-    }
+    },
+    "plugins":[
+      {
+         "transform":"typescript-transform-paths"
+      },
+      {
+         "transform":"typescript-transform-paths",
+         "afterDeclarations": true
+      }
+   ]
   },
   "include": [
     "src/**/*"

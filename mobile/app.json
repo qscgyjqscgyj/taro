@@ -1,6 +1,5 @@
 {
     "expo": {
-        "jsEngine": "hermes",
         "name": "taro",
         "slug": "taro",
         "version": "1.0.0",

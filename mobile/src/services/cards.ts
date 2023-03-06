@@ -1,6 +1,6 @@
 // import { ImageSourcePropType } from 'react-native';
 
-import { RemoteData } from 'aidbox-react';
+import { RemoteData } from 'shared/types/remoteData';
 import { CardData } from 'shared/types/cards';
 
 export async function getCardsData(): Promise<RemoteData<CardData[]>> {

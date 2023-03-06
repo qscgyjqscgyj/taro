@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { isSuccess, RemoteData, success, useService } from 'aidbox-react';
 
 import { CardData } from 'shared/types/cards';
+import { isSuccess, RemoteData, success } from 'shared/types/remoteData';
 
 import { getCardsData } from 'src/services/cards';
 
