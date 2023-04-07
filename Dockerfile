@@ -9,3 +9,5 @@ WORKDIR /app/app
 RUN yarn
 
 EXPOSE 4000
+
+CMD ["yarn", "start"]
