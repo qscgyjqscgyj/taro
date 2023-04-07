@@ -12,3 +12,5 @@ web-build/
 
 # macOS
 .DS_Store
+
+mobile/src/services/initialise.ts

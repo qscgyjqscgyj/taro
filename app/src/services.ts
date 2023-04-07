@@ -1,5 +1,5 @@
-const PORT = process.env.PORT ?? 4000;
+const HOST = process.env.HOST ?? 'http://localhost:4000';
 
 export function getFullHost() {
-    return `http://localhost:${PORT}`;
+    return HOST;
 }
