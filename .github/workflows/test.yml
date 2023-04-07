@@ -24,7 +24,7 @@ jobs:
               run: yarn typecheck
 
             - name: Run backend
-              working-directory: ./app
+              working-directory: ./
               run: docker-compose -f docker-compose.yaml up --build -d
             - name: Show logs
               if: ${{ failure() }}
