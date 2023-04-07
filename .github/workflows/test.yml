@@ -11,8 +11,11 @@ jobs:
             - name: Install deps
               working-directory: ./app
               run: yarn
-            - name: Check types
+            - name: Check types backend
               working-directory: ./app
+              run: yarn typecheck
+            - name: Check types mobile
+              working-directory: ./mobile
               run: yarn typecheck
             - name: Run backend
               working-directory: ./app

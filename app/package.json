@@ -6,7 +6,8 @@
     "dev": "ts-node-dev --poll src/index.ts",
     "build": "rimraf ./dist && npx tsc",
     "start": "npm run build && node dist/app/src/index.js",
-    "prepare": "npx ts-patch install -s"
+    "prepare": "npx ts-patch install -s",
+    "typecheck": "tsc --noEmit"
   },
   "license": "MIT",
   "dependencies": {
