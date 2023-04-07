@@ -2,11 +2,9 @@ import dotenv from 'dotenv';
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 
-import { CardData } from 'shared/types/cards';
+import { success } from 'shared/types/remoteData';
 
-import { initializeGardsData } from 'src/cards/services';
-
-import { createResponseData } from './services';
+import { initializeCardsData } from 'src/cards/services';
 
 dotenv.config();
 
@@ -19,9 +17,9 @@ app.use(cors());
 app.use('/images', express.static(`${__dirname}/cards/lib`));
 
 app.get('/cards', (_req: Request, res: Response) => {
-    const cards = initializeGardsData();
+    const cards = initializeCardsData();
 
-    return res.status(200).json(createResponseData<CardData[]>(cards));
+    return res.status(200).json(success(cards));
 });
 
 const PORT = process.env.PORT ?? 4000;

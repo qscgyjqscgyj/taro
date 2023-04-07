@@ -79,7 +79,7 @@ import { cupsKnight } from './lib/cupsKnight/card';
 import { cupsQueen } from './lib/cupsQueen/card';
 import { cupsKing } from './lib/cupsKing/card';
 
-export function initializeGardsData(): CardData[] {
+export function initializeCardsData(): CardData[] {
     return [
         fool,
         magician,
