@@ -5,9 +5,10 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        height: 50,
+        height: 104,
         borderBottomColor: '#000',
         borderBottomWidth: 1,
+        backgroundColor: '#3E2276',
     },
     leftBlock: {
         padding: 10,
