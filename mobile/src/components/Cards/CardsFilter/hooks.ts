@@ -8,7 +8,7 @@ import { CardsFilterHookData, CardsFilterHookProps } from './types';
 export const SUITS: SuitType[] = ['cups', 'pentacless', 'swords', 'wands'];
 
 export function useCardsFilter(props: CardsFilterHookProps): CardsFilterHookData {
-    const { cardsRemoteData } = props;
+    const { cardsRemoteData, cardsNameFilter } = props;
 
     const [arcanaFilter, setArcanaFilter] = useState<ArcanaType['type']>('minor');
     const [suitFilter, setSuitFilter] = useState<SuitType>(SUITS[0]);
@@ -27,6 +27,10 @@ export function useCardsFilter(props: CardsFilterHookProps): CardsFilterHookData
     const filteredCards = useMemo(() => {
         const cards = isSuccess(cardsRemoteData) ? cardsRemoteData.data : [];
 
+        if (cardsNameFilter !== '') {
+            return cards;
+        }
+
         const resultCards = [...cards].filter((card) => card.arcana.type === arcanaFilter);
 
         if (arcanaFilter === 'minor') {
@@ -34,7 +38,7 @@ export function useCardsFilter(props: CardsFilterHookProps): CardsFilterHookData
         }
 
         return resultCards;
-    }, [cardsRemoteData, arcanaFilter, suitFilter]);
+    }, [cardsRemoteData, arcanaFilter, suitFilter, cardsNameFilter]);
 
     return {
         filteredCards,

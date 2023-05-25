@@ -16,12 +16,30 @@ app.use(cors());
 
 app.use('/images', express.static(`${__dirname}/cards/lib`));
 
-app.get('/cards', (_req: Request, res: Response) => {
+app.get('/cards', (req: Request, res: Response) => {
+    const { name } = req.query;
     const cards = initializeCardsData();
 
-    return res.status(200).json(success(cards));
-});
+    let filteredCards = cards;
 
+    if (typeof name === 'string' && name !== '') {
+        filteredCards = cards.filter((card) => {
+            const includesInName = card.name.toLowerCase().includes(name.toLowerCase());
+
+            if (includesInName) {
+                return true;
+            }
+
+            const includesInAltNames = card.altNames.some((altName) =>
+                altName.toLowerCase().includes(name.toLowerCase()),
+            );
+
+            return includesInAltNames;
+        });
+    }
+
+    res.status(200).json(success(filteredCards));
+});
 const PORT = process.env.PORT ?? 4000;
 
 app.listen(PORT, () => {

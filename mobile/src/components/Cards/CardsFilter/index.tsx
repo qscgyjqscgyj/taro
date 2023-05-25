@@ -16,15 +16,7 @@ export function CardsFilter(props: CardsFilterProps) {
                             ? styles.arcanaMajorIcon
                             : styles.arcanaMinorIcon),
                     }}
-                >
-                    <View
-                        style={
-                            arcanaFilter === 'major'
-                                ? styles.arcanaMajorDiagonalLine
-                                : styles.arcanaMinorDiagonalLine
-                        }
-                    ></View>
-                </View>
+                ></View>
             </TouchableOpacity>
 
             {arcanaFilter === 'minor' ? (

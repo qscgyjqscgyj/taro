@@ -7,9 +7,11 @@ import { useCardsFilter } from 'src/components/Cards/CardsFilter/hooks';
 import { useCards } from './hooks';
 import { CardsProps } from './types';
 import { styles } from './styles';
+import { SearchInput } from './SearchInput';
 
 export function Cards(props: CardsProps) {
-    const { cardsRemoteData, onCardPressHandler } = useCards(props);
+    const { cardsRemoteData, cardsNameFilter, onCardPressHandler, onSearchHandler } =
+        useCards(props);
 
     const {
         filteredCards,
@@ -19,10 +21,13 @@ export function Cards(props: CardsProps) {
         suiteTypeFilterHandler,
     } = useCardsFilter({
         cardsRemoteData,
+        cardsNameFilter,
     });
 
     return (
         <View style={styles.container}>
+            <SearchInput onChange={onSearchHandler} />
+
             <CardsFilter
                 suitFilter={suitFilter}
                 arcanaFilter={arcanaFilter}

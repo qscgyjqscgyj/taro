@@ -5,8 +5,8 @@ import { CardData } from 'shared/types/cards';
 
 import { HOST } from 'src/services/initialise';
 
-export async function getCardsData(): Promise<RemoteData<CardData[]>> {
-    const cardDataRespone = await fetch(`${HOST}/cards`);
+export async function getCardsData(searchName: string): Promise<RemoteData<CardData[]>> {
+    const cardDataRespone = await fetch(`${HOST}/cards?name=${searchName}`);
 
     return cardDataRespone.json();
 }

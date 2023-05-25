@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { debounce } from 'lodash';
 
 import { CardData } from 'shared/types/cards';
 import { isSuccess, RemoteData, success } from 'shared/types/remoteData';
@@ -11,20 +12,23 @@ export function useCards(props: CardsProps) {
     const { navigation } = props;
 
     const [cardsRemoteData, setCardsRemoteData] = useState<RemoteData<CardData[]>>(success([]));
+    const [cardsNameFilter, setCardsNameFilter] = useState<string>('');
 
     useEffect(() => {
-        const response = getCardsData();
+        async function getCardsDataAsync() {
+            const response = await getCardsData(cardsNameFilter);
 
-        response.then((data) => {
             setCardsRemoteData(() => {
-                if (isSuccess(data)) {
-                    return data;
+                if (isSuccess(response)) {
+                    return response;
                 }
 
                 return success([]);
             });
-        });
-    }, [setCardsRemoteData]);
+        }
+
+        getCardsDataAsync();
+    }, [cardsNameFilter]);
 
     const onCardPressHandler = useCallback(
         (card: CardData) => {
@@ -33,5 +37,19 @@ export function useCards(props: CardsProps) {
         [navigation],
     );
 
-    return { cardsRemoteData, onCardPressHandler };
+    const debouncedSearch = useCallback(
+        debounce((text: string) => {
+            setCardsNameFilter(text);
+        }, 300),
+        [],
+    );
+
+    const onSearchHandler = useCallback(
+        (text: string) => {
+            debouncedSearch(text);
+        },
+        [debouncedSearch],
+    );
+
+    return { cardsRemoteData, cardsNameFilter, onCardPressHandler, onSearchHandler };
 }

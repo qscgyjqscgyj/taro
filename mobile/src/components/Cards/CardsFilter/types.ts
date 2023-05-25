@@ -4,6 +4,7 @@ import { ArcanaType, CardData, SuitType } from 'shared/types/cards';
 
 export interface CardsFilterHookProps {
     cardsRemoteData: RemoteData<CardData[]>;
+    cardsNameFilter: string;
 }
 
 export interface CardsFilterHookData {
