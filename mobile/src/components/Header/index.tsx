@@ -1,15 +1,27 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { NativeStackHeaderProps } from '@react-navigation/native-stack';
 
 import { useHeader } from './hooks';
 import { styles } from './styles';
+import { aboutMenuIcon, historyMenuIcon, setMenuIcon } from './images';
 
 function MainHeader(props: NativeStackHeaderProps) {
+    const { navigation } = props;
+
     return (
         <View style={styles.container}>
-            <View style={styles.centerBlock}>
-                <Text style={styles.centerBlockText}>MainHeader</Text>
+            <View style={styles.menuItem}>
+                <Image style={styles.menuIcon} source={setMenuIcon} />
+                <Text style={styles.menuText}>Расклад</Text>
+            </View>
+            <View style={styles.menuItem}>
+                <Image style={styles.menuIcon} source={historyMenuIcon} />
+                <Text style={styles.menuText}>История</Text>
+            </View>
+            <View style={styles.menuItem}>
+                <Image style={styles.menuIcon} source={aboutMenuIcon} />
+                <Text style={styles.menuText}>О Таро</Text>
             </View>
         </View>
     );

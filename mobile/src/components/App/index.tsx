@@ -1,9 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import { Cards } from 'src/components/Cards';
 import { Card } from 'src/components/Cards/Card';
@@ -11,6 +12,7 @@ import { Header } from 'src/components/Header';
 
 import { RootStackParamList } from './types';
 import { styles } from './styles';
+import { useApp } from './hooks';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -23,6 +25,12 @@ const appTheme = {
 };
 
 export function App() {
+    const { fontsLoaded } = useApp();
+
+    if (!fontsLoaded) {
+        return null;
+    }
+
     return (
         <LinearGradient colors={['#F1D9D9', '#AC67CC', '#5064A9']} style={styles.linearGradient}>
             <SafeAreaView style={styles.container}>

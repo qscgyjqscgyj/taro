@@ -8,9 +8,7 @@ export const styles = StyleSheet.create({
         paddingTop: 30,
         marginBottom: 30,
     },
-    arcanaFilterWrapper: {
-        // marginBottom: 20,
-    },
+    arcanaFilterWrapper: {},
     arcanaMajorIcon: {
         width: 50,
         height: 50,
