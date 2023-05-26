@@ -11,8 +11,8 @@ import { Card } from 'src/components/Cards/Card';
 import { Header } from 'src/components/Header';
 
 import { RootStackParamList } from './types';
-import { styles } from './styles';
 import { useApp } from './hooks';
+import { styles } from './styles';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

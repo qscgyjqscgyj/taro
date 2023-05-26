@@ -13,18 +13,17 @@ jobs:
               working-directory: ./app
               run: yarn
             - name: Check types backend
-              working-directory: ./app
               run: yarn typecheck
 
             - name: Install deps mobile
               working-directory: ./mobile
               run: yarn
             - name: Copy initialize files
-              working-directory: ./mobile
               run: cp mobile/src/services/initialise.local.ts mobile/src/services/initialise.ts
             - name: Check types mobile
-              working-directory: ./mobile
               run: yarn typecheck
+            - name: Run tests
+              run: yarn test
 
             - name: Run backend
               working-directory: ./

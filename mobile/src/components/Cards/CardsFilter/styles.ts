@@ -19,13 +19,6 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         transform: [{ rotate: '45deg' }],
     },
-    arcanaMajorDiagonalLine: {
-        width: 0.5,
-        height: '100%',
-        borderColor: '#a92525',
-        borderWidth: 2,
-        transform: [{ rotate: '45deg' }],
-    },
 
     arcanaMinorIcon: {
         width: 50,
@@ -35,13 +28,6 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        transform: [{ rotate: '45deg' }],
-    },
-    arcanaMinorDiagonalLine: {
-        width: 0.5,
-        height: '100%',
-        borderColor: '#000',
-        borderWidth: 2,
         transform: [{ rotate: '45deg' }],
     },
 

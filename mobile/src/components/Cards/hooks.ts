@@ -18,13 +18,7 @@ export function useCards(props: CardsProps) {
         async function getCardsDataAsync() {
             const response = await getCardsData(cardsNameFilter);
 
-            setCardsRemoteData(() => {
-                if (isSuccess(response)) {
-                    return response;
-                }
-
-                return success([]);
-            });
+            setCardsRemoteData(response);
         }
 
         getCardsDataAsync();
