@@ -21,7 +21,7 @@ jobs:
               run: yarn
             - name: Copy initialize files
               working-directory: ./mobile
-              run: cp mobile/src/services/initialise.local.ts mobile/src/services/initialise.ts
+              run: cp ./src/services/initialise.local.ts ./src/services/initialise.ts
             - name: Check types mobile
               working-directory: ./mobile
               run: yarn typecheck
