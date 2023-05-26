@@ -6,9 +6,7 @@ import { useHeader } from './hooks';
 import { styles } from './styles';
 import { aboutMenuIcon, historyMenuIcon, setMenuIcon } from './images';
 
-function MainHeader(props: NativeStackHeaderProps) {
-    const { navigation } = props;
-
+function MainHeader(_props: NativeStackHeaderProps) {
     return (
         <View style={styles.container}>
             <View style={styles.menuItem}>

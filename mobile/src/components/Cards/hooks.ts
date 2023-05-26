@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 
 import { CardData } from 'shared/types/cards';
-import { isSuccess, RemoteData, success } from 'shared/types/remoteData';
+import { RemoteData, success } from 'shared/types/remoteData';
 
 import { getCardsData } from 'src/services/cards';
 
