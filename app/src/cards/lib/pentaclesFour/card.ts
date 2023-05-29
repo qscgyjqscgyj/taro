@@ -12,7 +12,7 @@ export const pentaclesFour: CardData = {
         'четвёрка монет',
         'четвёрка денариев',
     ],
-    arcana: { type: 'minor', suit: 'pentacless' },
+    arcana: { type: 'minor', suit: 'pentacles' },
     subTitle: 'Крепкая хватка',
     image: `${getFullHost()}/images/pentaclesFour/images/pentaclesFour.png`,
     description: [

@@ -5,7 +5,7 @@ import { getFullHost } from 'src/services';
 export const pentaclesTen: CardData = {
     name: 'ДЕСЯТКА ПЕНТАКЛЕЙ',
     altNames: ['десятка пентаклей', 'десятка монет', 'десятка денариев'],
-    arcana: { type: 'minor', suit: 'pentacless' },
+    arcana: { type: 'minor', suit: 'pentacles' },
     subTitle: 'Изобилие',
     image: `${getFullHost()}/images/pentaclesTen/images/pentaclesTen.png`,
     description: [

@@ -10,8 +10,7 @@ import { styles } from './styles';
 import { SearchInput } from './SearchInput';
 
 export function Cards(props: CardsProps) {
-    const { cardsRemoteData, cardsNameFilter, onCardPressHandler, onSearchHandler } =
-        useCards(props);
+    const { onCardPressHandler } = useCards(props);
 
     const {
         filteredCards,
@@ -19,10 +18,8 @@ export function Cards(props: CardsProps) {
         suitFilter,
         toggleArcanaTypeFilter,
         suiteTypeFilterHandler,
-    } = useCardsFilter({
-        cardsRemoteData,
-        cardsNameFilter,
-    });
+        onSearchHandler,
+    } = useCardsFilter();
 
     return (
         <View style={styles.container}>

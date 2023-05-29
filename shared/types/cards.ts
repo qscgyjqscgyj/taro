@@ -8,7 +8,7 @@ export type ArcanaType =
           suit: SuitType;
       };
 
-export type SuitType = 'wands' | 'cups' | 'swords' | 'pentacless';
+export type SuitType = 'wands' | 'cups' | 'swords' | 'pentacles';
 
 export interface CardData {
     name: string;

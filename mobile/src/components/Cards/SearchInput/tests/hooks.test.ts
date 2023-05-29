@@ -4,7 +4,7 @@ import { RemoteData } from 'shared/types/remoteData';
 import { CardData } from 'shared/types/cards';
 
 import { getCardsData } from 'src/services/cards';
-import { useCards } from 'src/components/Cards/hooks';
+import { useCardsFilter } from 'src/components/Cards/CardsFilter/hooks';
 
 import { useSearchInput } from '../hooks';
 
@@ -24,36 +24,10 @@ test('useSearchInput calls getCardsData with correct search value', async () => 
         return Promise.resolve(mockedGetCardsDataResponse);
     });
 
-    const { result: useCardsResult } = renderHook(() =>
-        useCards({
-            navigation: {
-                navigate: jest.fn(),
-                dispatch: jest.fn(),
-                reset: jest.fn(),
-                goBack: jest.fn(),
-                isFocused: jest.fn(),
-                canGoBack: jest.fn(),
-                getId: jest.fn(),
-                getState: jest.fn(),
-                getParent: jest.fn(),
-                setParams: jest.fn(),
-                setOptions: jest.fn(),
-                addListener: jest.fn(),
-                removeListener: jest.fn(),
-                replace: jest.fn(),
-                push: jest.fn(),
-                pop: jest.fn(),
-                popToTop: jest.fn(),
-            },
-            route: {
-                key: 'test',
-                name: 'CardsList',
-            },
-        }),
-    );
+    const { result: useCardsFilterResult } = renderHook(() => useCardsFilter());
 
     const { result: useSearchInputResult } = renderHook(() =>
-        useSearchInput({ onChange: useCardsResult.current.onSearchHandler }),
+        useSearchInput({ onChange: useCardsFilterResult.current.onSearchHandler }),
     );
 
     expect(mockedGetCardsData).toHaveBeenCalledWith('');

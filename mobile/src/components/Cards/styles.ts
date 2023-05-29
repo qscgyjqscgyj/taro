@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        marginBottom: 120,
+        marginBottom: 150,
     },
     cardWrapper: {
         display: 'flex',

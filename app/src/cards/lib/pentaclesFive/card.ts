@@ -12,7 +12,7 @@ export const pentaclesFive: CardData = {
         'пятвёрка монет',
         'пятвёрка денариев',
     ],
-    arcana: { type: 'minor', suit: 'pentacless' },
+    arcana: { type: 'minor', suit: 'pentacles' },
     subTitle: 'Бедность',
     image: `${getFullHost()}/images/pentaclesFive/images/pentaclesFive.png`,
     description: [
