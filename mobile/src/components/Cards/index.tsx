@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 
 import { CardsFilter } from 'src/components/Cards/CardsFilter';
 import { useCardsFilter } from 'src/components/Cards/CardsFilter/hooks';
+import { CachedImage } from 'src/components/CachedImage';
 
 import { useCards } from './hooks';
 import { CardsProps } from './types';
@@ -38,7 +39,7 @@ export function Cards(props: CardsProps) {
                         <View key={`card-${cardIndex}`} style={styles.cardWrapper}>
                             <View style={styles.cardImageWrapper}>
                                 <TouchableOpacity onPress={() => onCardPressHandler(card)}>
-                                    <Image source={{ uri: card.image }} style={styles.cardImage} />
+                                    <CachedImage url={card.image} style={styles.cardImage} />
                                 </TouchableOpacity>
                             </View>
 
