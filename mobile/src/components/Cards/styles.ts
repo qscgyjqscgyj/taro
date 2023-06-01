@@ -1,5 +1,8 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from 'src/styles/colors';
+import { fonts } from 'src/styles/fonts';
+
 export const styles = StyleSheet.create({
     container: {},
     cardsWrapper: {
@@ -7,24 +10,30 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginBottom: 150,
+        justifyContent: 'space-between',
+        paddingLeft: 14,
+        paddingRight: 14,
     },
     cardWrapper: {
         display: 'flex',
         width: '33%',
         flexDirection: 'column',
-        marginBottom: 10,
     },
     cardImageWrapper: {
-        marginBottom: 5,
+        marginBottom: 8,
     },
     cardImage: {
         width: 'auto',
         height: 150,
         resizeMode: 'contain',
     },
-    cardNameWrapper: {},
+    cardNameWrapper: {
+        marginBottom: 17,
+    },
     cardNameText: {
         textAlign: 'center',
+        fontFamily: fonts.primary,
         fontSize: 10,
+        color: colors.headerText,
     },
 });
