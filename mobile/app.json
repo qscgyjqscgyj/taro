@@ -12,7 +12,8 @@
             "backgroundColor": "#ffffff"
         },
         "updates": {
-            "fallbackToCacheTimeout": 0
+            "fallbackToCacheTimeout": 0,
+            "url": "https://u.expo.dev/f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
         },
         "assetBundlePatterns": ["**/*"],
         "ios": {
@@ -26,6 +27,26 @@
         },
         "web": {
             "favicon": "./assets/favicon.png"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
+            }
+        },
+        "runtimeVersion": {
+            "policy": "sdkVersion"
+        }
+    },
+    "$env": {
+        "development": {
+            "extra": {
+                "API_BASE_URL": "https://api.example.dev"
+            }
+        },
+        "production": {
+            "extra": {
+                "API_BASE_URL": "https://api.example.com"
+            }
         }
     }
 }

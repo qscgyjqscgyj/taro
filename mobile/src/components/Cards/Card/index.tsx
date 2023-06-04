@@ -1,14 +1,11 @@
 import React from 'react';
 import { View, Text, ScrollView, Image } from 'react-native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-
-import { RootStackParamList } from 'src/components/App/types';
 
 import { styles } from './styles';
+import { CardProps } from './types';
 
-type CardProps = NativeStackScreenProps<RootStackParamList, 'CardDetails'>;
-
-export function Card({ route }: CardProps) {
+export function Card(props: CardProps) {
+    const { route } = props;
     const { card } = route.params;
 
     return (

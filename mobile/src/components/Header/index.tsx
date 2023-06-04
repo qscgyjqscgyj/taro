@@ -1,60 +1,50 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { NativeStackHeaderProps } from '@react-navigation/native-stack';
+
+import { AddToSetButton } from 'src/components/Sets/AddToSetButton';
 
 import { useHeader } from './hooks';
 import { styles } from './styles';
-import { aboutMenuIcon, historyMenuIcon, setMenuIcon } from './images';
+import { backIcon } from './images';
+import { MainHeader } from './MainHeader';
+import { HeaderProps } from './types';
 
-function MainHeader(_props: NativeStackHeaderProps) {
-    return (
-        <View style={styles.container}>
-            <View style={styles.menuItem}>
-                <Image style={styles.menuIcon} source={setMenuIcon} />
-                <Text style={styles.menuText}>Расклад</Text>
-            </View>
-            <View style={styles.menuItem}>
-                <Image style={styles.menuIcon} source={historyMenuIcon} />
-                <Text style={styles.menuText}>История</Text>
-            </View>
-            <View style={styles.menuItem}>
-                <Image style={styles.menuIcon} source={aboutMenuIcon} />
-                <Text style={styles.menuText}>О Таро</Text>
-            </View>
-        </View>
-    );
-}
-
-function NavigationHeader(props: NativeStackHeaderProps) {
-    const { back } = props;
+function NavigationHeader(props: HeaderProps) {
+    const { back, options, rightBlock, navigation, route } = props;
 
     const { onBackPressHandler } = useHeader(props);
+
+    const card = route.name === 'CardDetails' ? route.params.card : undefined;
 
     return (
         <View style={styles.container}>
             <View style={styles.leftBlock}>
                 {back ? (
                     <TouchableOpacity onPress={onBackPressHandler}>
-                        <Text>{back.title}</Text>
+                        <Image source={backIcon} />
                     </TouchableOpacity>
                 ) : null}
             </View>
 
             <View style={styles.centerBlock}>
-                <Text style={styles.centerBlockText}>NavigationHeader</Text>
+                <Text style={styles.centerBlockText}>{options.title}</Text>
             </View>
 
-            <View style={styles.rightBlock}></View>
+            {rightBlock !== undefined && card !== undefined ? (
+                <View style={styles.rightBlock}>{rightBlock({ navigation, card: card })}</View>
+            ) : null}
         </View>
     );
 }
 
-export function Header(props: NativeStackHeaderProps) {
+export function Header(props: HeaderProps) {
     const { route } = props;
 
     switch (route.name) {
         case 'CardsList':
             return <MainHeader {...props} />;
+        case 'CardDetails':
+            return <NavigationHeader {...props} rightBlock={AddToSetButton} />;
         default:
             return <NavigationHeader {...props} />;
     }

@@ -16,30 +16,19 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.headerBackground,
         height: 98,
     },
-
-    leftBlock: {
-        padding: 10,
+    menuItem: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     },
-    leftBlockText: {
-        textAlign: 'left',
+    menuIcon: {
+        marginBottom: 7,
     },
-
-    centerBlock: {
-        padding: 10,
-    },
-    centerBlockText: {
-        textAlign: 'center',
-        color: colors.headerText,
+    menuText: {
         fontFamily: fonts.primary,
         fontWeight: '400',
-        fontSize: 24,
-        lineHeight: 29,
-    },
-
-    rightBlock: {
-        padding: 10,
-    },
-    rightBlockText: {
-        textAlign: 'right',
+        fontSize: 12,
+        lineHeight: 15,
+        color: colors.headerText,
     },
 });
