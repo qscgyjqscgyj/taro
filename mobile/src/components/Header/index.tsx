@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-import { AddToSetButton } from 'src/components/Sets/AddToSetButton';
+import { AddToSetButton } from 'src/components/Set/AddToSetButton';
 
 import { useHeader } from './hooks';
 import { styles } from './styles';
@@ -10,11 +10,9 @@ import { MainHeader } from './MainHeader';
 import { HeaderProps } from './types';
 
 function NavigationHeader(props: HeaderProps) {
-    const { back, options, rightBlock, navigation, route } = props;
+    const { back, options, rightBlock } = props;
 
     const { onBackPressHandler } = useHeader(props);
-
-    const card = route.name === 'CardDetails' ? route.params.card : undefined;
 
     return (
         <View style={styles.container}>
@@ -30,9 +28,9 @@ function NavigationHeader(props: HeaderProps) {
                 <Text style={styles.centerBlockText}>{options.title}</Text>
             </View>
 
-            {rightBlock !== undefined && card !== undefined ? (
-                <View style={styles.rightBlock}>{rightBlock({ navigation, card: card })}</View>
-            ) : null}
+            <View style={styles.rightBlock}>
+                {rightBlock !== undefined ? rightBlock(props) : null}
+            </View>
         </View>
     );
 }

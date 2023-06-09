@@ -1,5 +1,5 @@
-import { NativeStackHeaderProps } from '@react-navigation/native-stack';
 import { useCallback } from 'react';
+import { NativeStackHeaderProps } from '@react-navigation/native-stack';
 
 export function useHeader(props: NativeStackHeaderProps) {
     const { navigation } = props;

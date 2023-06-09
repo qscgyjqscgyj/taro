@@ -14,3 +14,4 @@ web-build/
 .DS_Store
 
 mobile/src/services/initialise.ts
+yarn-error.log

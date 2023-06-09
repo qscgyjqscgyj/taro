@@ -1,8 +1,7 @@
-import { ParamListBase } from '@react-navigation/native';
-
 import { CardData } from 'shared/types/cards';
 
-export interface RootStackParamList extends ParamListBase {
+export type RootStackParamList = {
     CardsList: undefined;
     CardDetails: { card: CardData };
-}
+    Set: { card: CardData } | undefined;
+} & Record<string, object | undefined>;

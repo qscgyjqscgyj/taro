@@ -1,5 +1,6 @@
-import { loadAsync } from 'expo-font';
 import { useEffect, useState } from 'react';
+
+import { initFonts } from 'src/styles/fonts/services';
 
 export function useApp() {
     const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
@@ -7,10 +8,7 @@ export function useApp() {
     useEffect(() => {
         async function loadFontsAsync() {
             try {
-                await loadAsync({
-                    Inter: require('src/styles/fonts/Inter-Regular.ttf'),
-                    'Inter-Medium': require('src/styles/fonts/Inter-Medium.ttf'),
-                });
+                await initFonts();
                 setFontsLoaded(true);
             } catch (error) {
                 console.log('Error loading fonts:', error);

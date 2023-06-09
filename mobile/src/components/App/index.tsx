@@ -10,8 +10,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Cards } from 'src/components/Cards';
 import { Card } from 'src/components/Cards/Card';
 import { Header } from 'src/components/Header';
+import { Set } from 'src/components/Set';
 import i18n from 'src/services/localization/i18n';
 import { useTranslation } from 'src/services/localization/hooks';
+import { AppContextProvider } from 'src/services/store';
 
 import { RootStackParamList } from './types';
 import { useApp } from './hooks';
@@ -37,32 +39,45 @@ export function App() {
     }
 
     return (
-        <LinearGradient colors={['#F1D9D9', '#AC67CC', '#5064A9']} style={styles.linearGradient}>
-            <I18nextProvider i18n={i18n}>
-                <SafeAreaView style={styles.container}>
-                    <NavigationContainer theme={appTheme}>
-                        <Stack.Navigator
-                            initialRouteName={'CardsList'}
-                            screenOptions={{
-                                header: Header,
-                                animation: 'none',
-                            }}
-                        >
-                            <Stack.Screen name={'CardsList'} component={Cards} />
-
-                            <Stack.Screen
-                                name={'CardDetails'}
-                                component={Card}
-                                options={{
-                                    title: t('cardDetailsTitle'),
+        <AppContextProvider>
+            <LinearGradient
+                colors={['#F1D9D9', '#AC67CC', '#5064A9']}
+                style={styles.linearGradient}
+            >
+                <I18nextProvider i18n={i18n}>
+                    <SafeAreaView style={styles.container}>
+                        <NavigationContainer theme={appTheme}>
+                            <Stack.Navigator
+                                initialRouteName={'CardsList'}
+                                screenOptions={{
+                                    header: Header,
+                                    animation: 'none',
                                 }}
-                            />
-                        </Stack.Navigator>
+                            >
+                                <Stack.Screen name={'CardsList'} component={Cards} />
 
-                        <StatusBar style="auto" />
-                    </NavigationContainer>
-                </SafeAreaView>
-            </I18nextProvider>
-        </LinearGradient>
+                                <Stack.Screen
+                                    name={'CardDetails'}
+                                    component={Card}
+                                    options={{
+                                        title: t('cardDetailsTitle'),
+                                    }}
+                                />
+
+                                <Stack.Screen
+                                    name={'Set'}
+                                    component={Set}
+                                    options={{
+                                        title: t('setScreenTitle'),
+                                    }}
+                                />
+                            </Stack.Navigator>
+
+                            <StatusBar style="auto" />
+                        </NavigationContainer>
+                    </SafeAreaView>
+                </I18nextProvider>
+            </LinearGradient>
+        </AppContextProvider>
     );
 }
