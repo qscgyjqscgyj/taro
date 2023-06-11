@@ -20,8 +20,16 @@ export interface CardData {
     number?: number;
 }
 
-interface CardDescription {
+export interface CardDescription {
     category: string;
     direction: 'normal' | 'reversed';
     textData: string[];
+}
+
+export interface SetData {
+    id: string;
+    cards: CardData[];
+    createdAt: string;
+    notes?: string;
+    updatedAt?: string;
 }

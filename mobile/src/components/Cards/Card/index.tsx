@@ -1,18 +1,25 @@
 import React from 'react';
-import { View, Text, ScrollView, Pressable, FlatList } from 'react-native';
+import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
 
 import { styles } from './styles';
 import { CardProps } from './types';
 import { useCard } from './hooks';
+import { chevronDownIcon } from './images';
 
 export function Card(props: CardProps) {
     const { route } = props;
 
     const { card } = route.params;
 
-    const { reversedValue, reversedValueToggle } = useCard(props);
+    const {
+        reversedValue,
+        filteredCardDescription,
+        reversedValueToggle,
+        toggleCardDescriptionAccordion,
+        openedCardDescriptionIndeces,
+    } = useCard(props);
 
     return (
         <ScrollView>
@@ -52,39 +59,41 @@ export function Card(props: CardProps) {
                 </Pressable>
 
                 <View style={styles.descriptionWrapper}>
-                    <FlatList
-                        style={{ margin: 40 }}
-                        data={card.description}
-                        renderItem={({ item }) => {
-                            return (
-                                <View style={styles.description}>
-                                    <Text style={styles.descriptionTitle}>{item.category}</Text>
-                                    {item.textData.map((text, textIndex) => (
-                                        <Text key={`card-text-${textIndex}`}>{text}</Text>
-                                    ))}
+                    {filteredCardDescription.map((cardDescription, cardDescriptionIndex) => (
+                        <Pressable
+                            onPress={() => toggleCardDescriptionAccordion(cardDescriptionIndex)}
+                            key={String(cardDescription.textData)}
+                        >
+                            <View style={styles.description}>
+                                <View style={styles.descriptionTitleWrapper}>
+                                    <Text style={styles.descriptionTitle}>
+                                        {cardDescription.category}
+                                    </Text>
+
+                                    <Image
+                                        source={chevronDownIcon}
+                                        style={[
+                                            openedCardDescriptionIndeces.has(cardDescriptionIndex)
+                                                ? styles.dropdownReverseChevronIcon
+                                                : {},
+                                        ]}
+                                    />
                                 </View>
-                            );
-                        }}
-                    />
 
-                    {/* <View style={styles.descriptionsWrapper}></View> */}
+                                {openedCardDescriptionIndeces.has(cardDescriptionIndex) ? (
+                                    <View style={styles.descriptionTextWrapper}>
+                                        {cardDescription.textData.map((text) => (
+                                            <View style={styles.descriptionTextItem} key={text}>
+                                                <Text style={styles.bullet}>•</Text>
+                                                <Text style={styles.descriptionText}>{text}</Text>
+                                            </View>
+                                        ))}
+                                    </View>
+                                ) : null}
+                            </View>
+                        </Pressable>
+                    ))}
                 </View>
-
-                {/* {card.description.map((cardDescription, cardDescriptionIndex) => (
-                    <View key={`card-description-${cardDescriptionIndex}`}>
-                        <Text>{cardDescription.category}</Text>
-
-                        <Text>
-                            {cardDescription.direction === 'normal' ? 'Нормальное' : 'Перевернутое'}
-                        </Text>
-
-                        {cardDescription.textData.map((text, textIndex) => (
-                            <Text key={`card-text-${textIndex}`}>-- {text}</Text>
-                        ))}
-
-                        <Text>-----------------</Text>
-                    </View>
-                ))} */}
             </View>
         </ScrollView>
     );
