@@ -7,16 +7,14 @@ import { useAddToSetButton } from './hooks';
 import { styles } from './styles';
 
 export function AddToSetButton(props: HeaderProps) {
-    const { navigation } = props;
-
-    const { activeCard } = useAddToSetButton();
+    const { activeCard, addToSetHandler } = useAddToSetButton(props);
 
     if (activeCard === undefined) {
         return null;
     }
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Set', { card: activeCard })}>
+        <TouchableOpacity onPress={addToSetHandler}>
             <View style={styles.button}>
                 <Image style={styles.icon} source={crownIcon} />
                 <Text style={styles.text}>добавить в расклад</Text>

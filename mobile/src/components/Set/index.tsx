@@ -7,6 +7,7 @@ export function Set(props: SetProps) {
     const { params } = props.route;
 
     const card = params?.card;
+    const activeSet = params?.activeSet ?? null;
 
     const {} = useSet(props);
 
@@ -14,5 +15,10 @@ export function Set(props: SetProps) {
         return <Text>Set Screen with no card</Text>;
     }
 
-    return <Text>Set Screen, card: {card.name}</Text>;
+    return (
+        <>
+            <Text>Set Screen, card: {card.name}</Text>
+            <Text>active set: {activeSet ? activeSet.id : 'No set'}</Text>
+        </>
+    );
 }
