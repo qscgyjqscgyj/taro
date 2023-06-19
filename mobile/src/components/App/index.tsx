@@ -1,7 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { I18nextProvider } from 'react-i18next';
 
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
@@ -14,6 +13,7 @@ import { Set } from 'src/components/Set';
 import i18n from 'src/services/localization/i18n';
 import { useTranslation } from 'src/services/localization/hooks';
 import { AppContextProvider } from 'src/services/store';
+import { MainLinearGradient } from 'src/components/App/LinearGradient';
 
 import { RootStackParamList } from './types';
 import { useApp } from './hooks';
@@ -40,10 +40,7 @@ export function App() {
 
     return (
         <AppContextProvider>
-            <LinearGradient
-                colors={['#F1D9D9', '#AC67CC', '#5064A9']}
-                style={styles.linearGradient}
-            >
+            <MainLinearGradient>
                 <I18nextProvider i18n={i18n}>
                     <SafeAreaView style={styles.container}>
                         <NavigationContainer theme={appTheme}>
@@ -77,7 +74,7 @@ export function App() {
                         </NavigationContainer>
                     </SafeAreaView>
                 </I18nextProvider>
-            </LinearGradient>
+            </MainLinearGradient>
         </AppContextProvider>
     );
 }

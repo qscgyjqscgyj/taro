@@ -73,17 +73,17 @@ export async function getActiveSet() {
     return await getSet(activeSetId);
 }
 
-export async function setActiveSet(set: SetData) {
+export async function setActiveSet(newActiveSet: SetData) {
     const sets = await getSets();
 
     if (sets === null) {
         return;
     }
 
-    const existSet = sets.find((set) => set.id === set.id);
+    const existSet = sets.find((set) => set.id === newActiveSet.id);
     if (!existSet) {
         return;
     }
 
-    return await setActiveSetId(set.id);
+    return await setActiveSetId(newActiveSet.id);
 }

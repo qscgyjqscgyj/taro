@@ -2,7 +2,7 @@ import AsyncStorageMock from '@react-native-async-storage/async-storage/jest/asy
 
 import { SetData } from 'shared/types/cards';
 
-import { deleteSet, getSets, setSet } from '../sets';
+import { deleteSet, getActiveSet, getSets, setActiveSet, setSet } from '../sets';
 
 AsyncStorageMock.setItem = jest.fn(() => Promise.resolve());
 
@@ -115,5 +115,53 @@ describe('Have to delete set', () => {
             'sets',
             JSON.stringify(TEST_SETS.filter((set) => set.id !== TEST_SETS[0].id)),
         );
+    });
+});
+
+describe('Test get and set active set', () => {
+    test('Get active set if there are no sets', async () => {
+        AsyncStorageMock.getItem = jest.fn(() => Promise.resolve(null));
+
+        const activeSet = await getActiveSet();
+
+        expect(activeSet).toBeNull();
+    });
+
+    test('Get active set if there are sets', async () => {
+        AsyncStorageMock.getItem = jest.fn((key: 'sets' | 'activeSetId' | string) => {
+            switch (key) {
+                case 'sets':
+                    return Promise.resolve(JSON.stringify(TEST_SETS));
+                case 'activeSetId':
+                    return Promise.resolve(TEST_SETS[0].id);
+                default:
+                    return Promise.resolve(null);
+            }
+        });
+
+        const activeSet = await getActiveSet();
+
+        expect(activeSet?.id).toBe(TEST_SETS[0].id);
+    });
+
+    test('Set active set if passed set not in sets', async () => {
+        AsyncStorageMock.getItem = jest.fn(() => Promise.resolve(JSON.stringify(TEST_SETS)));
+        const setItemMock = jest.fn(() => Promise.resolve());
+        AsyncStorageMock.setItem = setItemMock;
+
+        await setActiveSet(NEW_SET);
+
+        expect(setItemMock).toHaveBeenCalledTimes(0);
+    });
+
+    test('Set active set if passed set in sets', async () => {
+        AsyncStorageMock.getItem = jest.fn(() => Promise.resolve(JSON.stringify(TEST_SETS)));
+        const setItemMock = jest.fn(() => Promise.resolve());
+        AsyncStorageMock.setItem = setItemMock;
+
+        await setActiveSet(TEST_SETS[0]);
+
+        expect(setItemMock).toHaveBeenCalledTimes(1);
+        expect(setItemMock).toHaveBeenCalledWith('activeSetId', TEST_SETS[0].id);
     });
 });

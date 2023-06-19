@@ -18,4 +18,7 @@ export const colors = {
     whiteText: pallete.white,
     switcherBackground: pallete.grey,
     switcherActiveBackground: pallete.greyLight,
+    dialogHeaderBackground: pallete.white,
+    dialogButtonText: pallete.purpleLight,
+    dialogActiveButtonBackground: pallete.purpleDark,
 };
