@@ -1,4 +1,4 @@
-import { SetData } from 'shared/types/cards';
+import { CardData, SetData } from 'shared/types/cards';
 
 import { getStorageItem, setStorageItem } from '.';
 
@@ -86,4 +86,38 @@ export async function setActiveSet(newActiveSet: SetData) {
     }
 
     return await setActiveSetId(newActiveSet.id);
+}
+
+// TODO: write test on this service
+export async function createNewActiveSet(card?: CardData) {
+    const nowDate = new Date();
+
+    const newSet: SetData = {
+        id: String(nowDate.getTime()),
+        cards: card !== undefined ? [card] : [],
+        createdAt: nowDate.toISOString(),
+    };
+
+    await setSet(newSet);
+    await setActiveSet(newSet);
+
+    return newSet;
+}
+
+// TODO: write test on this service
+export async function addCardToActiveSet(card: CardData) {
+    const activeSet = await getActiveSet();
+
+    if (activeSet === null) {
+        return;
+    }
+
+    const newSet = {
+        ...activeSet,
+        cards: [...activeSet.cards, card],
+    };
+
+    await setSet(newSet);
+
+    return newSet;
 }

@@ -9,8 +9,14 @@ import { useAddToSetButton } from './hooks';
 import { styles } from './styles';
 
 export function AddToSetButton(props: HeaderProps) {
-    const { activeCard, addToSetHandler, isModalOpen, closeModal, addToSetDialogAccepted } =
-        useAddToSetButton(props);
+    const {
+        activeCard,
+        addToSetHandler,
+        isModalOpen,
+        closeModal,
+        createNewSetHandler,
+        addActiveCardToActiveSetHandler,
+    } = useAddToSetButton(props);
 
     if (activeCard === undefined) {
         return null;
@@ -28,9 +34,11 @@ export function AddToSetButton(props: HeaderProps) {
             <ModalComponent
                 component={() => (
                     <Dialog
-                        title="У вас уже есть активный расклад"
-                        isModalOpen={isModalOpen}
-                        onAccept={addToSetDialogAccepted}
+                        title="У вас уже есть расклад"
+                        leftButtonTitle="создать новый расклад"
+                        leftButtonHandler={createNewSetHandler}
+                        rightButtonTitle="добавить в текущий"
+                        rightButtonHandler={addActiveCardToActiveSetHandler}
                         closeModal={closeModal}
                     />
                 )}
