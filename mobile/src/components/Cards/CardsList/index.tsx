@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Text, Image, LayoutChangeEvent } from 'react-native';
+import { View, TouchableOpacity, Text, Image } from 'react-native';
 
 import { CardData } from 'shared/types/cards';
 
