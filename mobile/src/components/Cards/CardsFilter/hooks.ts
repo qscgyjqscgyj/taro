@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { ImageSourcePropType } from 'react-native';
 import { debounce } from 'lodash';
 
-import { ArcanaType, CardData, SuitType } from 'shared/types/cards';
-import { RemoteData, isSuccess, success } from 'shared/types/remoteData';
+import { ArcanaType, SuitType } from 'shared/types/cards';
 
-import { getCardsData } from 'src/services/cards';
+import { useAppContext } from 'src/services/store/context';
 
 import { CardsFilterHookData } from './types';
 import {
@@ -36,6 +35,8 @@ export function useCardsFilter(): CardsFilterHookData {
     const [arcanaFilter, setArcanaFilter] = useState<ArcanaType['type']>('minor');
     const [suitFilter, setSuitFilter] = useState<SuitType | undefined>();
     const [cardsNameFilter, setCardsNameFilter] = useState<string>('');
+
+    const { cards } = useAppContext();
 
     const toggleArcanaTypeFilter = useCallback(() => {
         if (suitFilter) {
@@ -70,23 +71,11 @@ export function useCardsFilter(): CardsFilterHookData {
         [debouncedSearch],
     );
 
-    const [cardsRemoteData, setCardsRemoteData] = useState<RemoteData<CardData[]>>(success([]));
-
-    useEffect(() => {
-        async function getCardsDataAsync() {
-            const response = await getCardsData(cardsNameFilter);
-
-            setCardsRemoteData(response);
-        }
-
-        getCardsDataAsync();
-    }, [cardsNameFilter]);
-
     const filteredCards = useMemo(() => {
-        const cards = isSuccess(cardsRemoteData) ? cardsRemoteData.data : [];
-
         if (cardsNameFilter !== '') {
-            return cards;
+            return cards.filter((card) =>
+                card.name.toLowerCase().includes(cardsNameFilter.toLowerCase()),
+            );
         }
 
         let resultCards = [...cards];
@@ -98,7 +87,7 @@ export function useCardsFilter(): CardsFilterHookData {
         }
 
         return resultCards;
-    }, [cardsRemoteData, arcanaFilter, suitFilter, cardsNameFilter]);
+    }, [cards, arcanaFilter, suitFilter, cardsNameFilter]);
 
     return {
         filteredCards,

@@ -1,16 +1,17 @@
-import { Image } from 'react-native';
+import { Image, ImageProps } from 'react-native';
 
 import { useCachedImage } from './hooks';
 
-interface CachedImageProps {
+interface CachedImageProps extends Omit<ImageProps, 'source'> {
     url: string;
-    style?: any;
 }
 
 export function CachedImage(props: CachedImageProps) {
-    const { url, style } = props;
+    const { url, style, onLayout } = props;
 
     const { cachedImage } = useCachedImage(url);
 
-    return cachedImage ? <Image source={{ uri: cachedImage }} style={style} /> : null;
+    return cachedImage ? (
+        <Image onLayout={onLayout} source={{ uri: cachedImage }} style={style} />
+    ) : null;
 }

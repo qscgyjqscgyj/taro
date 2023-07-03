@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: colors.headerButtonBackground,
+        backgroundColor: colors.purpleButtonBackground,
         borderRadius: 7,
         padding: 10,
         width: 70,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     },
     text: {
         fontFamily: fonts.primary,
-        color: colors.headerButtonText,
+        color: colors.purpleButtonText,
         fontWeight: '400',
         fontSize: 10,
         // lineHeight: 12,

@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
         fontFamily: fonts.primary,
         fontSize: 16,
         lineHeight: 19,
-        color: colors.headerButtonText,
+        color: colors.purpleButtonText,
         textAlign: 'center',
     },
 
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 26,
         paddingRight: 26,
-        backgroundColor: colors.headerButtonBackground,
+        backgroundColor: colors.purpleButtonBackground,
     },
     leftButton: {
         borderBottomLeftRadius: 13,
@@ -61,13 +61,13 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 13,
         borderLeftWidth: 1,
         borderSize: 12,
-        borderColor: colors.headerButtonText,
+        borderColor: colors.purpleButtonText,
     },
     controlText: {
         fontFamily: fonts.primary,
         fontSize: 12,
         lineHeight: 15,
-        color: colors.headerButtonText,
+        color: colors.purpleButtonText,
         textAlign: 'center',
     },
 });

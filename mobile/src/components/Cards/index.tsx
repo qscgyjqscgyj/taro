@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import { CardsFilter } from 'src/components/Cards/CardsFilter';
 import { useCardsFilter } from 'src/components/Cards/CardsFilter/hooks';
-import { CachedImage } from 'src/components/CachedImage';
+import { SearchInput } from 'src/components/Cards/SearchInput';
+import { CardsList } from 'src/components/Cards/CardsList';
 
 import { useCards } from './hooks';
 import { CardsProps } from './types';
-import { styles } from './styles';
-import { SearchInput } from './SearchInput';
 
 export function Cards(props: CardsProps) {
     const { onCardPressHandler } = useCards(props);
@@ -23,7 +22,7 @@ export function Cards(props: CardsProps) {
     } = useCardsFilter();
 
     return (
-        <View style={styles.container}>
+        <View>
             <SearchInput onChange={onSearchHandler} />
 
             <CardsFilter
@@ -33,22 +32,8 @@ export function Cards(props: CardsProps) {
                 suiteTypeFilterHandler={suiteTypeFilterHandler}
             />
 
-            <ScrollView>
-                <View style={styles.cardsWrapper}>
-                    {filteredCards.map((card, cardIndex) => (
-                        <View key={`card-${cardIndex}`} style={styles.cardWrapper}>
-                            <View style={styles.cardImageWrapper}>
-                                <TouchableOpacity onPress={() => onCardPressHandler(card)}>
-                                    <CachedImage url={card.image} style={styles.cardImage} />
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={styles.cardNameWrapper}>
-                                <Text style={styles.cardNameText}>{card.name}</Text>
-                            </View>
-                        </View>
-                    ))}
-                </View>
+            <ScrollView style={{ marginBottom: 150 }}>
+                <CardsList cards={filteredCards} onPressCard={onCardPressHandler} />
             </ScrollView>
         </View>
     );

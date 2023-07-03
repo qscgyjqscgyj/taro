@@ -12,8 +12,8 @@ const pallete = {
 export const colors = {
     headerBackground: pallete.purpleDark,
     headerText: pallete.purpleLight,
-    headerButtonBackground: pallete.purpleLight,
-    headerButtonText: pallete.purpleDark,
+    purpleButtonBackground: pallete.purpleLight,
+    purpleButtonText: pallete.purpleDark,
     searchInputBackground: pallete.purpleLighter,
     whiteText: pallete.white,
     switcherBackground: pallete.grey,
@@ -21,4 +21,5 @@ export const colors = {
     dialogHeaderBackground: pallete.white,
     dialogButtonText: pallete.purpleLight,
     dialogActiveButtonBackground: pallete.purpleDark,
+    addCardButtonBordder: pallete.grey,
 };

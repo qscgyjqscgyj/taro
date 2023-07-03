@@ -5,6 +5,8 @@ import { Action, AppContextProps } from './types';
 
 function reducer(state: AppContextProps, action: Action) {
     switch (action.type) {
+        case 'SET_CARDS':
+            return { ...state, cards: action.payload };
         case 'SET_ACTIVE_CARD':
             return { ...state, activeCard: action.payload };
 
@@ -22,7 +24,11 @@ export function AppContextProvider(props: AppProviderProps) {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    const { activeCard } = state;
+    const { activeCard, cards } = state;
 
-    return <AppContext.Provider value={{ activeCard, dispatch }}>{children}</AppContext.Provider>;
+    return (
+        <AppContext.Provider value={{ cards, activeCard, dispatch }}>
+            {children}
+        </AppContext.Provider>
+    );
 }

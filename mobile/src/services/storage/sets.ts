@@ -2,6 +2,8 @@ import { CardData, SetData } from 'shared/types/cards';
 
 import { getStorageItem, setStorageItem } from '.';
 
+const MAX_SETS_LENGTH = 10;
+
 export async function getSets() {
     const sets = await getStorageItem('sets');
 
@@ -40,7 +42,8 @@ export async function setSet(set: SetData) {
         return setStorageItem('sets', JSON.stringify(newSets));
     }
 
-    return setStorageItem('sets', JSON.stringify([...sets, newSet]));
+    // TODO: change setSet test after .slice(0, MAX_SETS_LENGTH - 1) has been added
+    return setStorageItem('sets', JSON.stringify([...sets.slice(0, MAX_SETS_LENGTH - 1), newSet]));
 }
 
 export async function deleteSet(id: SetData['id']) {
@@ -89,12 +92,23 @@ export async function setActiveSet(newActiveSet: SetData) {
 }
 
 // TODO: write test on this service
-export async function createNewActiveSet(card?: CardData) {
+export async function deleteActiveSet() {
+    const activeSetId = await getActiveSetId();
+
+    if (activeSetId === null) {
+        return;
+    }
+
+    await setActiveSetId('');
+}
+
+// TODO: write test on this service
+export async function createNewActiveSet(cards?: CardData[]) {
     const nowDate = new Date();
 
     const newSet: SetData = {
         id: String(nowDate.getTime()),
-        cards: card !== undefined ? [card] : [],
+        cards: cards !== undefined ? cards : [],
         createdAt: nowDate.toISOString(),
     };
 
