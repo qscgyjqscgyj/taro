@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 
 import { SearchInputProps } from './types';
 
+// TODO: Write test on the hook to test that it's filtering the data correctly
 export function useSearchInput(props: SearchInputProps) {
     const { onChange } = props;
 
