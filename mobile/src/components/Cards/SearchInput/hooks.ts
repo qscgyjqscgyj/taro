@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 import { SearchInputProps } from './types';
 
@@ -8,13 +8,10 @@ export function useSearchInput(props: SearchInputProps) {
 
     const [value, setValue] = useState<string>('');
 
-    const onChangeText = useCallback(
-        (text: string) => {
-            onChange(text);
-            setValue(text);
-        },
-        [onChange],
-    );
+    const onChangeText = (text: string) => {
+        onChange(text);
+        setValue(text);
+    };
 
     return {
         value,

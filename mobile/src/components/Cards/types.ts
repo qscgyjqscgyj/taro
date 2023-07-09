@@ -1,5 +1,5 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { CardData } from 'shared/types/cards';
 
-import { RootStackParamList } from 'src/components/App/types';
-
-export type CardsProps = NativeStackScreenProps<RootStackParamList, 'CardsList'>;
+export interface CardsProps {
+    onCardPress: (card: CardData) => void;
+}

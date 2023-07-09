@@ -2,56 +2,99 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { CardData, SetData } from 'shared/types/cards';
 
-import { createNewActiveSet, deleteActiveSet, getActiveSet } from 'src/services/storage/sets';
+import {
+    addCardToActiveSet,
+    createNewActiveSet,
+    deleteActiveSet,
+    getActiveSet,
+} from 'src/services/storage/sets';
 import { useAppContext } from 'src/services/store/context';
+import { useModal } from 'src/components/Modal/hooks';
 
 import { SetProps } from './types';
+
+type ModalComponentType = 'Card' | 'AddCard';
 
 // TODO: write tests on this hook
 export function useSet(props: SetProps) {
     const { params } = props.route;
 
-    const card = params?.card;
+    const cardParam = params?.card;
 
-    const [activeSet, setActiveSet] = useState<SetData | null>(params?.activeSet ?? null);
+    const [modalComponentType, setModalComponentType] = useState<ModalComponentType | undefined>();
+
+    const [activeSet, setActiveSet] = useState<SetData | undefined>(params?.activeSet ?? undefined);
+    const [activeCard, setActiveCard] = useState<CardData | undefined>();
 
     const { cards } = useAppContext();
 
-    const generateRandomSet = useCallback(async () => {
-        const randomCards = cards.sort(() => Math.random() - 0.5).slice(0, 5);
+    const { openModal, closeModal, isModalOpen } = useModal();
 
-        const newActiveSet = await createNewActiveSet(randomCards);
-
-        setActiveSet(newActiveSet);
-    }, [card]);
-
-    const clearActiveSet = useCallback(async () => {
-        await deleteActiveSet();
-        loadActiveSet();
+    const addCardPressHandler = useCallback(() => {
+        setModalComponentType('AddCard');
+        openModal();
     }, []);
 
-    const loadActiveSet = useCallback(() => {
-        const getOrCreateNewActiveSetAsync = async (c: CardData | undefined) => {
+    const addToSetHandler = async (cardData: CardData) => {
+        const currentActiveSet = await getActiveSet();
+
+        const updatedActiveSet =
+            currentActiveSet !== null
+                ? await addCardToActiveSet(cardData)
+                : await createNewActiveSet([cardData]);
+
+        setActiveSet(updatedActiveSet);
+        closeModal();
+    };
+
+    const onPressCardHandler = useCallback(
+        (card: CardData) => {
+            setActiveCard(card);
+            setModalComponentType('Card');
+            openModal();
+        },
+        [openModal],
+    );
+
+    const generateRandomSet = async () => {
+        const randomCards = cards.sort(() => Math.random() - 0.5).slice(0, 5);
+        const newActiveSet = await createNewActiveSet(randomCards);
+        setActiveSet(newActiveSet);
+    };
+
+    const clearActiveSet = async () => {
+        await deleteActiveSet();
+        loadActiveSet();
+    };
+
+    const loadActiveSet = () => {
+        const loadActiveSetAsync = async () => {
             const currentActiveSet = await getActiveSet();
 
-            if (currentActiveSet === null) {
-                const newActiveSet = await createNewActiveSet(c && [c]);
-                setActiveSet(newActiveSet);
-            } else {
+            if (currentActiveSet !== null) {
                 setActiveSet(currentActiveSet);
+            } else {
+                setActiveSet(undefined);
             }
         };
 
-        if (activeSet !== null) {
-            setActiveSet(activeSet);
-        } else {
-            getOrCreateNewActiveSetAsync(card);
-        }
-    }, [card, activeSet]);
+        loadActiveSetAsync();
+    };
 
     useEffect(() => {
         loadActiveSet();
-    }, [card, activeSet]);
+    }, [cardParam?.name, activeSet?.id]);
 
-    return { activeSet, clearActiveSet, generateRandomSet };
+    return {
+        activeSet,
+        activeCard,
+        onPressCardHandler,
+        addCardPressHandler,
+        addToSetHandler,
+        clearActiveSet,
+        generateRandomSet,
+        closeModal,
+        isModalOpen,
+        modalComponentType,
+    };
 }

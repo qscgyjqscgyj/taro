@@ -47,7 +47,7 @@ export function CardsList(props: CardsListProps) {
                             <View
                                 style={[
                                     styles.emptyCardWrpper,
-                                    cardWidth ? { maxWidth: cardWidth } : {},
+                                    cardWidth ? { maxWidth: cardWidth } : { maxWidth: 100 },
                                 ]}
                             >
                                 <Image style={styles.emptyCardAddIcon} source={whitePlusIcon} />

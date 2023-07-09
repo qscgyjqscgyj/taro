@@ -3,15 +3,13 @@ import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
 
-import { styles } from './styles';
 import { CardProps } from './types';
 import { useCard } from './hooks';
 import { chevronDownIcon } from './images';
+import { styles } from './styles';
 
 export function Card(props: CardProps) {
-    const { route } = props;
-
-    const { card } = route.params;
+    const { card } = props;
 
     const {
         reversedValue,

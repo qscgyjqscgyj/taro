@@ -6,14 +6,14 @@ import { I18nextProvider } from 'react-i18next';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Cards } from 'src/components/Cards';
-import { Card } from 'src/components/Cards/Card';
 import { Header } from 'src/components/Header';
 import { Set } from 'src/components/Set';
 import i18n from 'src/services/localization/i18n';
 import { useTranslation } from 'src/services/localization/hooks';
 import { AppContextProvider } from 'src/services/store';
 import { MainLinearGradient } from 'src/components/App/LinearGradient';
+import { CardScreen } from 'src/screens/CardScreen';
+import { CardsScreen } from 'src/screens/CardsScreen';
 
 import { RootStackParamList } from './types';
 import { useApp } from './hooks';
@@ -51,11 +51,11 @@ export function App() {
                                     animation: 'none',
                                 }}
                             >
-                                <Stack.Screen name={'CardsList'} component={Cards} />
+                                <Stack.Screen name={'CardsList'} component={CardsScreen} />
 
                                 <Stack.Screen
                                     name={'CardDetails'}
-                                    component={Card}
+                                    component={CardScreen}
                                     options={{
                                         title: t('cardDetailsTitle'),
                                     }}

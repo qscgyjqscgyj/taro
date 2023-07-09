@@ -16,13 +16,15 @@ function NavigationHeader(props: HeaderProps) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.leftBlock}>
-                {back ? (
-                    <TouchableOpacity onPress={onBackPressHandler}>
+            {back ? (
+                <TouchableOpacity onPress={onBackPressHandler}>
+                    <View style={styles.leftBlock}>
                         <Image source={backIcon} />
-                    </TouchableOpacity>
-                ) : null}
-            </View>
+                    </View>
+                </TouchableOpacity>
+            ) : (
+                <View style={styles.leftBlock}></View>
+            )}
 
             <View style={styles.centerBlock}>
                 <Text style={styles.centerBlockText}>{options.title}</Text>

@@ -1,13 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-
-import { useAppContext } from 'src/services/store/context';
+import { useMemo, useState } from 'react';
 
 import { CardProps } from './types';
 
 export function useCard(props: CardProps) {
-    const { route } = props;
-
-    const { card } = route.params;
+    const { card } = props;
 
     const [reversedValue, setReversedValue] = useState<boolean>(false);
     const [openedCardDescriptionIndeces, setOpenedCardDescriptionIndeces] = useState<Set<number>>(
@@ -24,13 +20,11 @@ export function useCard(props: CardProps) {
         });
     }, [card, reversedValue]);
 
-    const { dispatch } = useAppContext();
-
-    const reversedValueToggle = useCallback(() => {
+    const reversedValueToggle = () => {
         setReversedValue((prevState) => !prevState);
-    }, []);
+    };
 
-    const toggleCardDescriptionAccordion = useCallback((index: number) => {
+    const toggleCardDescriptionAccordion = (index: number) => {
         setOpenedCardDescriptionIndeces((prevState) => {
             const newState = new Set(prevState);
 
@@ -42,15 +36,7 @@ export function useCard(props: CardProps) {
 
             return newState;
         });
-    }, []);
-
-    useEffect(() => {
-        dispatch({ type: 'SET_ACTIVE_CARD', payload: card });
-
-        return () => {
-            dispatch({ type: 'SET_ACTIVE_CARD', payload: undefined });
-        };
-    }, [card]);
+    };
 
     return {
         reversedValue,

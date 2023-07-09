@@ -1,52 +1,57 @@
 {
-    "expo": {
-        "name": "taro",
-        "slug": "taro",
-        "version": "1.0.0",
-        "orientation": "portrait",
-        "icon": "./assets/icon.png",
-        "userInterfaceStyle": "light",
-        "splash": {
-            "image": "./assets/splash.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#ffffff"
-        },
-        "updates": {
-            "fallbackToCacheTimeout": 0,
-            "url": "https://u.expo.dev/f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
-        },
-        "assetBundlePatterns": ["**/*"],
-        "ios": {
-            "supportsTablet": true
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#FFFFFF"
-            }
-        },
-        "web": {
-            "favicon": "./assets/favicon.png"
-        },
-        "extra": {
-            "eas": {
-                "projectId": "f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
-            }
-        },
-        "runtimeVersion": {
-            "policy": "sdkVersion"
-        }
+  "expo": {
+    "name": "taro",
+    "slug": "taro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "$env": {
-        "development": {
-            "extra": {
-                "API_BASE_URL": "https://api.example.dev"
-            }
-        },
-        "production": {
-            "extra": {
-                "API_BASE_URL": "https://api.example.com"
-            }
-        }
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f16fcf10-c9fb-4100-a068-6dbbdbcb3641"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "plugins": [
+      "expo-localization"
+    ]
+  },
+  "$env": {
+    "development": {
+      "extra": {
+        "API_BASE_URL": "https://api.example.dev"
+      }
+    },
+    "production": {
+      "extra": {
+        "API_BASE_URL": "https://api.example.com"
+      }
     }
+  }
 }

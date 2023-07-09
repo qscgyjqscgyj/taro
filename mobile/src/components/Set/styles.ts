@@ -30,4 +30,17 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         color: colors.purpleButtonText,
     },
+
+    modalSetContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        paddingTop: 50,
+    },
+    moadlSetCloseIconWrapper: {
+        marginBottom: 20,
+        paddingLeft: 20,
+        paddingRight: 40,
+    },
 });

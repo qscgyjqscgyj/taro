@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     container: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
         paddingTop: 16,
         paddingBottom: 16,
@@ -18,7 +18,10 @@ export const styles = StyleSheet.create({
     },
 
     leftBlock: {
-        padding: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 28,
+        paddingRight: 10,
     },
     leftBlockText: {
         textAlign: 'left',
@@ -37,7 +40,10 @@ export const styles = StyleSheet.create({
     },
 
     rightBlock: {
-        padding: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 10,
+        paddingRight: 28,
     },
     rightBlockText: {
         textAlign: 'right',
