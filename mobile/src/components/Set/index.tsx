@@ -17,6 +17,7 @@ export function Set(props: SetProps) {
         onPressCardHandler,
         addCardPressHandler,
         addToSetHandler,
+        onCardDeletePressHandler,
         clearActiveSet,
         generateRandomSet,
         closeModal,
@@ -35,11 +36,12 @@ export function Set(props: SetProps) {
                     </TouchableOpacity>
                 </View>
 
-                <ScrollView style={{ marginBottom: 150 }}>
+                <ScrollView style={styles.cardsListScrollWrapper}>
                     <CardsList
                         cards={activeSet?.cards ?? []}
                         onPressCard={onPressCardHandler}
                         addCard={addCardPressHandler}
+                        deleteCard={onCardDeletePressHandler}
                     />
 
                     <View style={styles.buttonWrapper}>

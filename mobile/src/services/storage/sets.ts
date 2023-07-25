@@ -126,9 +126,32 @@ export async function addCardToActiveSet(card: CardData) {
         return;
     }
 
+    const isCardAlreadyInSet = activeSet.cards.some((c) => c.name === card.name);
+    if (isCardAlreadyInSet) {
+        return activeSet;
+    }
+
     const newSet = {
         ...activeSet,
         cards: [...activeSet.cards, card],
+    };
+
+    await setSet(newSet);
+
+    return newSet;
+}
+
+// TODO: write test on this service
+export async function removeCardFromActiveSet(card: CardData) {
+    const activeSet = await getActiveSet();
+
+    if (activeSet === null) {
+        return;
+    }
+
+    const newSet = {
+        ...activeSet,
+        cards: activeSet.cards.filter((c) => c.name !== card.name),
     };
 
     await setSet(newSet);

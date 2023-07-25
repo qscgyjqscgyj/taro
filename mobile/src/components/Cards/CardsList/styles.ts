@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { colors } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
+        paddingTop: 16,
         paddingLeft: 14,
         paddingRight: 14,
     },
@@ -17,8 +18,12 @@ export const styles = StyleSheet.create({
         width: '33%',
         flexDirection: 'column',
     },
-    cardImageWrapper: {
+    cardImageContainer: {
         marginBottom: 8,
+    },
+    cardImageWrapper: {
+        position: 'relative',
+        zIndex: 0,
     },
     cardImage: {
         width: 'auto',
@@ -56,5 +61,22 @@ export const styles = StyleSheet.create({
         fontFamily: fonts.primary,
         fontSize: 12,
         color: colors.whiteText,
+    },
+
+    deleteIconWrapper: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        backgroundColor: colors.purpleButtonBackground,
+        borderRadius: 50,
+        padding: 5,
+        top: -15,
+        right: 5,
+        zIndex: 1,
+        elevation: Platform.OS === 'android' ? 50 : 0,
+    },
+    deleteIcon: {
+        transform: [{ rotate: '45deg' }],
     },
 });

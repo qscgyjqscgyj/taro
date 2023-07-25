@@ -1,37 +1,42 @@
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 
-import { CardData } from 'shared/types/cards';
-
 import { CachedImage } from 'src/components/CachedImage';
 
 import { whitePlusIcon } from './images';
 import { useCardsList } from './hooks';
+import { CardsListProps } from './types';
 import { styles } from './styles';
 
-interface CardsListProps {
-    cards: CardData[];
-    onPressCard: (card: CardData) => void;
-    addCard?: () => void;
-    deleteCard?: (card: CardData) => void;
-}
-
 export function CardsList(props: CardsListProps) {
-    const { cards, onPressCard, addCard } = props;
+    const { cards, addCard, deleteCard } = props;
 
-    const { cardWidth, handleCardWrapperLayout } = useCardsList();
+    const { cardWidth, handleCardWrapperLayout, onCardPressHandler, onCardDeletePressHandler } =
+        useCardsList(props);
 
     return (
         <View style={styles.cardsWrapper}>
-            {cards.map((card, cardIndex) => (
-                <View key={`card-${cardIndex}`} style={styles.cardWrapper}>
-                    <View style={styles.cardImageWrapper}>
-                        <TouchableOpacity onPress={() => onPressCard(card)}>
-                            <CachedImage
-                                url={card.image}
-                                style={styles.cardImage}
-                                onLayout={handleCardWrapperLayout}
-                            />
-                        </TouchableOpacity>
+            {cards.map((card) => (
+                <View key={card.name} style={styles.cardWrapper}>
+                    <View style={styles.cardImageContainer}>
+                        {deleteCard && (
+                            <View style={styles.deleteIconWrapper}>
+                                <TouchableOpacity
+                                    onPress={(event) => onCardDeletePressHandler(event, card)}
+                                >
+                                    <Image style={styles.deleteIcon} source={whitePlusIcon} />
+                                </TouchableOpacity>
+                            </View>
+                        )}
+
+                        <View style={styles.cardImageWrapper}>
+                            <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
+                                <CachedImage
+                                    url={card.image}
+                                    style={styles.cardImage}
+                                    onLayout={handleCardWrapperLayout}
+                                />
+                            </TouchableOpacity>
+                        </View>
                     </View>
 
                     <View style={styles.cardNameWrapper}>

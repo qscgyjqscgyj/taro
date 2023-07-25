@@ -3,7 +3,7 @@ import { CardData } from 'shared/types/cards';
 import { getFullHost } from 'src/services';
 
 export const swordsFour: CardData = {
-    name: 'ТРОЙКА МЕЧЕЙ',
+    name: 'ЧЕТВЕРКА МЕЧЕЙ',
     altNames: ['четверка мечей', 'четверка шпаг', 'четвёрка мечей', 'четвёрка шпаг'],
     arcana: { type: 'minor', suit: 'swords' },
     subTitle: 'Отдых',

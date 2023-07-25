@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
         paddingLeft: 78,
         paddingRight: 78,
         marginTop: 29,
-        marginBottom: 29,
     },
     purpleButton: {
         display: 'flex',
@@ -42,5 +41,10 @@ export const styles = StyleSheet.create({
         marginBottom: 20,
         paddingLeft: 20,
         paddingRight: 40,
+    },
+
+    cardsListScrollWrapper: {
+        marginBottom: 150,
+        paddingTop: 20,
     },
 });

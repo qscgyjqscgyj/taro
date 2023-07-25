@@ -7,6 +7,7 @@ import {
     createNewActiveSet,
     deleteActiveSet,
     getActiveSet,
+    removeCardFromActiveSet,
 } from 'src/services/storage/sets';
 import { useAppContext } from 'src/services/store/context';
 import { useModal } from 'src/components/Modal/hooks';
@@ -37,6 +38,13 @@ export function useSet(props: SetProps) {
 
     const addToSetHandler = async (cardData: CardData) => {
         const currentActiveSet = await getActiveSet();
+
+        // TODO: show error message in the card already in set in the modal
+        const isCardAlreadyInSet = currentActiveSet?.cards.some((c) => c.name === cardData.name);
+        if (isCardAlreadyInSet) {
+            closeModal();
+            return;
+        }
 
         const updatedActiveSet =
             currentActiveSet !== null
@@ -81,6 +89,11 @@ export function useSet(props: SetProps) {
         loadActiveSetAsync();
     };
 
+    const onCardDeletePressHandler = async (card: CardData) => {
+        const updatedActiveSet = await removeCardFromActiveSet(card);
+        setActiveSet(updatedActiveSet);
+    };
+
     useEffect(() => {
         loadActiveSet();
     }, [cardParam?.name, activeSet?.id]);
@@ -91,6 +104,7 @@ export function useSet(props: SetProps) {
         onPressCardHandler,
         addCardPressHandler,
         addToSetHandler,
+        onCardDeletePressHandler,
         clearActiveSet,
         generateRandomSet,
         closeModal,
