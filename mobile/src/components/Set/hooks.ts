@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { CardData, SetData } from 'shared/types/cards';
+import { SetCardData, SetData } from 'shared/types/cards';
 
 import {
     addCardToActiveSet,
@@ -14,7 +14,7 @@ import { useModal } from 'src/components/Modal/hooks';
 
 import { SetProps } from './types';
 
-type ModalComponentType = 'Card' | 'AddCard';
+type ModalComponentType = 'Card' | 'AddCard' | 'GenerateRandomSet';
 
 // TODO: write tests on this hook
 export function useSet(props: SetProps) {
@@ -25,7 +25,7 @@ export function useSet(props: SetProps) {
     const [modalComponentType, setModalComponentType] = useState<ModalComponentType | undefined>();
 
     const [activeSet, setActiveSet] = useState<SetData | undefined>(params?.activeSet ?? undefined);
-    const [activeCard, setActiveCard] = useState<CardData | undefined>();
+    const [activeCard, setActiveCard] = useState<SetCardData | undefined>();
 
     const { cards } = useAppContext();
 
@@ -36,7 +36,7 @@ export function useSet(props: SetProps) {
         openModal();
     }, []);
 
-    const addToSetHandler = async (cardData: CardData) => {
+    const addToSetHandler = async (cardData: SetCardData) => {
         const currentActiveSet = await getActiveSet();
 
         // TODO: show error message in the card already in set in the modal
@@ -56,7 +56,7 @@ export function useSet(props: SetProps) {
     };
 
     const onPressCardHandler = useCallback(
-        (card: CardData) => {
+        (card: SetCardData) => {
             setActiveCard(card);
             setModalComponentType('Card');
             openModal();
@@ -64,10 +64,17 @@ export function useSet(props: SetProps) {
         [openModal],
     );
 
-    const generateRandomSet = async () => {
-        const randomCards = cards.sort(() => Math.random() - 0.5).slice(0, 5);
-        const newActiveSet = await createNewActiveSet(randomCards);
+    const generateRandomSetModalOpen = async () => {
+        setModalComponentType('GenerateRandomSet');
+        openModal();
+    };
+
+    const generateRandomSet = async (cardsCount: number) => {
+        const randomCards = cards.sort(() => Math.random() - 0.5).slice(0, cardsCount);
+
+        const newActiveSet = await createNewActiveSet(randomCards, true);
         setActiveSet(newActiveSet);
+        closeModal();
     };
 
     const clearActiveSet = async () => {
@@ -89,7 +96,7 @@ export function useSet(props: SetProps) {
         loadActiveSetAsync();
     };
 
-    const onCardDeletePressHandler = async (card: CardData) => {
+    const onCardDeletePressHandler = async (card: SetCardData) => {
         const updatedActiveSet = await removeCardFromActiveSet(card);
         setActiveSet(updatedActiveSet);
     };
@@ -106,6 +113,7 @@ export function useSet(props: SetProps) {
         addToSetHandler,
         onCardDeletePressHandler,
         clearActiveSet,
+        generateRandomSetModalOpen,
         generateRandomSet,
         closeModal,
         isModalOpen,

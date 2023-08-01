@@ -1,7 +1,5 @@
 import { Modal } from 'react-native';
 
-import { MainLinearGradient } from 'src/components/App/LinearGradient';
-
 import { ModalProps } from './types';
 
 export function ModalComponent(props: ModalProps) {
@@ -14,9 +12,7 @@ export function ModalComponent(props: ModalProps) {
             transparent={true}
             onRequestClose={closeModal}
         >
-            <MainLinearGradient>
-                <Component {...props} closeModal={closeModal} />
-            </MainLinearGradient>
+            <Component {...props} closeModal={closeModal} />
         </Modal>
     );
 }

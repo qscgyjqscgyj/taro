@@ -3,9 +3,9 @@ import { useMemo, useState } from 'react';
 import { CardProps } from './types';
 
 export function useCard(props: CardProps) {
-    const { card } = props;
+    const { card, direction } = props;
 
-    const [reversedValue, setReversedValue] = useState<boolean>(false);
+    const [reversedValue, setReversedValue] = useState<boolean>(direction === 'reversed');
     const [openedCardDescriptionIndeces, setOpenedCardDescriptionIndeces] = useState<Set<number>>(
         new Set([0]),
     );

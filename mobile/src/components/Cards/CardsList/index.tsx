@@ -1,17 +1,18 @@
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
+import { CardData, SetCardData } from 'shared/types/cards';
 
 import { whitePlusIcon } from './images';
 import { useCardsList } from './hooks';
 import { CardsListProps } from './types';
 import { styles } from './styles';
 
-export function CardsList(props: CardsListProps) {
+export function CardsList<CD extends CardData | SetCardData>(props: CardsListProps<CD>) {
     const { cards, addCard, deleteCard } = props;
 
     const { cardWidth, handleCardWrapperLayout, onCardPressHandler, onCardDeletePressHandler } =
-        useCardsList(props);
+        useCardsList<CD>(props);
 
     return (
         <View style={styles.cardsWrapper}>
@@ -32,7 +33,12 @@ export function CardsList(props: CardsListProps) {
                             <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
                                 <CachedImage
                                     url={card.image}
-                                    style={styles.cardImage}
+                                    style={[
+                                        styles.cardImage,
+                                        'direction' in card && card.direction === 'reversed'
+                                            ? styles.reversedImage
+                                            : {},
+                                    ]}
                                     onLayout={handleCardWrapperLayout}
                                 />
                             </TouchableOpacity>

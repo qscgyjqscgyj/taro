@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: 16,
         lineHeight: 19,
-        color: colors.whiteText,
+        color: pallete.white,
     },
     cardSubTitle: {
         fontFamily: fonts.light,
@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
         fontWeight: '300',
         fontSize: 16,
         lineHeight: 19,
-        color: colors.whiteText,
+        color: pallete.white,
     },
     cardDirectionWrapper: {
         width: '100%',
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: colors.switcherBackground,
+        backgroundColor: pallete.grey,
         borderRadius: 34,
         paddingTop: 3,
         paddingBottom: 3,
@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
         borderRadius: 34,
         paddingTop: 7,
         paddingBottom: 7,
-        backgroundColor: colors.switcherActiveBackground,
+        backgroundColor: pallete.greyLight,
     },
 
     descriptionWrapper: {
@@ -90,7 +90,7 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         marginBottom: 16,
-        borderBottomColor: colors.whiteText,
+        borderBottomColor: pallete.white,
         borderBottomWidth: 1,
     },
     descriptionTitleWrapper: {
@@ -106,7 +106,7 @@ export const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: 14,
         lineHeight: 17,
-        color: colors.whiteText,
+        color: pallete.white,
     },
     dropdownReverseChevronIcon: {
         transform: [{ rotate: '180deg' }],
@@ -125,7 +125,7 @@ export const styles = StyleSheet.create({
         fontWeight: '400',
         fontSize: 14,
         lineHeight: 17,
-        color: colors.whiteText,
+        color: pallete.white,
     },
     bullet: {
         marginRight: 10,
@@ -133,6 +133,6 @@ export const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: 14,
         lineHeight: 17,
-        color: colors.whiteText,
+        color: pallete.white,
     },
 });

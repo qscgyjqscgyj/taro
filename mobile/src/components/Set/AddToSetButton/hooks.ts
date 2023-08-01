@@ -4,7 +4,7 @@ import { isTimeDifferenceGreaterThanHours } from 'shared/utils/date';
 
 import { HeaderProps } from 'src/components/Header/types';
 import { useModal } from 'src/components/Modal/hooks';
-import { addCardToActiveSet, getActiveSet } from 'src/services/storage/sets';
+import { addCardToActiveSet, createNewActiveSet, getActiveSet } from 'src/services/storage/sets';
 import { useAppContext } from 'src/services/store/context';
 
 // TODO: write tests on this hook
@@ -15,8 +15,10 @@ export function useAddToSetButton(props: HeaderProps) {
 
     const { openModal, closeModal, isModalOpen } = useModal();
 
-    const createNewSetHandler = useCallback(() => {
-        navigation.navigate('Set', { card: activeCard });
+    const createNewSetHandler = useCallback(async () => {
+        const newActiveSet = await createNewActiveSet(activeCard ? [activeCard] : undefined);
+
+        navigation.navigate('Set', { card: activeCard, activeSet: newActiveSet });
         closeModal();
     }, [activeCard, navigation]);
 
@@ -42,6 +44,8 @@ export function useAddToSetButton(props: HeaderProps) {
             } else {
                 return await addActiveCardToActiveSetHandler();
             }
+        } else {
+            await createNewSetHandler();
         }
 
         return navigation.navigate('Set', { card: activeCard });

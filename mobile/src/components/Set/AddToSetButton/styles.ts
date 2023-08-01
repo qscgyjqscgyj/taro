@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: colors.purpleButtonBackground,
+        backgroundColor: pallete.purpleLight,
         borderRadius: 7,
         padding: 10,
         width: 70,
@@ -20,9 +20,8 @@ export const styles = StyleSheet.create({
     },
     text: {
         fontFamily: fonts.primary,
-        color: colors.purpleButtonText,
+        color: pallete.purpleDark,
         fontWeight: '400',
         fontSize: 10,
-        // lineHeight: 12,
     },
 });

@@ -8,7 +8,7 @@ export function CardScreen(props: CardScreenProps) {
 
     useCardScreen(props);
 
-    const { card } = route.params;
+    const { card, direction } = route.params;
 
-    return <Card card={card} />;
+    return <Card card={card} direction={direction} />;
 }

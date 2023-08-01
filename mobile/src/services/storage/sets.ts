@@ -103,7 +103,7 @@ export async function deleteActiveSet() {
 }
 
 // TODO: write test on this service
-export async function createNewActiveSet(cards?: CardData[]) {
+export async function createNewActiveSet(cards?: CardData[], randomSet?: boolean) {
     const nowDate = new Date();
 
     const newSet: SetData = {
@@ -111,6 +111,12 @@ export async function createNewActiveSet(cards?: CardData[]) {
         cards: cards !== undefined ? cards : [],
         createdAt: nowDate.toISOString(),
     };
+
+    if (randomSet) {
+        for (let card of newSet.cards) {
+            card.direction = Math.random() > 0.5 ? 'normal' : 'reversed';
+        }
+    }
 
     await setSet(newSet);
     await setActiveSet(newSet);

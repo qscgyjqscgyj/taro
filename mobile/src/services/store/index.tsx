@@ -9,7 +9,6 @@ function reducer(state: AppContextProps, action: Action) {
             return { ...state, cards: action.payload };
         case 'SET_ACTIVE_CARD':
             return { ...state, activeCard: action.payload };
-
         default:
             return state;
     }

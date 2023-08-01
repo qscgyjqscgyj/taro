@@ -1,7 +1,7 @@
-import { CardData, SetData } from 'shared/types/cards';
+import { CardData, CardDescription, SetData } from 'shared/types/cards';
 
 export type RootStackParamList = {
     CardsList: undefined;
-    CardDetails: { card: CardData };
+    CardDetails: { card: CardData; direction?: CardDescription['direction'] };
     Set: { card: CardData; activeSet: SetData | null } | undefined;
 } & Record<string, object | undefined>;

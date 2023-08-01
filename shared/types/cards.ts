@@ -26,9 +26,13 @@ export interface CardDescription {
     textData: string[];
 }
 
+export interface SetCardData extends CardData {
+    direction?: CardDescription['direction'];
+}
+
 export interface SetData {
     id: string;
-    cards: CardData[];
+    cards: SetCardData[];
     createdAt: string;
     notes?: string;
     updatedAt?: string;

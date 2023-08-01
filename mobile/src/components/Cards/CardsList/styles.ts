@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from 'react-native';
 
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -30,6 +30,10 @@ export const styles = StyleSheet.create({
         height: 150,
         resizeMode: 'contain',
     },
+    reversedImage: {
+        transform: [{ rotate: '180deg' }],
+    },
+
     cardNameWrapper: {
         marginBottom: 17,
     },
@@ -37,7 +41,7 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: fonts.primary,
         fontSize: 10,
-        color: colors.headerText,
+        color: pallete.purpleLight,
     },
     emptyCardWrpper: {
         alignSelf: 'center',
@@ -50,7 +54,7 @@ export const styles = StyleSheet.create({
         paddingLeft: 15,
         paddingRight: 15,
         borderWidth: 1,
-        borderColor: colors.addCardButtonBordder,
+        borderColor: pallete.grey,
         borderStyle: 'dashed',
     },
     emptyCardAddIcon: {
@@ -60,7 +64,7 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: fonts.primary,
         fontSize: 12,
-        color: colors.whiteText,
+        color: pallete.white,
     },
 
     deleteIconWrapper: {
@@ -68,7 +72,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        backgroundColor: colors.purpleButtonBackground,
+        backgroundColor: pallete.purpleLight,
         borderRadius: 50,
         padding: 5,
         top: -15,

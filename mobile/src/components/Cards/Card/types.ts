@@ -1,5 +1,6 @@
-import { CardData } from 'shared/types/cards';
+import { CardData, CardDescription } from 'shared/types/cards';
 
 export interface CardProps {
     card: CardData;
+    direction?: CardDescription['direction'];
 }

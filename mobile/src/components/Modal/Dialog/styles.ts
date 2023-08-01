@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        backgroundColor: colors.dialogHeaderBackground,
+        backgroundColor: pallete.white,
         borderTopLeftRadius: 13,
         borderTopRightRadius: 13,
     },
@@ -27,13 +27,13 @@ export const styles = StyleSheet.create({
         paddingBottom: 40,
         paddingLeft: 56,
         paddingRight: 56,
-        backgroundColor: colors.dialogHeaderBackground,
+        backgroundColor: pallete.white,
     },
     headerText: {
         fontFamily: fonts.primary,
         fontSize: 16,
         lineHeight: 19,
-        color: colors.purpleButtonText,
+        color: pallete.purpleDark,
         textAlign: 'center',
     },
 
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 26,
         paddingRight: 26,
-        backgroundColor: colors.purpleButtonBackground,
+        backgroundColor: pallete.purpleLight,
     },
     leftButton: {
         borderBottomLeftRadius: 13,
@@ -61,13 +61,13 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 13,
         borderLeftWidth: 1,
         borderSize: 12,
-        borderColor: colors.purpleButtonText,
+        borderColor: pallete.purpleDark,
     },
     controlText: {
         fontFamily: fonts.primary,
         fontSize: 12,
         lineHeight: 15,
-        color: colors.purpleButtonText,
+        color: pallete.purpleDark,
         textAlign: 'center',
     },
 });

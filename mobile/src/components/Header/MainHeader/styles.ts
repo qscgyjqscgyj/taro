@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         paddingBottom: 16,
         borderBottomColor: '#000',
         borderBottomWidth: 1,
-        backgroundColor: colors.headerBackground,
+        backgroundColor: pallete.purpleDark,
         height: 98,
     },
     menuItem: {
@@ -29,6 +29,6 @@ export const styles = StyleSheet.create({
         fontWeight: '400',
         fontSize: 12,
         lineHeight: 15,
-        color: colors.headerText,
+        color: pallete.purpleLight,
     },
 });

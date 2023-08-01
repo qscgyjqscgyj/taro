@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { colors } from 'src/styles/colors';
+import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         fontFamily: fonts.primary,
         fontWeight: '400',
         fontSize: 16,
-        backgroundColor: colors.searchInputBackground,
+        backgroundColor: pallete.purpleLighter,
         borderRadius: 8,
         paddingLeft: 25,
     },

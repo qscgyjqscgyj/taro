@@ -1,4 +1,4 @@
-const pallete = {
+export const pallete = {
     black: '#000000',
     white: '#FFFFFF',
     purple: '#969BDE',
@@ -7,19 +7,5 @@ const pallete = {
     purpleLighter: '#d9d9d994',
     grey: '#d9d9d999',
     greyLight: '#fffdfdc2',
-};
-
-export const colors = {
-    headerBackground: pallete.purpleDark,
-    headerText: pallete.purpleLight,
-    purpleButtonBackground: pallete.purpleLight,
-    purpleButtonText: pallete.purpleDark,
-    searchInputBackground: pallete.purpleLighter,
-    whiteText: pallete.white,
-    switcherBackground: pallete.grey,
-    switcherActiveBackground: pallete.greyLight,
-    dialogHeaderBackground: pallete.white,
-    dialogButtonText: pallete.purpleLight,
-    dialogActiveButtonBackground: pallete.purpleDark,
-    addCardButtonBordder: pallete.grey,
+    opacityBlack: 'rgba(0, 0, 0, 0.5)',
 };

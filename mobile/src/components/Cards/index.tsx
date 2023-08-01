@@ -7,6 +7,7 @@ import { SearchInput } from 'src/components/Cards/SearchInput';
 import { CardsList } from 'src/components/Cards/CardsList';
 
 import { CardsProps } from './types';
+import { CardData } from 'shared/types/cards';
 
 export function Cards(props: CardsProps) {
     const { onCardPress } = props;
@@ -31,7 +32,7 @@ export function Cards(props: CardsProps) {
                 suiteTypeFilterHandler={suiteTypeFilterHandler}
             />
 
-            <CardsList cards={filteredCards} onPressCard={onCardPress} />
+            <CardsList<CardData> cards={filteredCards} onPressCard={onCardPress} />
         </ScrollView>
     );
 }

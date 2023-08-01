@@ -7,7 +7,7 @@ import { CardsListProps } from './types';
 
 const CARD_WIDTH_OFFSET = 30;
 
-export function useCardsList(props: CardsListProps) {
+export function useCardsList<CD>(props: CardsListProps<CD>) {
     const { onPressCard, deleteCard } = props;
 
     const [cardWidth, setCardWidth] = useState<number | undefined>();

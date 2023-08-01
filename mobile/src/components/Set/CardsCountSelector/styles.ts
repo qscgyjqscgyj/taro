@@ -4,14 +4,37 @@ import { pallete } from 'src/styles/colors';
 import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
-    container: {},
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        paddingLeft: 47,
+        paddingRight: 47,
+    },
+
+    headerWrapper: {
+        marginBottom: 10,
+    },
+    headerText: {
+        fontFamily: fonts.primary,
+        fontSize: 16,
+        fontWeight: '400',
+        textAlign: 'center',
+        color: pallete.purpleDark,
+    },
+
+    pickerWrapper: {
+        marginBottom: 10,
+    },
+    picker: {
+        backgroundColor: pallete.purpleLight,
+    },
+
     buttonWrapper: {
-        paddingLeft: 78,
-        paddingRight: 78,
         marginTop: 10,
         marginBottom: 10,
     },
-    purpleButton: {
+    button: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -21,35 +44,14 @@ export const styles = StyleSheet.create({
         paddingLeft: 32,
         paddingRight: 32,
         borderRadius: 7,
-        backgroundColor: pallete.purpleLight,
+        marginBottom: 10,
+        backgroundColor: pallete.purpleDark,
     },
     buttonText: {
         fontFamily: fonts.primary,
         fontSize: 16,
         fontWeight: '400',
         textAlign: 'center',
-        color: pallete.purpleDark,
-    },
-
-    modalSetContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end',
-        paddingTop: 50,
-    },
-    moadlSetCloseIconWrapper: {
-        marginBottom: 20,
-        paddingLeft: 20,
-        paddingRight: 40,
-    },
-
-    cardsListScrollWrapper: {
-        height: '100%',
-        paddingTop: 10,
-    },
-    cardsListWrapper: {
-        paddingTop: 10,
-        marginBottom: 100,
+        color: pallete.purpleLight,
     },
 });

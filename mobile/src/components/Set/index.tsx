@@ -2,13 +2,17 @@ import { Image, Pressable, ScrollView, Text, TouchableOpacity, View } from 'reac
 
 import { CardsList } from 'src/components/Cards/CardsList';
 import { ModalComponent } from 'src/components/Modal';
+import { HalfScreenDialog } from 'src/components/Modal/HalfScreenDialog';
 import { Cards } from 'src/components/Cards';
 import { Card } from 'src/components/Cards/Card';
 import { closeIcon } from 'src/components/Modal/images';
+import { MainLinearGradient } from 'src/components/App/LinearGradient';
+import { CardsCountSelector } from 'src/components/Set/CardsCountSelector';
 
 import { useSet } from './hooks';
 import { SetProps } from './types';
 import { styles } from './styles';
+import { SetCardData } from 'shared/types/cards';
 
 export function Set(props: SetProps) {
     const {
@@ -19,6 +23,7 @@ export function Set(props: SetProps) {
         addToSetHandler,
         onCardDeletePressHandler,
         clearActiveSet,
+        generateRandomSetModalOpen,
         generateRandomSet,
         closeModal,
         isModalOpen,
@@ -28,21 +33,16 @@ export function Set(props: SetProps) {
     return (
         <>
             <View style={styles.container}>
-                <View style={styles.buttonWrapper}>
-                    <TouchableOpacity onPress={generateRandomSet}>
-                        <View style={styles.purpleButton}>
-                            <Text style={styles.buttonText}>Сгенерировать случайный расклад</Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
-
                 <ScrollView style={styles.cardsListScrollWrapper}>
-                    <CardsList
-                        cards={activeSet?.cards ?? []}
-                        onPressCard={onPressCardHandler}
-                        addCard={addCardPressHandler}
-                        deleteCard={onCardDeletePressHandler}
-                    />
+                    <View style={styles.buttonWrapper}>
+                        <TouchableOpacity onPress={generateRandomSetModalOpen}>
+                            <View style={styles.purpleButton}>
+                                <Text style={styles.buttonText}>
+                                    Сгенерировать случайный расклад
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
 
                     <View style={styles.buttonWrapper}>
                         <TouchableOpacity onPress={clearActiveSet}>
@@ -51,27 +51,55 @@ export function Set(props: SetProps) {
                             </View>
                         </TouchableOpacity>
                     </View>
+
+                    <View style={styles.cardsListWrapper}>
+                        <CardsList<SetCardData>
+                            cards={activeSet?.cards ?? []}
+                            onPressCard={onPressCardHandler}
+                            addCard={addCardPressHandler}
+                            deleteCard={onCardDeletePressHandler}
+                        />
+                    </View>
                 </ScrollView>
             </View>
 
             <ModalComponent
-                component={() => (
-                    <View style={styles.modalSetContainer}>
-                        <View style={styles.moadlSetCloseIconWrapper}>
-                            <Pressable onPress={closeModal}>
-                                <Image source={closeIcon} />
-                            </Pressable>
-                        </View>
+                component={() => {
+                    if (modalComponentType === 'AddCard' || modalComponentType === 'Card') {
+                        return (
+                            <MainLinearGradient>
+                                <View style={styles.modalSetContainer}>
+                                    <View style={styles.moadlSetCloseIconWrapper}>
+                                        <Pressable onPress={closeModal}>
+                                            <Image source={closeIcon} />
+                                        </Pressable>
+                                    </View>
 
-                        {modalComponentType === 'Card' && activeCard !== undefined ? (
-                            <Card card={activeCard} />
-                        ) : null}
+                                    {modalComponentType === 'Card' && activeCard !== undefined ? (
+                                        <Card card={activeCard} direction={activeCard.direction} />
+                                    ) : null}
 
-                        {modalComponentType === 'AddCard' ? (
-                            <Cards onCardPress={addToSetHandler} />
-                        ) : null}
-                    </View>
-                )}
+                                    {modalComponentType === 'AddCard' ? (
+                                        <Cards onCardPress={addToSetHandler} />
+                                    ) : null}
+                                </View>
+                            </MainLinearGradient>
+                        );
+                    }
+
+                    if (modalComponentType === 'GenerateRandomSet') {
+                        return (
+                            <HalfScreenDialog
+                                closeModal={closeModal}
+                                component={() => (
+                                    <CardsCountSelector selectHandler={generateRandomSet} />
+                                )}
+                            />
+                        );
+                    }
+
+                    return null;
+                }}
                 isModalOpen={isModalOpen}
                 closeModal={closeModal}
             />
