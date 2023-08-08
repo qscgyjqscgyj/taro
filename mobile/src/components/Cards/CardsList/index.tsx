@@ -1,46 +1,24 @@
-import { View, TouchableOpacity, Text, Image } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
-import { CardData, SetCardData } from 'shared/types/cards';
 
-import { whitePlusIcon } from './images';
 import { useCardsList } from './hooks';
 import { CardsListProps } from './types';
 import { styles } from './styles';
 
-export function CardsList<CD extends CardData | SetCardData>(props: CardsListProps<CD>) {
-    const { cards, addCard, deleteCard } = props;
+export function CardsList(props: CardsListProps) {
+    const { cards } = props;
 
-    const { cardWidth, handleCardWrapperLayout, onCardPressHandler, onCardDeletePressHandler } =
-        useCardsList<CD>(props);
+    const { onCardPressHandler } = useCardsList(props);
 
     return (
-        <View style={styles.cardsWrapper}>
+        <>
             {cards.map((card) => (
                 <View key={card.name} style={styles.cardWrapper}>
                     <View style={styles.cardImageContainer}>
-                        {deleteCard && (
-                            <View style={styles.deleteIconWrapper}>
-                                <TouchableOpacity
-                                    onPress={(event) => onCardDeletePressHandler(event, card)}
-                                >
-                                    <Image style={styles.deleteIcon} source={whitePlusIcon} />
-                                </TouchableOpacity>
-                            </View>
-                        )}
-
                         <View style={styles.cardImageWrapper}>
                             <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
-                                <CachedImage
-                                    url={card.image}
-                                    style={[
-                                        styles.cardImage,
-                                        'direction' in card && card.direction === 'reversed'
-                                            ? styles.reversedImage
-                                            : {},
-                                    ]}
-                                    onLayout={handleCardWrapperLayout}
-                                />
+                                <CachedImage url={card.image} style={styles.cardImage} />
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -50,25 +28,6 @@ export function CardsList<CD extends CardData | SetCardData>(props: CardsListPro
                     </View>
                 </View>
             ))}
-
-            {addCard && (
-                <View style={styles.cardWrapper}>
-                    <View style={styles.cardImageWrapper}>
-                        <TouchableOpacity onPress={addCard}>
-                            <View
-                                style={[
-                                    styles.emptyCardWrpper,
-                                    cardWidth ? { maxWidth: cardWidth } : { maxWidth: 100 },
-                                ]}
-                            >
-                                <Image style={styles.emptyCardAddIcon} source={whitePlusIcon} />
-
-                                <Text style={styles.emptyCardText}>добавить карту</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            )}
-        </View>
+        </>
     );
 }

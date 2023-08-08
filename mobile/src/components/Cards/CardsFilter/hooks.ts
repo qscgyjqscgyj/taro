@@ -17,6 +17,7 @@ import {
     wandIcon,
     wandSelectedIcon,
 } from './images';
+import { normaliseFilterValue } from 'src/utils/strings';
 
 type suitIcons = {
     name: SuitType;
@@ -73,8 +74,10 @@ export function useCardsFilter(): CardsFilterHookData {
 
     const filteredCards = useMemo(() => {
         if (cardsNameFilter !== '') {
+            const normalisedCardsNameFilter = normaliseFilterValue(cardsNameFilter);
+
             return cards.filter((card) =>
-                card.name.toLowerCase().includes(cardsNameFilter.toLowerCase()),
+                normaliseFilterValue(card.name).includes(normalisedCardsNameFilter),
             );
         }
 

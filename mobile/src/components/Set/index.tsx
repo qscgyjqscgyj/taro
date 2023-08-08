@@ -1,6 +1,5 @@
 import { Image, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
-import { CardsList } from 'src/components/Cards/CardsList';
 import { ModalComponent } from 'src/components/Modal';
 import { HalfScreenDialog } from 'src/components/Modal/HalfScreenDialog';
 import { Cards } from 'src/components/Cards';
@@ -8,11 +7,11 @@ import { Card } from 'src/components/Cards/Card';
 import { closeIcon } from 'src/components/Modal/images';
 import { MainLinearGradient } from 'src/components/App/LinearGradient';
 import { CardsCountSelector } from 'src/components/Set/CardsCountSelector';
+import { SetCardsList } from 'src/components/Set/SetCardsList';
 
 import { useSet } from './hooks';
 import { SetProps } from './types';
 import { styles } from './styles';
-import { SetCardData } from 'shared/types/cards';
 
 export function Set(props: SetProps) {
     const {
@@ -53,7 +52,7 @@ export function Set(props: SetProps) {
                     </View>
 
                     <View style={styles.cardsListWrapper}>
-                        <CardsList<SetCardData>
+                        <SetCardsList
                             cards={activeSet?.cards ?? []}
                             onPressCard={onPressCardHandler}
                             addCard={addCardPressHandler}
