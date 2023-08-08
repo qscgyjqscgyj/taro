@@ -6,4 +6,5 @@ export const ru: TranslationObject = {
     headerHistoryLink: 'История',
     headerAboutLink: 'О Таро',
     setScreenTitle: 'Создать Расклад',
+    historyScreenTitle: 'История',
 };

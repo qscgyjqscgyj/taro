@@ -4,4 +4,5 @@ export interface TranslationObject {
     headerHistoryLink: string;
     headerAboutLink: string;
     setScreenTitle: string;
+    historyScreenTitle: string;
 }

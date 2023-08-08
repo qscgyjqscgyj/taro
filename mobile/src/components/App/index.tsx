@@ -7,13 +7,14 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Header } from 'src/components/Header';
-import { Set } from 'src/components/Set';
+import { SetScreen } from 'src/screens/SetScreen';
 import i18n from 'src/services/localization/i18n';
 import { useTranslation } from 'src/services/localization/hooks';
 import { AppContextProvider } from 'src/services/store';
 import { MainLinearGradient } from 'src/components/App/LinearGradient';
 import { CardScreen } from 'src/screens/CardScreen';
 import { CardsScreen } from 'src/screens/CardsScreen';
+import { HistoryScreen } from 'src/screens/HistoryScreen';
 
 import { RootStackParamList } from './types';
 import { useApp } from './hooks';
@@ -63,9 +64,17 @@ export function App() {
 
                                 <Stack.Screen
                                     name={'Set'}
-                                    component={Set}
+                                    component={SetScreen}
                                     options={{
                                         title: t('setScreenTitle'),
+                                    }}
+                                />
+
+                                <Stack.Screen
+                                    name={'History'}
+                                    component={HistoryScreen}
+                                    options={{
+                                        title: t('historyScreenTitle'),
                                     }}
                                 />
                             </Stack.Navigator>

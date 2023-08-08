@@ -6,4 +6,5 @@ export const en: TranslationObject = {
     headerHistoryLink: 'History',
     headerAboutLink: 'About Tarot',
     setScreenTitle: 'Sets',
+    historyScreenTitle: 'History',
 };

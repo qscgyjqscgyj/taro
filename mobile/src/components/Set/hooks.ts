@@ -18,13 +18,11 @@ type ModalComponentType = 'Card' | 'AddCard' | 'GenerateRandomSet';
 
 // TODO: write tests on this hook
 export function useSet(props: SetProps) {
-    const { params } = props.route;
-
-    const cardParam = params?.card;
+    const { card, activeSet: activeSetParams } = props;
 
     const [modalComponentType, setModalComponentType] = useState<ModalComponentType | undefined>();
 
-    const [activeSet, setActiveSet] = useState<SetData | undefined>(params?.activeSet ?? undefined);
+    const [activeSet, setActiveSet] = useState<SetData | undefined>(activeSetParams ?? undefined);
     const [activeCard, setActiveCard] = useState<SetCardData | undefined>();
 
     const { cards } = useAppContext();
@@ -103,7 +101,7 @@ export function useSet(props: SetProps) {
 
     useEffect(() => {
         loadActiveSet();
-    }, [cardParam?.name, activeSet?.id]);
+    }, [card?.name, activeSet?.id]);
 
     return {
         activeSet,

@@ -1,4 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { setHistoryRecord } from 'src/services/storage/history';
 
 import { CardProps } from './types';
 
@@ -37,6 +39,10 @@ export function useCard(props: CardProps) {
             return newState;
         });
     };
+
+    useEffect(() => {
+        setHistoryRecord(card);
+    }, [card.name]);
 
     return {
         reversedValue,

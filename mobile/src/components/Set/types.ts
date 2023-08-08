@@ -1,5 +1,6 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { CardData, SetData } from 'shared/types/cards';
 
-import { RootStackParamList } from 'src/components/App/types';
-
-export type SetProps = NativeStackScreenProps<RootStackParamList, 'Set'>;
+export interface SetProps {
+    card?: CardData;
+    activeSet?: SetData | null;
+}

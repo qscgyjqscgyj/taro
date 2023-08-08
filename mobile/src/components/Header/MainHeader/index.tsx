@@ -20,10 +20,12 @@ export function MainHeader(props: HeaderProps) {
                 </View>
             </TouchableOpacity>
 
-            <View style={styles.menuItem}>
-                <Image style={styles.menuIcon} source={historyMenuIcon} />
-                <Text style={styles.menuText}>{t('headerHistoryLink')}</Text>
-            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('History')}>
+                <View style={styles.menuItem}>
+                    <Image style={styles.menuIcon} source={historyMenuIcon} />
+                    <Text style={styles.menuText}>{t('headerHistoryLink')}</Text>
+                </View>
+            </TouchableOpacity>
 
             <View style={styles.menuItem}>
                 <Image style={styles.menuIcon} source={aboutMenuIcon} />

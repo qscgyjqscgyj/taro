@@ -10,8 +10,8 @@ import { CardsCountSelector } from 'src/components/Set/CardsCountSelector';
 import { SetCardsList } from 'src/components/Set/SetCardsList';
 
 import { useSet } from './hooks';
-import { SetProps } from './types';
 import { styles } from './styles';
+import { SetProps } from './types';
 
 export function Set(props: SetProps) {
     const {

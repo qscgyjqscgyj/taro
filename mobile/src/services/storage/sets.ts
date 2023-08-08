@@ -42,8 +42,12 @@ export async function setSet(set: SetData) {
         return setStorageItem('sets', JSON.stringify(newSets));
     }
 
-    // TODO: change setSet test after .slice(0, MAX_SETS_LENGTH - 1) has been added
-    return setStorageItem('sets', JSON.stringify([...sets.slice(0, MAX_SETS_LENGTH - 1), newSet]));
+    // TODO: change setSet test after the MAX_SETS_LENGTH guard has been added
+    if (sets.length >= MAX_SETS_LENGTH) {
+        sets.pop();
+    }
+
+    return setStorageItem('sets', JSON.stringify([newSet, ...sets]));
 }
 
 export async function deleteSet(id: SetData['id']) {
