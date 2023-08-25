@@ -1,6 +1,5 @@
-// const HOST = process.env.HOST ?? 'http://localhost:4000';
-const HOST = process.env.HOST ?? 'http://192.168.0.101:4000';
+import { APP_HOST } from 'shared/constants/host';
 
 export function getFullHost() {
-    return HOST;
+    return APP_HOST;
 }

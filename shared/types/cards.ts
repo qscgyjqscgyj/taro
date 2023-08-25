@@ -15,8 +15,8 @@ export interface CardData {
     altNames: string[];
     arcana: ArcanaType;
     subTitle: string;
-    image: string;
     description: CardDescription[];
+    image?: string;
     number?: number;
 }
 
