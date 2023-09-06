@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
+import { Switcher } from 'src/components/UI/Switcher';
 
 import { CardProps } from './types';
 import { useCard } from './hooks';
@@ -24,7 +25,7 @@ export function Card(props: CardProps) {
             <View style={styles.container}>
                 <View style={styles.cardWrapper}>
                     <CachedImage
-                        url={card.image}
+                        url={card.image!}
                         style={[styles.cardImage, reversedValue ? styles.reversedImage : {}]}
                     />
                 </View>
@@ -34,27 +35,11 @@ export function Card(props: CardProps) {
                     <Text style={styles.cardSubTitle}>{card.subTitle}</Text>
                 </View>
 
-                <Pressable onPress={reversedValueToggle}>
-                    <View style={styles.cardDirectionWrapper}>
-                        <View
-                            style={[
-                                styles.cardDirectionItem,
-                                reversedValue ? {} : styles.cardDirectionActiveItem,
-                            ]}
-                        >
-                            <Text>Прямое</Text>
-                        </View>
-
-                        <View
-                            style={[
-                                styles.cardDirectionItem,
-                                reversedValue ? styles.cardDirectionActiveItem : {},
-                            ]}
-                        >
-                            <Text>Перевернутое</Text>
-                        </View>
-                    </View>
-                </Pressable>
+                <Switcher
+                    onPress={reversedValueToggle}
+                    values={['Прямое', 'Перевернутое']}
+                    value={reversedValue ? 1 : 0}
+                />
 
                 <View style={styles.descriptionWrapper}>
                     {filteredCardDescription.map((cardDescription, cardDescriptionIndex) => (

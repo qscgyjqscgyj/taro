@@ -31,7 +31,7 @@ export function SetCardsList(props: SetCardsListProps) {
                         <View style={styles.cardImageWrapper}>
                             <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
                                 <CachedImage
-                                    url={card.image}
+                                    url={card.image!}
                                     style={[
                                         styles.cardImage,
                                         'direction' in card && card.direction === 'reversed'

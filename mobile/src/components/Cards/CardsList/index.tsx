@@ -18,7 +18,7 @@ export function CardsList(props: CardsListProps) {
                     <View style={styles.cardImageContainer}>
                         <View style={styles.cardImageWrapper}>
                             <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
-                                <CachedImage url={card.image} style={styles.cardImage} />
+                                <CachedImage url={card.image!} style={styles.cardImage} />
                             </TouchableOpacity>
                         </View>
                     </View>

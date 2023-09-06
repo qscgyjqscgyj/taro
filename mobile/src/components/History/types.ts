@@ -5,3 +5,9 @@ export interface HistoryRecord {
     card: CardData;
     createdAt: string;
 }
+
+export type HistoryTab = {
+    id: 'cards' | 'sets';
+    name: string;
+    tabIndex: 0 | 1;
+};

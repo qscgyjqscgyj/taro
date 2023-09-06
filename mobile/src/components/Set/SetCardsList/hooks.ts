@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { GestureResponderEvent, LayoutChangeEvent } from 'react-native';
 
 import { CardData } from 'shared/types/cards';
-
-import { CardsListProps } from './types';
+import { CardsListProps } from 'src/components/Cards/CardsList/types';
 
 const CARD_WIDTH_OFFSET = 30;
 
-export function useCardsList<CD>(props: CardsListProps<CD>) {
+export function useCardsList(props: CardsListProps) {
     const { onPressCard, deleteCard } = props;
 
     const [cardWidth, setCardWidth] = useState<number | undefined>();
