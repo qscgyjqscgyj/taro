@@ -3,7 +3,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { useTranslation } from 'src/services/localization/hooks';
 import { HeaderProps } from 'src/components/Header/types';
 
-import { aboutMenuIcon, historyMenuIcon, setMenuIcon } from './images';
+import { historyMenuIcon, setMenuIcon } from './images';
 import { styles } from './styles';
 
 export function MainHeader(props: HeaderProps) {
@@ -27,10 +27,10 @@ export function MainHeader(props: HeaderProps) {
                 </View>
             </TouchableOpacity>
 
-            <View style={styles.menuItem}>
+            {/* <View style={styles.menuItem}>
                 <Image style={styles.menuIcon} source={aboutMenuIcon} />
                 <Text style={styles.menuText}>{t('headerAboutLink')}</Text>
-            </View>
+            </View> */}
         </View>
     );
 }
