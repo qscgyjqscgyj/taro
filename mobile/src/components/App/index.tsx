@@ -10,11 +10,11 @@ import { Header } from 'src/components/Header';
 import { SetScreen } from 'src/screens/SetScreen';
 import i18n from 'src/services/localization/i18n';
 import { useTranslation } from 'src/services/localization/hooks';
-import { AppContextProvider } from 'src/services/store';
 import { MainLinearGradient } from 'src/components/App/LinearGradient';
 import { CardScreen } from 'src/screens/CardScreen';
 import { CardsScreen } from 'src/screens/CardsScreen';
 import { HistoryScreen } from 'src/screens/HistoryScreen';
+import { AppStoreProvider } from 'src/services/store';
 
 import { RootStackParamList } from './types';
 import { useApp } from './hooks';
@@ -40,7 +40,7 @@ export function App() {
     }
 
     return (
-        <AppContextProvider>
+        <AppStoreProvider>
             <MainLinearGradient>
                 <I18nextProvider i18n={i18n}>
                     <SafeAreaView style={styles.container}>
@@ -84,6 +84,6 @@ export function App() {
                     </SafeAreaView>
                 </I18nextProvider>
             </MainLinearGradient>
-        </AppContextProvider>
+        </AppStoreProvider>
     );
 }

@@ -1,12 +1,10 @@
 import { useCallback, useMemo, useState } from 'react';
 import { ImageSourcePropType } from 'react-native';
+import { useSelector } from 'react-redux';
 import { debounce } from 'lodash';
 
 import { ArcanaType, SuitType } from 'shared/types/cards';
 
-import { useAppContext } from 'src/services/store/context';
-
-import { CardsFilterHookData } from './types';
 import {
     cupIcon,
     cupSelectedIcon,
@@ -18,6 +16,9 @@ import {
     wandSelectedIcon,
 } from './images';
 import { normaliseFilterValue } from 'src/utils/strings';
+import { selectCards } from 'src/services/store';
+
+import { CardsFilterHookData } from './types';
 
 type suitIcons = {
     name: SuitType;
@@ -37,7 +38,7 @@ export function useCardsFilter(): CardsFilterHookData {
     const [suitFilter, setSuitFilter] = useState<SuitType | undefined>();
     const [cardsNameFilter, setCardsNameFilter] = useState<string>('');
 
-    const { cards } = useAppContext();
+    const cards = useSelector(selectCards);
 
     const toggleArcanaTypeFilter = useCallback(() => {
         if (suitFilter) {

@@ -1,3 +1,5 @@
+import { toLower, startCase } from 'lodash';
+
 export function normaliseFilterValue(value: string) {
     const REPLACE_PAIRS = [
         ['á', 'a'],
@@ -12,4 +14,8 @@ export function normaliseFilterValue(value: string) {
     return REPLACE_PAIRS.reduce((acc, [char, replaceChar]) => {
         return acc.replace(new RegExp(char, 'g'), replaceChar);
     }, value.toLowerCase());
+}
+
+export function startTitleCase(value: string) {
+    return startCase(toLower(value));
 }

@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import moment from 'moment';
 
 import { SetCardData, SetData } from 'shared/types/cards';
 
@@ -9,8 +11,8 @@ import {
     getActiveSet,
     removeCardFromActiveSet,
 } from 'src/services/storage/sets';
-import { useAppContext } from 'src/services/store/context';
 import { useModal } from 'src/components/Modal/hooks';
+import { selectCards, setHeaderTitle } from 'src/services/store';
 
 import { SetProps } from './types';
 
@@ -18,14 +20,16 @@ type ModalComponentType = 'Card' | 'AddCard' | 'GenerateRandomSet';
 
 // TODO: write tests on this hook
 export function useSet(props: SetProps) {
-    const { card, activeSet: activeSetParams } = props;
+    const { card, activeSet: activeSetParams, viewMode } = props;
+
+    const dispatch = useDispatch();
+
+    const cards = useSelector(selectCards);
 
     const [modalComponentType, setModalComponentType] = useState<ModalComponentType | undefined>();
 
     const [activeSet, setActiveSet] = useState<SetData | undefined>(activeSetParams ?? undefined);
     const [activeCard, setActiveCard] = useState<SetCardData | undefined>();
-
-    const { cards } = useAppContext();
 
     const { openModal, closeModal, isModalOpen } = useModal();
 
@@ -100,8 +104,22 @@ export function useSet(props: SetProps) {
     };
 
     useEffect(() => {
-        loadActiveSet();
+        if (activeSet === undefined) {
+            loadActiveSet();
+        }
     }, [card?.name, activeSet?.id]);
+
+    useEffect(() => {
+        const needsToUpdateHeaderTitle = viewMode && activeSet !== undefined;
+
+        if (needsToUpdateHeaderTitle) {
+            dispatch(setHeaderTitle(moment(activeSet.createdAt).format('DD.MM.YYYY HH:mm')));
+        }
+
+        return () => {
+            dispatch(setHeaderTitle(null));
+        };
+    }, []);
 
     return {
         activeSet,

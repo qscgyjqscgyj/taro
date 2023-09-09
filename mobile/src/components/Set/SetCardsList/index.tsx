@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, Image } from 'react-native';
 import { CachedImage } from 'src/components/CachedImage';
 
 import { whitePlusIcon } from './images';
-import { useCardsList } from './hooks';
+import { useSetCardsList } from './hooks';
 import { SetCardsListProps } from './types';
 import { styles } from './styles';
 
@@ -11,14 +11,14 @@ export function SetCardsList(props: SetCardsListProps) {
     const { cards, addCard, deleteCard } = props;
 
     const { cardWidth, handleCardWrapperLayout, onCardPressHandler, onCardDeletePressHandler } =
-        useCardsList(props);
+        useSetCardsList(props);
 
     return (
         <View style={styles.cardsWrapper}>
             {cards.map((card) => (
                 <View key={card.name} style={styles.cardWrapper}>
                     <View style={styles.cardImageContainer}>
-                        {deleteCard && (
+                        {deleteCard !== undefined ? (
                             <View style={styles.deleteIconWrapper}>
                                 <TouchableOpacity
                                     onPress={(event) => onCardDeletePressHandler(event, card)}
@@ -26,7 +26,7 @@ export function SetCardsList(props: SetCardsListProps) {
                                     <Image style={styles.deleteIcon} source={whitePlusIcon} />
                                 </TouchableOpacity>
                             </View>
-                        )}
+                        ) : null}
 
                         <View style={styles.cardImageWrapper}>
                             <TouchableOpacity onPress={(event) => onCardPressHandler(event, card)}>
@@ -50,7 +50,7 @@ export function SetCardsList(props: SetCardsListProps) {
                 </View>
             ))}
 
-            {addCard && (
+            {addCard !== undefined ? (
                 <View style={styles.cardWrapper}>
                     <View style={styles.cardImageWrapper}>
                         <TouchableOpacity onPress={addCard}>
@@ -67,7 +67,7 @@ export function SetCardsList(props: SetCardsListProps) {
                         </TouchableOpacity>
                     </View>
                 </View>
-            )}
+            ) : null}
         </View>
     );
 }

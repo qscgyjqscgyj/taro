@@ -12,7 +12,7 @@ export function ModalComponent(props: ModalProps) {
             transparent={true}
             onRequestClose={closeModal}
         >
-            <Component {...props} closeModal={closeModal} />
+            <Component />
         </Modal>
     );
 }

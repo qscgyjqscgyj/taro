@@ -1,11 +1,15 @@
+import { PayloadAction } from '@reduxjs/toolkit';
+
 import { CardData } from 'shared/types/cards';
 
-export type Action =
-    | { type: 'SET_ACTIVE_CARD'; payload: CardData | undefined }
-    | { type: 'SET_CARDS'; payload: CardData[] };
+export interface Actions {
+    addCards: PayloadAction<CardData[]>;
+    setActiveCard: PayloadAction<CardData | null>;
+    setHeaderTitle: PayloadAction<string | null>;
+}
 
-export interface AppContextProps {
+export interface AppState {
     cards: CardData[];
-    activeCard: CardData | undefined;
-    dispatch: React.Dispatch<Action>;
+    activeCard: CardData | null;
+    headerTitle: string | null;
 }

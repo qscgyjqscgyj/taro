@@ -7,6 +7,7 @@ export function SetScreen(props: SetScreenProps) {
 
     const card = params?.card;
     const activeSet = params?.activeSet;
+    const viewMode = params?.viewMode;
 
-    return <Set card={card} activeSet={activeSet} />;
+    return <Set card={card} activeSet={activeSet} viewMode={viewMode} />;
 }

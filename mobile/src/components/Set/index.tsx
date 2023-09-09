@@ -1,11 +1,10 @@
-import { Image, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 import { ModalComponent } from 'src/components/Modal';
+import { GradientModal } from 'src/components/Modal/GradientModal';
 import { HalfScreenDialog } from 'src/components/Modal/HalfScreenDialog';
 import { Cards } from 'src/components/Cards';
 import { Card } from 'src/components/Cards/Card';
-import { closeIcon } from 'src/components/Modal/images';
-import { MainLinearGradient } from 'src/components/App/LinearGradient';
 import { CardsCountSelector } from 'src/components/Set/CardsCountSelector';
 import { SetCardsList } from 'src/components/Set/SetCardsList';
 
@@ -14,6 +13,8 @@ import { styles } from './styles';
 import { SetProps } from './types';
 
 export function Set(props: SetProps) {
+    const { viewMode } = props;
+
     const {
         activeSet,
         activeCard,
@@ -33,30 +34,33 @@ export function Set(props: SetProps) {
         <>
             <View style={styles.container}>
                 <ScrollView style={styles.cardsListScrollWrapper}>
-                    <View style={styles.buttonWrapper}>
-                        <TouchableOpacity onPress={generateRandomSetModalOpen}>
-                            <View style={styles.purpleButton}>
-                                <Text style={styles.buttonText}>
-                                    Сгенерировать случайный расклад
-                                </Text>
+                    {!viewMode ? (
+                        <>
+                            <View style={styles.buttonWrapper}>
+                                <TouchableOpacity onPress={generateRandomSetModalOpen}>
+                                    <View style={styles.purpleButton}>
+                                        <Text style={styles.buttonText}>
+                                            Сгенерировать случайный расклад
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
                             </View>
-                        </TouchableOpacity>
-                    </View>
 
-                    <View style={styles.buttonWrapper}>
-                        <TouchableOpacity onPress={clearActiveSet}>
-                            <View style={styles.purpleButton}>
-                                <Text style={styles.buttonText}>Сбросить карты</Text>
+                            <View style={styles.buttonWrapper}>
+                                <TouchableOpacity onPress={clearActiveSet}>
+                                    <View style={styles.purpleButton}>
+                                        <Text style={styles.buttonText}>Сбросить карты</Text>
+                                    </View>
+                                </TouchableOpacity>
                             </View>
-                        </TouchableOpacity>
-                    </View>
-
+                        </>
+                    ) : null}
                     <View style={styles.cardsListWrapper}>
                         <SetCardsList
                             cards={activeSet?.cards ?? []}
                             onPressCard={onPressCardHandler}
-                            addCard={addCardPressHandler}
-                            deleteCard={onCardDeletePressHandler}
+                            addCard={viewMode ? undefined : addCardPressHandler}
+                            deleteCard={viewMode ? undefined : onCardDeletePressHandler}
                         />
                     </View>
                 </ScrollView>
@@ -66,14 +70,8 @@ export function Set(props: SetProps) {
                 component={() => {
                     if (modalComponentType === 'AddCard' || modalComponentType === 'Card') {
                         return (
-                            <MainLinearGradient>
-                                <View style={styles.modalSetContainer}>
-                                    <View style={styles.moadlSetCloseIconWrapper}>
-                                        <Pressable onPress={closeModal}>
-                                            <Image source={closeIcon} />
-                                        </Pressable>
-                                    </View>
-
+                            <GradientModal closeModal={closeModal}>
+                                <>
                                     {modalComponentType === 'Card' && activeCard !== undefined ? (
                                         <Card card={activeCard} direction={activeCard.direction} />
                                     ) : null}
@@ -81,8 +79,8 @@ export function Set(props: SetProps) {
                                     {modalComponentType === 'AddCard' ? (
                                         <Cards onCardPress={addToSetHandler} />
                                     ) : null}
-                                </View>
-                            </MainLinearGradient>
+                                </>
+                            </GradientModal>
                         );
                     }
 

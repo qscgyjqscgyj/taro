@@ -1,16 +1,20 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import { AddToSetButton } from 'src/components/Set/AddToSetButton';
+import { selectHeaderTitle } from 'src/services/store';
 
-import { useHeader } from './hooks';
-import { styles } from './styles';
-import { backIcon } from './images';
 import { MainHeader } from './MainHeader';
+import { useHeader } from './hooks';
+import { backIcon } from './images';
 import { HeaderProps } from './types';
+import { styles } from './styles';
 
 function NavigationHeader(props: HeaderProps) {
     const { back, options, rightBlock } = props;
+
+    const headerTitle = useSelector(selectHeaderTitle);
 
     const { onBackPressHandler } = useHeader(props);
 
@@ -27,7 +31,9 @@ function NavigationHeader(props: HeaderProps) {
             )}
 
             <View style={styles.centerBlock}>
-                <Text style={styles.centerBlockText}>{options.title}</Text>
+                <Text style={styles.centerBlockText}>
+                    {headerTitle !== null ? headerTitle : options.title}
+                </Text>
             </View>
 
             <View style={styles.rightBlock}>

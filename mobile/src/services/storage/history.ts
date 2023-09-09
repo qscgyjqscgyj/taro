@@ -30,6 +30,11 @@ export async function setHistoryRecord(card: CardData) {
     const historyData = await getStorageItem('history');
     const history: HistoryRecord[] = historyData ? JSON.parse(historyData) : [];
 
+    const isPrevCardTheSame = history.length > 0 && history[0].card.name === card.name;
+    if (isPrevCardTheSame) {
+        return;
+    }
+
     const newRecord: HistoryRecord = {
         id: String(nowDate.getTime()),
         card: card,

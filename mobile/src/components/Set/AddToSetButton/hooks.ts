@@ -1,17 +1,18 @@
 import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 
 import { isTimeDifferenceGreaterThanHours } from 'shared/utils/date';
 
 import { HeaderProps } from 'src/components/Header/types';
 import { useModal } from 'src/components/Modal/hooks';
 import { addCardToActiveSet, createNewActiveSet, getActiveSet } from 'src/services/storage/sets';
-import { useAppContext } from 'src/services/store/context';
+import { selectActiveCard } from 'src/services/store';
 
 // TODO: write tests on this hook
 export function useAddToSetButton(props: HeaderProps) {
     const { navigation } = props;
 
-    const { activeCard } = useAppContext();
+    const activeCard = useSelector(selectActiveCard);
 
     const { openModal, closeModal, isModalOpen } = useModal();
 

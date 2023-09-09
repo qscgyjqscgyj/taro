@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
+
 import { pallete } from 'src/styles/colors';
+import { fonts } from 'src/styles/fonts';
 
 export const styles = StyleSheet.create({
     container: {
@@ -36,9 +38,21 @@ export const styles = StyleSheet.create({
     historyItemCards: {
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'center',
+    },
+    cardNameText: {
+        fontFamily: fonts.primary,
+        fontWeight: '400',
+        fontSize: 12,
     },
     historyItemDate: {
         display: 'flex',
         flexDirection: 'column',
+    },
+    dateText: {
+        textAlign: 'right',
+        fontFamily: fonts.primary,
+        fontWeight: '400',
+        fontSize: 12,
     },
 });

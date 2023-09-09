@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { useAppContext } from 'src/services/store/context';
+import { setActiveCard } from 'src/services/store';
 
 import { CardScreenProps } from './types';
 
@@ -9,13 +10,13 @@ export function useCardScreen(props: CardScreenProps) {
 
     const { card } = route.params;
 
-    const { dispatch } = useAppContext();
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({ type: 'SET_ACTIVE_CARD', payload: card });
+        dispatch(setActiveCard(card));
 
         return () => {
-            dispatch({ type: 'SET_ACTIVE_CARD', payload: undefined });
+            dispatch(setActiveCard(null));
         };
     }, [card.name]);
 }

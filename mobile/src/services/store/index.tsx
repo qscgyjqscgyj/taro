@@ -1,33 +1,40 @@
-import { useReducer } from 'react';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
 
-import { AppContext, initialState } from './context';
-import { Action, AppContextProps } from './types';
+import { Actions, AppState } from './types';
 
-function reducer(state: AppContextProps, action: Action) {
-    switch (action.type) {
-        case 'SET_CARDS':
-            return { ...state, cards: action.payload };
-        case 'SET_ACTIVE_CARD':
-            return { ...state, activeCard: action.payload };
-        default:
-            return state;
-    }
-}
+const initialState: AppState = {
+    cards: [],
+    activeCard: null,
+    headerTitle: null,
+};
 
-interface AppProviderProps {
-    children: React.ReactNode;
-}
+const appSlice = createSlice({
+    name: 'appSlice',
+    initialState: initialState,
+    reducers: {
+        setCards: (state, action: Actions['addCards']) => {
+            state.cards = action.payload;
+        },
+        setActiveCard: (state, action: Actions['setActiveCard']) => {
+            state.activeCard = action.payload;
+        },
+        setHeaderTitle: (state, action: Actions['setHeaderTitle']) => {
+            state.headerTitle = action.payload;
+        },
+    },
+});
 
-export function AppContextProvider(props: AppProviderProps) {
-    const { children } = props;
+export const { setCards, setActiveCard, setHeaderTitle } = appSlice.actions;
 
-    const [state, dispatch] = useReducer(reducer, initialState);
+const store = configureStore({
+    reducer: appSlice.reducer,
+});
 
-    const { activeCard, cards } = state;
+export const selectCards = (state: AppState) => state.cards;
+export const selectActiveCard = (state: AppState) => state.activeCard;
+export const selectHeaderTitle = (state: AppState) => state.headerTitle;
 
-    return (
-        <AppContext.Provider value={{ cards, activeCard, dispatch }}>
-            {children}
-        </AppContext.Provider>
-    );
+export function AppStoreProvider(props: any) {
+    return <Provider store={store}>{props.children}</Provider>;
 }
