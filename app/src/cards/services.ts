@@ -1,169 +1,23 @@
 import { CardData } from 'shared/types/cards';
+import { Locale } from 'shared/types/localization';
 
 import { getCardImageUrl } from 'src/cards/utils';
+import { CardsData } from 'src/cards/lib/cards/types';
+import { allRUCards } from 'src/cards/lib/cards/ru';
+import { allENCards } from 'src/cards/lib/cards/en';
 
-import { fool } from './lib/cards/fool';
-import { magician } from './lib/cards/magician';
-import { highPriestess } from './lib/cards/highPriestess';
-import { empress } from './lib/cards/empress';
-import { emperor } from './lib/cards/emperor';
-import { hierophant } from './lib/cards/hierophant';
-import { lovers } from './lib/cards/lovers';
-import { chariot } from './lib/cards/chariot';
-import { strength } from './lib/cards/strength';
-import { hermit } from './lib/cards/hermit';
-import { wheelOfFortune } from './lib/cards/wheelOfFortune';
-import { justice } from './lib/cards/justice';
-import { hangedMan } from './lib/cards/hangedMan';
-import { death } from './lib/cards/death';
-import { temperance } from './lib/cards/temperance';
-import { devil } from './lib/cards/devil';
-import { tower } from './lib/cards/tower';
-import { star } from './lib/cards/star';
-import { moon } from './lib/cards/moon';
-import { sun } from './lib/cards/sun';
-import { judgement } from './lib/cards/judgement';
-import { world } from './lib/cards/world';
-import { pentaclesKing } from './lib/cards/pentaclesKing';
-import { pentaclesAce } from './lib/cards/pentaclesAce';
-import { pentaclesTwo } from './lib/cards/pentaclesTwo';
-import { pentaclesThree } from './lib/cards/pentaclesThree';
-import { pentaclesFour } from './lib/cards/pentaclesFour';
-import { pentaclesFive } from './lib/cards/pentaclesFive';
-import { pentaclesSix } from './lib/cards/pentaclesSix';
-import { pentaclesSeven } from './lib/cards/pentaclesSeven';
-import { pentaclesEight } from './lib/cards/pentaclesEight';
-import { pentaclesNine } from './lib/cards/pentaclesNine';
-import { pentaclesTen } from './lib/cards/pentaclesTen';
-import { pentaclesPage } from './lib/cards/pentaclesPage';
-import { pentaclesQueen } from './lib/cards/pentaclesQueen';
-import { pentaclesKnight } from './lib/cards/pentaclesKnight';
-import { wandsAce } from './lib/cards/wandsAce';
-import { wandsTwo } from './lib/cards/wandsTwo';
-import { wandsThree } from './lib/cards/wandsThree';
-import { wandsFour } from './lib/cards/wandsFour';
-import { wandsFive } from './lib/cards/wandsFive';
-import { wandsSix } from './lib/cards/wandsSix';
-import { wandsSeven } from './lib/cards/wandsSeven';
-import { wandsEight } from './lib/cards/wandsEight';
-import { wandsNine } from './lib/cards/wandsNine';
-import { wandsTen } from './lib/cards/wandsTen';
-import { wandsPage } from './lib/cards/wandsPage';
-import { wandsKnight } from './lib/cards/wandsKnight';
-import { wandsQueen } from './lib/cards/wandsQueen';
-import { wandsKing } from './lib/cards/wandsKing';
-import { swordsAce } from './lib/cards/swordsAce';
-import { swordsTwo } from './lib/cards/swordsTwo';
-import { swordsThree } from './lib/cards/swordsThree';
-import { swordsFour } from './lib/cards/swordsFour';
-import { swordsFive } from './lib/cards/swordsFive';
-import { swordsSix } from './lib/cards/swordsSix';
-import { swordsSeven } from './lib/cards/swordsSeven';
-import { swordsEight } from './lib/cards/swordsEight';
-import { swordsNine } from './lib/cards/swordsNine';
-import { swordsTen } from './lib/cards/swordsTen';
-import { swordsPage } from './lib/cards/swordsPage';
-import { swordsKnight } from './lib/cards/swordsKnight';
-import { swordsQueen } from './lib/cards/swordsQueen';
-import { swordsKing } from './lib/cards/swordsKing';
-import { cupsAce } from './lib/cards/cupsAce';
-import { cupsTwo } from './lib/cards/cupsTwo';
-import { cupsThree } from './lib/cards/cupsThree';
-import { cupsFour } from './lib/cards/cupsFour';
-import { cupsFive } from './lib/cards/cupsFive';
-import { cupsSix } from './lib/cards/cupsSix';
-import { cupsSeven } from './lib/cards/cupsSeven';
-import { cupsEight } from './lib/cards/cupsEight';
-import { cupsNine } from './lib/cards/cupsNine';
-import { cupsTen } from './lib/cards/cupsTen';
-import { cupsPage } from './lib/cards/cupsPage';
-import { cupsKnight } from './lib/cards/cupsKnight';
-import { cupsQueen } from './lib/cards/cupsQueen';
-import { cupsKing } from './lib/cards/cupsKing';
+function getCardsByLocale(locale: Locale) {
+    if (locale === 'ru') {
+        return allRUCards;
+    } else if (locale === 'en') {
+        return allENCards;
+    }
 
-type CardsData = { card: CardData; name: string }[];
+    return [];
+}
 
-export function initializeCardsData(): CardData[] {
-    const allCards: CardsData = [
-        { card: fool, name: 'fool' },
-        { card: magician, name: 'magician' },
-        { card: highPriestess, name: 'highPriestess' },
-        { card: empress, name: 'empress' },
-        { card: emperor, name: 'emperor' },
-        { card: hierophant, name: 'hierophant' },
-        { card: lovers, name: 'lovers' },
-        { card: chariot, name: 'chariot' },
-        { card: strength, name: 'strength' },
-        { card: hermit, name: 'hermit' },
-        { card: wheelOfFortune, name: 'wheelOfFortune' },
-        { card: justice, name: 'justice' },
-        { card: hangedMan, name: 'hangedMan' },
-        { card: death, name: 'death' },
-        { card: temperance, name: 'temperance' },
-        { card: devil, name: 'devil' },
-        { card: tower, name: 'tower' },
-        { card: star, name: 'star' },
-        { card: moon, name: 'moon' },
-        { card: sun, name: 'sun' },
-        { card: judgement, name: 'judgement' },
-        { card: world, name: 'world' },
-        { card: pentaclesKing, name: 'pentaclesKing' },
-        { card: pentaclesAce, name: 'pentaclesAce' },
-        { card: pentaclesTwo, name: 'pentaclesTwo' },
-        { card: pentaclesThree, name: 'pentaclesThree' },
-        { card: pentaclesFour, name: 'pentaclesFour' },
-        { card: pentaclesFive, name: 'pentaclesFive' },
-        { card: pentaclesSix, name: 'pentaclesSix' },
-        { card: pentaclesSeven, name: 'pentaclesSeven' },
-        { card: pentaclesEight, name: 'pentaclesEight' },
-        { card: pentaclesNine, name: 'pentaclesNine' },
-        { card: pentaclesTen, name: 'pentaclesTen' },
-        { card: pentaclesPage, name: 'pentaclesPage' },
-        { card: pentaclesQueen, name: 'pentaclesQueen' },
-        { card: pentaclesKnight, name: 'pentaclesKnight' },
-        { card: wandsKing, name: 'wandsKing' },
-        { card: wandsQueen, name: 'wandsQueen' },
-        { card: wandsKnight, name: 'wandsKnight' },
-        { card: swordsKing, name: 'swordsKing' },
-        { card: swordsQueen, name: 'swordsQueen' },
-        { card: swordsKnight, name: 'swordsKnight' },
-        { card: cupsKing, name: 'cupsKing' },
-        { card: cupsQueen, name: 'cupsQueen' },
-        { card: cupsKnight, name: 'cupsKnight' },
-        { card: wandsAce, name: 'wandsAce' },
-        { card: wandsTwo, name: 'wandsTwo' },
-        { card: wandsThree, name: 'wandsThree' },
-        { card: wandsFour, name: 'wandsFour' },
-        { card: wandsFive, name: 'wandsFive' },
-        { card: wandsSix, name: 'wandsSix' },
-        { card: wandsSeven, name: 'wandsSeven' },
-        { card: wandsEight, name: 'wandsEight' },
-        { card: wandsNine, name: 'wandsNine' },
-        { card: wandsTen, name: 'wandsTen' },
-        { card: wandsPage, name: 'wandsPage' },
-        { card: cupsAce, name: 'cupsAce' },
-        { card: cupsTwo, name: 'cupsTwo' },
-        { card: cupsThree, name: 'cupsThree' },
-        { card: cupsFour, name: 'cupsFour' },
-        { card: cupsFive, name: 'cupsFive' },
-        { card: cupsSix, name: 'cupsSix' },
-        { card: cupsSeven, name: 'cupsSeven' },
-        { card: cupsEight, name: 'cupsEight' },
-        { card: cupsNine, name: 'cupsNine' },
-        { card: cupsTen, name: 'cupsTen' },
-        { card: cupsPage, name: 'cupsPage' },
-        { card: swordsAce, name: 'swordsAce' },
-        { card: swordsTwo, name: 'swordsTwo' },
-        { card: swordsThree, name: 'swordsThree' },
-        { card: swordsFour, name: 'swordsFour' },
-        { card: swordsFive, name: 'swordsFive' },
-        { card: swordsSix, name: 'swordsSix' },
-        { card: swordsSeven, name: 'swordsSeven' },
-        { card: swordsEight, name: 'swordsEight' },
-        { card: swordsNine, name: 'swordsNine' },
-        { card: swordsTen, name: 'swordsTen' },
-        { card: swordsPage, name: 'swordsPage' },
-    ];
+export function initializeCardsData(locale: Locale): CardData[] {
+    const allCards = getCardsByLocale(locale);
 
     const resultCards = allCards.reduce<CardData[]>((result, cardData) => {
         result.push({ ...cardData.card, image: getCardImageUrl(cardData.name) });

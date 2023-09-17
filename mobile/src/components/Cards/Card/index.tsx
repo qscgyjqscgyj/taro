@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
 import { Switcher } from 'src/components/UI/Switcher';
+import { useTranslation } from 'src/services/localization/hooks';
 
 import { CardProps } from './types';
 import { useCard } from './hooks';
@@ -19,6 +20,8 @@ export function Card(props: CardProps) {
         toggleCardDescriptionAccordion,
         openedCardDescriptionIndeces,
     } = useCard(props);
+
+    const { t } = useTranslation();
 
     return (
         <ScrollView>
@@ -37,7 +40,7 @@ export function Card(props: CardProps) {
 
                 <Switcher
                     onPress={reversedValueToggle}
-                    values={['Прямое', 'Перевернутое']}
+                    values={[t('cardDirectionNormal'), t('cardDirectionFlipped')]}
                     value={reversedValue ? 1 : 0}
                 />
 

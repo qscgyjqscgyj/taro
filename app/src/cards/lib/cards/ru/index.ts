@@ -1,0 +1,161 @@
+import { CardsData } from 'src/cards/lib/cards/types';
+
+import { fool } from './fool';
+import { magician } from './magician';
+import { highPriestess } from './highPriestess';
+import { empress } from './empress';
+import { emperor } from './emperor';
+import { hierophant } from './hierophant';
+import { lovers } from './lovers';
+import { chariot } from './chariot';
+import { strength } from './strength';
+import { hermit } from './hermit';
+import { wheelOfFortune } from './wheelOfFortune';
+import { justice } from './justice';
+import { hangedMan } from './hangedMan';
+import { death } from './death';
+import { temperance } from './temperance';
+import { devil } from './devil';
+import { tower } from './tower';
+import { star } from './star';
+import { moon } from './moon';
+import { sun } from './sun';
+import { judgement } from './judgement';
+import { world } from './world';
+import { pentaclesKing } from './pentaclesKing';
+import { pentaclesAce } from './pentaclesAce';
+import { pentaclesTwo } from './pentaclesTwo';
+import { pentaclesThree } from './pentaclesThree';
+import { pentaclesFour } from './pentaclesFour';
+import { pentaclesFive } from './pentaclesFive';
+import { pentaclesSix } from './pentaclesSix';
+import { pentaclesSeven } from './pentaclesSeven';
+import { pentaclesEight } from './pentaclesEight';
+import { pentaclesNine } from './pentaclesNine';
+import { pentaclesTen } from './pentaclesTen';
+import { pentaclesPage } from './pentaclesPage';
+import { pentaclesQueen } from './pentaclesQueen';
+import { pentaclesKnight } from './pentaclesKnight';
+import { wandsAce } from './wandsAce';
+import { wandsTwo } from './wandsTwo';
+import { wandsThree } from './wandsThree';
+import { wandsFour } from './wandsFour';
+import { wandsFive } from './wandsFive';
+import { wandsSix } from './wandsSix';
+import { wandsSeven } from './wandsSeven';
+import { wandsEight } from './wandsEight';
+import { wandsNine } from './wandsNine';
+import { wandsTen } from './wandsTen';
+import { wandsPage } from './wandsPage';
+import { wandsKnight } from './wandsKnight';
+import { wandsQueen } from './wandsQueen';
+import { wandsKing } from './wandsKing';
+import { swordsAce } from './swordsAce';
+import { swordsTwo } from './swordsTwo';
+import { swordsThree } from './swordsThree';
+import { swordsFour } from './swordsFour';
+import { swordsFive } from './swordsFive';
+import { swordsSix } from './swordsSix';
+import { swordsSeven } from './swordsSeven';
+import { swordsEight } from './swordsEight';
+import { swordsNine } from './swordsNine';
+import { swordsTen } from './swordsTen';
+import { swordsPage } from './swordsPage';
+import { swordsKnight } from './swordsKnight';
+import { swordsQueen } from './swordsQueen';
+import { swordsKing } from './swordsKing';
+import { cupsAce } from './cupsAce';
+import { cupsTwo } from './cupsTwo';
+import { cupsThree } from './cupsThree';
+import { cupsFour } from './cupsFour';
+import { cupsFive } from './cupsFive';
+import { cupsSix } from './cupsSix';
+import { cupsSeven } from './cupsSeven';
+import { cupsEight } from './cupsEight';
+import { cupsNine } from './cupsNine';
+import { cupsTen } from './cupsTen';
+import { cupsPage } from './cupsPage';
+import { cupsKnight } from './cupsKnight';
+import { cupsQueen } from './cupsQueen';
+import { cupsKing } from './cupsKing';
+
+export const allRUCards: CardsData = [
+    { card: fool, name: 'fool' },
+    { card: magician, name: 'magician' },
+    { card: highPriestess, name: 'highPriestess' },
+    { card: empress, name: 'empress' },
+    { card: emperor, name: 'emperor' },
+    { card: hierophant, name: 'hierophant' },
+    { card: lovers, name: 'lovers' },
+    { card: chariot, name: 'chariot' },
+    { card: strength, name: 'strength' },
+    { card: hermit, name: 'hermit' },
+    { card: wheelOfFortune, name: 'wheelOfFortune' },
+    { card: justice, name: 'justice' },
+    { card: hangedMan, name: 'hangedMan' },
+    { card: death, name: 'death' },
+    { card: temperance, name: 'temperance' },
+    { card: devil, name: 'devil' },
+    { card: tower, name: 'tower' },
+    { card: star, name: 'star' },
+    { card: moon, name: 'moon' },
+    { card: sun, name: 'sun' },
+    { card: judgement, name: 'judgement' },
+    { card: world, name: 'world' },
+    { card: pentaclesKing, name: 'pentaclesKing' },
+    { card: pentaclesAce, name: 'pentaclesAce' },
+    { card: pentaclesTwo, name: 'pentaclesTwo' },
+    { card: pentaclesThree, name: 'pentaclesThree' },
+    { card: pentaclesFour, name: 'pentaclesFour' },
+    { card: pentaclesFive, name: 'pentaclesFive' },
+    { card: pentaclesSix, name: 'pentaclesSix' },
+    { card: pentaclesSeven, name: 'pentaclesSeven' },
+    { card: pentaclesEight, name: 'pentaclesEight' },
+    { card: pentaclesNine, name: 'pentaclesNine' },
+    { card: pentaclesTen, name: 'pentaclesTen' },
+    { card: pentaclesPage, name: 'pentaclesPage' },
+    { card: pentaclesQueen, name: 'pentaclesQueen' },
+    { card: pentaclesKnight, name: 'pentaclesKnight' },
+    { card: wandsKing, name: 'wandsKing' },
+    { card: wandsQueen, name: 'wandsQueen' },
+    { card: wandsKnight, name: 'wandsKnight' },
+    { card: swordsKing, name: 'swordsKing' },
+    { card: swordsQueen, name: 'swordsQueen' },
+    { card: swordsKnight, name: 'swordsKnight' },
+    { card: cupsKing, name: 'cupsKing' },
+    { card: cupsQueen, name: 'cupsQueen' },
+    { card: cupsKnight, name: 'cupsKnight' },
+    { card: wandsAce, name: 'wandsAce' },
+    { card: wandsTwo, name: 'wandsTwo' },
+    { card: wandsThree, name: 'wandsThree' },
+    { card: wandsFour, name: 'wandsFour' },
+    { card: wandsFive, name: 'wandsFive' },
+    { card: wandsSix, name: 'wandsSix' },
+    { card: wandsSeven, name: 'wandsSeven' },
+    { card: wandsEight, name: 'wandsEight' },
+    { card: wandsNine, name: 'wandsNine' },
+    { card: wandsTen, name: 'wandsTen' },
+    { card: wandsPage, name: 'wandsPage' },
+    { card: cupsAce, name: 'cupsAce' },
+    { card: cupsTwo, name: 'cupsTwo' },
+    { card: cupsThree, name: 'cupsThree' },
+    { card: cupsFour, name: 'cupsFour' },
+    { card: cupsFive, name: 'cupsFive' },
+    { card: cupsSix, name: 'cupsSix' },
+    { card: cupsSeven, name: 'cupsSeven' },
+    { card: cupsEight, name: 'cupsEight' },
+    { card: cupsNine, name: 'cupsNine' },
+    { card: cupsTen, name: 'cupsTen' },
+    { card: cupsPage, name: 'cupsPage' },
+    { card: swordsAce, name: 'swordsAce' },
+    { card: swordsTwo, name: 'swordsTwo' },
+    { card: swordsThree, name: 'swordsThree' },
+    { card: swordsFour, name: 'swordsFour' },
+    { card: swordsFive, name: 'swordsFive' },
+    { card: swordsSix, name: 'swordsSix' },
+    { card: swordsSeven, name: 'swordsSeven' },
+    { card: swordsEight, name: 'swordsEight' },
+    { card: swordsNine, name: 'swordsNine' },
+    { card: swordsTen, name: 'swordsTen' },
+    { card: swordsPage, name: 'swordsPage' },
+];

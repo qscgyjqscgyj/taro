@@ -7,4 +7,6 @@ export const ru: TranslationObject = {
     headerAboutLink: 'О Таро',
     setScreenTitle: 'Создать Расклад',
     historyScreenTitle: 'История',
+    cardDirectionNormal: 'Нормальное',
+    cardDirectionFlipped: 'Перевернутое',
 };

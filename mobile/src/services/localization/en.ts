@@ -7,4 +7,6 @@ export const en: TranslationObject = {
     headerAboutLink: 'About Tarot',
     setScreenTitle: 'Sets',
     historyScreenTitle: 'History',
+    cardDirectionNormal: 'Normal',
+    cardDirectionFlipped: 'Flipped',
 };

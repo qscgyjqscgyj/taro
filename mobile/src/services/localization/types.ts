@@ -5,4 +5,6 @@ export interface TranslationObject {
     headerAboutLink: string;
     setScreenTitle: string;
     historyScreenTitle: string;
+    cardDirectionNormal: string;
+    cardDirectionFlipped: string;
 }
