@@ -1,91 +1,88 @@
 import { CardData } from 'shared/types/cards';
 
 export const chariot: CardData = {
-    name: 'КОЛЕСНИЦА',
-    altNames: ['колесница', 'повозка', 'возничий'],
+    name: 'CHARIOT',
+    altNames: ['chariot', 'cart', 'charioteer'],
     arcana: { type: 'major', suit: undefined },
-    subTitle: 'Торжество разума',
+    subTitle: 'Triumph of Reason',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Воля, амбиции, решительность',
-                'Направленность, движение',
-                'Контроль, сосредоточенность',
-                'Успех, прорыв',
+                'Willpower, ambition, determination',
+                'Direction, movement',
+                'Control, focus',
+                'Success, breakthrough',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Отсутствие контроля, направления',
-                'Препятствия, неудача, поражение',
-                'Агрессия, обида',
+                'Lack of control, direction',
+                'Obstacles, failure, defeat',
+                'Aggression, resentment',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Контроль над своей личной жизнью — понимание своих желаний, проявление инициативы',
-                'В отношениях не стоит терять свою индивидуальность и свои ценности. Следует сбалансировать их',
+                'Control over your personal life - understanding your desires, taking initiative',
+                "In relationships, don't lose your individuality and values. It's important to balance them",
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Сложности в принятии верного решения',
-                'Проблемы в отношениях, связанные со спонтанными решениями или действиями',
+                'Difficulties in making the right decisions',
+                'Relationship problems related to spontaneous decisions or actions',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Ваши амбиции и мотивация помогут вам достичь успеха в работе',
-                'Новый опыт',
-                'Независимый род деятельности, работа на себя',
-                'Смена деятельности',
+                'Your ambitions and motivation will help you succeed in your work',
+                'New experiences',
+                'Independent field of activity, self-employment',
+                'Change of profession',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: [
-                'Тщетность прилагаемых усилий',
-                'Недостаток или избыток амбиций и сосредоточенности',
-            ],
+            textData: ['Futility of efforts made', 'Lack or excess of ambition and focus'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Знак того, чтобы разобраться с финансовыми препятствиями. У вас будет мотивация, сосредоточенность и решимость для преодоления этих трудностей',
+                'A sign to tackle financial obstacles. You will have the motivation, focus, and determination to overcome these difficulties',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Следует опасаться необдуманных и поспешных покупок',
-                'Свидетельствует о нерешительность в финансовом плане',
+                'Beware of impulsive and hasty purchases',
+                'Indicates indecision in financial matters',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Карта свидетельствует о столкновении внутреннего и внешнего мира. Следует определиться с целью и сосредоточенно идти к ней. Прислушивание к своему внутреннему голосу поможет в достижении желаемого.',
+                'The card indicates a collision of the inner and outer worlds. It is important to define your goal and pursue it with focus. Listening to your inner voice will help you achieve your desires.',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Утрата контроля над ситуацией/своими поступками.Следует присмотреться к своему ритму и усердию и подкорректировать их',
+                "Loss of control over the situation/your actions. It's important to examine your pace and diligence and make adjustments",
             ],
         },
     ],
