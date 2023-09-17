@@ -62,7 +62,7 @@ describe('Have to set set', () => {
         { defaultSets: [...TEST_SETS, NEW_SET] },
     ])('Set works with default sets: $defaultSets', async ({ defaultSets }) => {
         AsyncStorageMock.getItem = jest.fn(() =>
-            Promise.resolve(defaultSets ? JSON.stringify(defaultSets) : null),
+            Promise.resolve(defaultSets !== null ? JSON.stringify(defaultSets) : null),
         );
 
         const { setItemMock, mockDateISO } = setup();
@@ -83,6 +83,7 @@ describe('Have to set set', () => {
         const newSetsExpect =
             defaultSets !== null
                 ? [
+                      ...(existInDefaultSetsIndex === -1 ? [newSetExpect] : []),
                       ...defaultSets.map((set) => {
                           if (set.id === NEW_SET.id) {
                               return newSetExpect;
@@ -90,7 +91,6 @@ describe('Have to set set', () => {
 
                           return set;
                       }),
-                      ...(existInDefaultSetsIndex === -1 ? [newSetExpect] : []),
                   ]
                 : null;
 
