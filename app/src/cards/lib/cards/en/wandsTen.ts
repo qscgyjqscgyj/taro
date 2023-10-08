@@ -1,81 +1,80 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsTen: CardData = {
-    name: 'ДЕCЯТКА ЖЕЗЛОВ',
-    altNames: ['деcятка жезлов', 'деcятка палок', 'деcятка посохов', 'деcятка скипетров'],
+    name: 'Ten of Wands',
+    altNames: ['ten of wands', 'ten of rods', 'ten of staffs', 'ten of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Много ответственности',
+    subTitle: 'A Lot of Responsibility',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
-            textData: ['Бремя, ответственность, долг, обязательство', 'Стресс, выгорание, борьба'],
+            textData: ['Burden, responsibility, duty, obligation', 'Stress, burnout, struggle'],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Неумение делегировать полномочия',
-                'Возложение слишком большой ответственности, перегруженность',
-                'Крах, срыв, недоверие',
+                'Inability to delegate authority',
+                'Placing too much responsibility, overloading',
+                'Failure, breakdown, distrust',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Ощущение тяжести бремени любви, перегруз ответственностью',
-                'Стресс создает проблемы в отношениях, не стесняйтесь просить о помощи близких',
+                'Feeling the weight of the burden of love, overloaded with responsibility',
+                "Stress creates problems in relationships, don't hesitate to ask for help from loved ones",
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Неспособность разделить бремя с партнером, потеря баланса в отношениях',
-                'Оказание эмоциональной поддержки друг-другу',
+                'Inability to share the burden with the partner, loss of balance in relationships',
+                'Providing emotional support to each other',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Перегрузка работой, нести бремя работы в одиночку',
-                'Нуждаться в помощи коллег. Сотрудничество и делегирование — ваши лучшие помощники в это время',
+                'Work overload, carrying the burden of work alone',
+                'Need for help from colleagues. Collaboration and delegation are your best allies at this time',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: [
-                'Освобождение от рабочей нагрузки, делегирование задач ',
-                'Поиск поддержки, выгорание',
-            ],
+            textData: ['Relief from work load, task delegation', 'Seeking support, burnout'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
-            textData: ['Финансовые обязательства, большие неизбежные расходы'],
+            textData: ['Financial obligations, significant unavoidable expenses'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Облегчение финансового бремени, поиск помощи',
-                'Углубление экономических проблем',
+                'Relief from financial burden, seeking assistance',
+                'Deepening economic problems',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Стресс от свалившихся новых обстоятельств. Требуется поддержка и внимание близких',
+                'Stress from unexpected new circumstances. Requires support and attention from loved ones',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
-            textData: ['Предчувствие разочарования, переживания из-за переоценённых возможностей'],
+            textData: [
+                'Foreboding of disappointment, anxieties due to overestimated possibilities',
+            ],
         },
     ],
 };

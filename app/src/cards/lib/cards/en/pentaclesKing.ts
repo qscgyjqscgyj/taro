@@ -1,89 +1,78 @@
 import { CardData } from 'shared/types/cards';
 
 export const pentaclesKing: CardData = {
-    name: 'КОРОЛЬ ПЕНТАКЛЕЙ',
-    altNames: ['король пентаклей', 'король монет', 'король денариев'],
+    name: 'KING OF PENTACLES',
+    altNames: ['king of pentacles', 'king of coins', 'king of denarii'],
     arcana: { type: 'minor', suit: 'pentacles' },
-    subTitle: 'Светский успех',
+    subTitle: 'Worldly success',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Изобилие, процветание',
-                'Безопасность, амбициозный, чувственный, надежный',
-                'Бизнесмен, кормилец',
-                'Инстинкт, ум, хорошее чутьё',
+                'Abundance, prosperity',
+                'Safety, ambitious, sensual, reliable',
+                'Businessman, provider',
+                'Instinct, intellect, good intuition',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Жадность, материалистичность, расточительность, фанатизм',
-                'Плохие финансовые решения, азартный игрок',
-                'Эксплуататор, собственник, гнев',
+                'Greed, materialism, wastefulness, fanaticism',
+                'Bad financial decisions, gambler',
+                'Exploiter, owner, anger',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
+            direction: 'normal',
+            textData: ['Serious relationship', 'Generous provider', 'Emotional comfort and wealth'],
+        },
+        {
+            category: 'Love',
+            direction: 'reversed',
+            textData: ['Materialistic, greedy lover who might use you', 'Control, manipulation'],
+        },
+        {
+            category: 'Career',
+            direction: 'normal',
+            textData: ['Success and ambition', 'Encouraging mentor, partner', 'Good reputation'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
+            textData: ['Failures at work, bad reputation', 'Despondency, tyranny'],
+        },
+        {
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Серьёзное отношение',
-                'Щедрый кормилец',
-                'Эмоциональный комфорт и достаток',
+                'Reaching a certain financial milestone',
+                'Investing, savings',
+                'Supporting loved ones, generosity',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Finances',
             direction: 'reversed',
-            textData: [
-                'Материалистичный, жадный любовник, который может вас использовать',
-                'Контроль, манипуляции',
-            ],
+            textData: ['Financial losses, bad financial decisions, debts', 'Stinginess'],
         },
         {
-            category: 'Карьера',
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Успех и амбициозность',
-                'Ободряющий наставник, партнёр',
-                'Хорошая репутация',
+                'Ability to transform internal resource into external',
+                'Equivalent exchange of energies leading to breakthrough or growth',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: ['Неудачи на работе, плохая репутация', 'Уныние, тирания'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: [
-                'Достижение некого финансового рубежа',
-                'Инвестирование, сбережения',
-                'Поддержка близких, щедрость',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: ['Финансовые потери, плохие финансовые решения, долги', 'Скупость'],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Cпocoбнocть пpeoбpaзoвывaть внутpeнний pecуpc вo внeшний',
-                'Paвнoцeнный oбмeн энepгиями, ведущий k пpopыву или pocту',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Cepьёзныe oшибки, нeпpaвильнo пepeдaнныe мыcли',
-                'Концентрация на материальном в ущерб морали и других сфер жизни',
+                'Serious mistakes, improperly conveyed thoughts',
+                'Focus on material at the expense of morality and other life spheres',
             ],
         },
     ],

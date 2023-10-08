@@ -1,88 +1,85 @@
 import { CardData } from 'shared/types/cards';
 
 export const pentaclesTwo: CardData = {
-    name: 'ДВОЙКА ПЕНТАКЛЕЙ',
-    altNames: ['двойка пентаклей', 'двойка монет', 'двойка денариев'],
+    name: 'TWO OF PENTACLES',
+    altNames: ['two of pentacles', 'two of coins', 'two of denarii'],
     arcana: { type: 'minor', suit: 'pentacles' },
-    subTitle: 'Суета',
+    subTitle: 'Fuss',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Балансирование',
-                'Адаптация, гибкость',
-                'Хаотичность, эмоции',
-                'Ловкость, находчивость',
+                'Balancing',
+                'Adaptation, flexibility',
+                'Chaotic, emotions',
+                'Agility, resourcefulness',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Дисбаланс, беспокойство',
-                'Неорганизованность, хаос',
-                'Перегруженность, перенапряжение, упадок духа',
+                'Imbalance, anxiety',
+                'Disorganization, chaos',
+                'Overload, strain, spirit downfall',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Трудности в удержании баланса между любовью, семьёй и работой',
-                'Адаптация к изменениям в отношениях',
+                'Difficulty in maintaining balance between love, family, and work',
+                'Adaptation to changes in relationships',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Расстановка приоритетов между отношениями и чем-то другим',
-                'Пренебрежение партнером',
-                'Выбор между двумя (потенциальными) партнёрами',
+                'Setting priorities between relationships and something else',
+                'Neglecting partner',
+                'Choice between two (potential) partners',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Жонглирование проектами, непомерная нагрузка', 'Находчивость на работе'],
+            textData: ['Juggling projects, excessive workload', 'Resourcefulness at work'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Стресс от перегрузки работой — потребуется пересмотреть приоритеты и внести коррективы',
+                'Stress from work overload \u2013 need to review priorities and make adjustments',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
-            textData: [
-                'Ограниченные финансы, нестабильность',
-                'Расставление финансовых приоритетов',
-            ],
+            textData: ['Limited finances, instability', 'Setting financial priorities'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Проблема недостатка ресурсов, которую можно решить сокращением трат или поиском дополнительных вариантов заработка',
+                'Problem of resource shortage, which can be solved by cutting expenses or looking for additional earning options',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Имеется много энергии, которые можно направить на реализацию задуманного',
-                'Путаница в мыслях',
+                "There's a lot of energy that can be directed towards the realization of what's planned",
+                'Confusion in thoughts',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Усталость и утрата мотивации',
-                'Требуется время для уединённого отдыха и размышлений',
+                'Fatigue and loss of motivation',
+                'Need time for secluded rest and reflection',
             ],
         },
     ],

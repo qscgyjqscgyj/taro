@@ -1,100 +1,87 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsFour: CardData = {
-    name: 'ЧЕТВЁРКА ЖЕЗЛОВ',
-    altNames: [
-        'четверка жезлов',
-        'четверка палок',
-        'четверка посохов',
-        'четверка скипетров',
-        'четвёрка жезлов',
-        'четвёрка палок',
-        'четвёрка посохов',
-        'четвёрка скипетров',
-    ],
+    name: 'FOUR OF WANDS',
+    altNames: ['four of wands', 'four of rods', 'four of staffs', 'four of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Цветущий сад',
+    subTitle: 'Blooming Garden',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Сообщество, дом, переезд',
-                'Праздники, встречи, вечеринки, собрания',
-                'Стабильность, гармония, мир, процветание',
+                'Community, home, relocation',
+                'Celebrations, gatherings, parties, meetings',
+                'Stability, harmony, peace, prosperity',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Отсутствие поддержки, нестабильность',
-                'Ощущение нежелательности, домашний конфликт',
-                'Критика, разочарование, спешка',
+                'Lack of support, instability',
+                'Feeling unwelcome, domestic conflict',
+                'Criticism, disappointment, haste',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Любовь, которая поддерживается в контексте большого сообщества',
-                'Свадьбы, помолвки, собрания и публичные празднования любви',
-                'Укрепление отношений благодаря семье и друзьям',
+                'Love that is supported within the context of a larger community',
+                'Weddings, engagements, gatherings, and public celebrations of love',
+                'Strengthening of relationships through family and friends',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Конфликт между вашим большим кругом друзей/семьей и вашим партнером',
-                'Страх перед публичными обязательствами',
+                'Conflict between your larger circle of friends/family and your partner',
+                'Fear of public commitments',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Стабильные и поддерживающие рабочие отношения',
-                'Сближение с коллегами, приобретение друга',
+                'Stable and supportive work relationships',
+                'Getting closer to colleagues, making a friend',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Конфликты на рабочем месте', 'Отсутствие значимых результатов в работе'],
+            textData: ['Conflicts at work', 'Lack of significant results at work'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Stable financial situation', 'Financial support', 'Gifts for loved ones'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: [
+                'Unstable financial situation',
+                'Support from family or loved ones can become a burden',
+            ],
+        },
+        {
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Стабильное финансовое положение',
-                'Финансовая поддержка',
-                'Подарки для близких',
+                'Constant growth, an active phase of growth or transformation of the mind',
+                'Accumulation of personal experiences and transition to something new',
+                'Joy from well-done work, inspiration and happiness',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Нестабильное финансовое положение',
-                'Поддержка семьи или близких может стать бременем',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Пocтoяннoe paзвитиe, активная фаза pocтa или пpeoбpaжeниe умa',
-                'Haкoплeниe coбcтвeннoгo чувcтвeннoгo oпытa и пepexoд к нoвoму',
-                'Paдocть oт xopoшo пpoдeлaннoй paбoты, oкpылённocть и счастье',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Haдeждa нa cтapыe кoнтaкты и нapaбoтки в любыx cфepax жизни',
-                'Зaмeдлившийcя pocт, пepиoд стагнации или затянувшийся отдых',
+                'Reliance on old connections and developments in all areas of life',
+                'Slower growth, a period of stagnation or prolonged rest',
             ],
         },
     ],

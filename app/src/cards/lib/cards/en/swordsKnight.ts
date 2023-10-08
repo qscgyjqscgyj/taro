@@ -1,91 +1,85 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsKnight: CardData = {
-    name: 'РЫЦАРЬ МЕЧЕЙ',
-    altNames: ['рыцарь мечей', 'рыцарь шпаг'],
+    name: 'Swords Knight',
+    altNames: ['knight of swords', 'knight of spades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Упорство',
+    subTitle: 'Determination',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Напористый, прямой, нетерпеливый',
-                'Интеллектуальный, смелый, защита',
-                'Сосредоточенный, перфекционист, амбициозный',
+                'Assertive, direct, impatient',
+                'Intellectual, bold, protective',
+                'Focused, perfectionist, ambitious',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Грубый, бестактный, задиристый, агрессивный',
-                'Волевой, безжалостный, высокомерный',
-                'Ссоры, эгоизм, скрытность, непонимание',
+                'Rude, tactless, quarrelsome, aggressive',
+                'Willful, ruthless, arrogant',
+                'Arguments, selfishness, secrecy, misunderstanding',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Страхи по поводу близости',
-                'Требовательный, легко скучающий партнер',
-                'Решительность в действиях',
+                'Fears of intimacy',
+                'Demanding, easily bored partner',
+                'Resolve in actions',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Агрессивный и контролирующий партнёр',
-                'Издевательства, оскорбления',
-                'Сильные ссоры',
+                'Aggressive and controlling partner',
+                'Mockery, insults',
+                'Strong arguments',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
+            direction: 'normal',
+            textData: ['Achieving goals, great successes', 'Focus on career, efficiency'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
+            textData: ['Ruthlessness and aggression at work', 'Arrogance, intimidation'],
+        },
+        {
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Focus on financial goals', 'Taking measures to achieve financial goals'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: [
+                'Excessive focus on money, potentially leading to unethical actions',
+                'Fraud, scams, coercion, questionable financial deals',
+            ],
+        },
+        {
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Достижение целей, большие успехи',
-                'Сосредоточенность на карьере, эффективность',
+                'Fearlessness and self-confidence, oriented towards achieving the goal',
+                'Decisive actions, presence of beliefs, high ideals',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: ['Безжалостность и агрессия на работе', 'Высокомерие, запугивание'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: [
-                'Концентрация на финансовых целях',
-                'Принятие мер по достижению финансовых целей',
-            ],
-        },
-        {
-            category: 'Финансы',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Чрезмерная концентрация на деньгах, потенциально ведущая к аморальным действиям',
-                'Мошенничество, аферы, принуждение, сомнительные финансовые сделки',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Бeccтpaшиe и caмoувepeннocть, opиeнтиp нa дocтижeниe цeли',
-                'Peшитeльныe дeйcтвия, нaличиe убeждeний, выcoкиx идeaлoв',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Heумecтнoe пoвeдeниe, пpямoe пpoявлeниe злoбы, нeнaвиcти',
-                'Жeлaниe oтoмcтить вceм и вcя, вoccтaнoвить cпpaвeдливocть',
-                'Зaциклeннocть нa coбcтвeннoй боли, oбидax и пpoшлoм гope',
+                'Inappropriate behavior, direct expression of anger, hatred',
+                'Desire to avenge everyone and everything, restore justice',
+                "Fixation on one's own pain, grievances, and past sorrow",
             ],
         },
     ],

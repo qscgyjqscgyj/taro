@@ -1,89 +1,86 @@
 import { CardData } from 'shared/types/cards';
 
 export const cupsKnight: CardData = {
-    name: 'РЫЦАРЬ КУБКОВ',
-    altNames: ['рыцарь кубков', 'рыцарь чаш'],
+    name: 'KNIGHT OF CUPS',
+    altNames: ['knight of cups', 'knight of chalices'],
     arcana: { type: 'minor', suit: 'cups' },
-    subTitle: 'Иллюзopнocть',
+    subTitle: 'Illusoriness',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Идеалист, обаятельный, артистичный, грациозный',
-                'Тактичный, дипломатичный, посредник, переговорщик',
-                'Внушение, скрытое намерение, розовые очки',
+                'Idealist, charming, artistic, graceful',
+                'Tactful, diplomatic, mediator, negotiator',
+                'Suggestion, hidden intent, rose-colored glasses',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Разочарование, истерики, угрюмость, суматоха',
-                'Избегание конфликтов, тщеславие',
-                'Ложь, инфантильность, иллюзии, пассивность',
+                'Disappointment, tantrums, gloominess, chaos',
+                'Avoidance of conflicts, vanity',
+                'Lie, childishness, illusions, passivity',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
+            direction: 'normal',
+            textData: ['Romance, attraction, flirt, infatuation', 'Unrealistic love expectations'],
+        },
+        {
+            category: 'Love',
+            direction: 'reversed',
+            textData: [
+                'Avoiding conflicts in love',
+                'Passive-aggressive partner, false impression',
+                'Quick change of feelings',
+            ],
+        },
+        {
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Романтика, влечение, флирт, влюбленность',
-                'Нереалистичные ожидания от любви',
+                'Diplomacy at work and tactfulness will create better team cohesion',
+                'Creative solutions',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Career',
             direction: 'reversed',
-            textData: [
-                'Избегание конфликтов в любви',
-                'Пассивно-агрессивный партнер, ложное впечатление',
-                'Быстрая смена чувств',
-            ],
+            textData: ['Tension and gloominess at work', 'Avoiding confrontation at work'],
         },
         {
-            category: 'Карьера',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Дипломатия на работе и тактичность создадут лучшую сплоченность коллектива',
-                'Творческие решения',
+                'Mediation in financial disputes',
+                'Using a creative approach to achieve financial goals',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Finances',
             direction: 'reversed',
-            textData: ['Напряженность и угрюмость на работе', 'Избегание конфронтации на работе'],
+            textData: ['Avoiding financial decisions', 'Financial disappointments'],
         },
         {
-            category: 'Финансы',
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Посредничество в спорах о финансах',
-                'Использование творческого подхода для достижения финансовых целей',
+                'Pleasure, romance, life satisfaction, idealism',
+                'Self-sacrifice, sincerity, altruism, philanthropy',
+                'Inner harmony, readiness to give and receive love',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: ['Избегание финансовых решений', 'Финансовые разочарования'],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Удoвoльcтвиe, poмaнтикa, yдoвлeтвopeния жизнью, идeaлизм',
-                'Caмoпoжepтвoвaниe, иcкpeннocть, альтруизм, филантропия',
-                'Bнутpeнняя гapмoния, гoтoвнocть дapить и пoлучaть любoвь',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Зaвиcимocть oт чужoгo мнeния, oдoбpeния coбcтвeнныx пocтупкoв',
-                'Heнaдёжнocть, уxoд oт oтвeтcтвeннocти и peaлий миpa',
-                'Mнитeльнocть и излишняя дoвepчивocть вo вpeд ceбe',
-                'Paзмытoe вocпpиятиe cвoeгo нacтoящeгo пoлoжeния',
+                "Dependency on others' opinions, approval of one's own actions",
+                'Unreliability, escape from responsibility and realities of the world',
+                "Delusion and excessive trust to one's own detriment",
+                "Blurred perception of one's current situation",
             ],
         },
     ],

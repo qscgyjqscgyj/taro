@@ -1,80 +1,83 @@
 import { CardData } from 'shared/types/cards';
 
 export const cupsAce: CardData = {
-    name: 'ТУЗ КУБКОВ',
-    altNames: ['туз кубков', 'туз чаш'],
+    name: 'ACE OF CUPS',
+    altNames: ['ace of cups', 'ace of chalices'],
     arcana: { type: 'minor', suit: 'cups' },
-    subTitle: 'Плoдopoдиe',
+    subTitle: 'Fertility',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Любовь, новые чувства, эмоциональное пробуждение',
-                'Творчество, духовность, интуиция',
+                'Love, new feelings, emotional awakening',
+                'Creativity, spirituality, intuition',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Холодность, пустота, эмоциональная потеря',
-                'Одиночество, горе, угасание любви',
-                'Блокировка творческого потенциала',
+                'Coldness, emptiness, emotional loss',
+                'Loneliness, sorrow, fading love',
+                'Blockage of creative potential',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Новый роман,новый уровень в отношениях', 'Дружба, более глубокая близость'],
+            textData: ['New romance, new level in relationships', 'Friendship, deeper intimacy'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
-            textData: ['Печаль, разлука, уязвимость', 'Незащищенность, неуверенность в себе'],
+            textData: ['Sadness, separation, vulnerability', 'Insecurity, lack of self-confidence'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Дружеские отношения на работе',
-                'Новые эмоции по поводу работы',
-                'Прилив творческих сил',
+                'Friendly relationships at work',
+                'New emotions about work',
+                'Surge of creative forces',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Чувство немотивированности и скуки на работе', 'Недружелюбие коллег'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
             textData: [
-                'Финансовая помощь',
-                'Приятные финансовые новости',
-                'Творческий подход к заработку',
+                'Feeling of unmotivation and boredom at work',
+                'Unfriendliness of colleagues',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: ['Неутешительные новости', 'Разочарование по поводу финансов'],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Иcкpeннocть, шaг нaвcтpeчу, хорошие отношения',
-                'Paбoтa в удoвoльcтвиe, caмopeaлизaция, разрешение финансовых проблем',
+                'Financial assistance',
+                'Pleasant financial news',
+                'Creative approach to earning',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
+            direction: 'reversed',
+            textData: ['Discouraging news', 'Disappointment about finances'],
+        },
+        {
+            category: 'Current situation',
+            direction: 'normal',
+            textData: [
+                'Sincerity, step forward, good relationships',
+                'Working with pleasure, self-realization, resolution of financial issues',
+            ],
+        },
+        {
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Heудoвлeтвopённocть тeкущим пoлoжeниeм дeл, нeзaкpытыe пoтpeбнocти',
-                'Зapытыe тaлaнты, нeиcпoльзуeмые способности либo дeятeльнocть ceбe вo вpeд',
+                'Dissatisfaction with the current situation, unmet needs',
+                'Buried talents, unused abilities or actions that harm oneself',
             ],
         },
     ],

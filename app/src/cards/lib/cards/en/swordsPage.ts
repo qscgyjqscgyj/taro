@@ -1,80 +1,83 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsPage: CardData = {
-    name: 'ПАЖ МЕЧЕЙ',
-    altNames: ['паж мечей', 'паж шпаг'],
+    name: 'Page of Swords',
+    altNames: ['page of swords', 'page of blades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Сообразительность',
+    subTitle: 'Ingenuity',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Любознательный, остроумный, коммуникабельный',
-                'Вдохновленный, внимательный, умственная активность',
-                'Шанс, возможность, начало конца, честность, решимость',
+                'Inquisitive, witty, communicative',
+                'Inspired, attentive, mental activity',
+                'Chance, opportunity, beginning of the end, honesty, determination',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Рассеянный, циничный, саркастичный',
-                'Сплетник, обидчивый, грубый, отсутствие планирования',
-                'Оскорбление, коварство, подозрительность, шпионаж',
+                'Distracted, cynical, sarcastic',
+                'Gossip, sensitive, rude, lack of planning',
+                'Insult, deceit, suspicion, espionage',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Интеллектуальные отношения', 'Неудовлетворенная эмоциональная потребность'],
+            textData: ['Intellectual relationships', 'Unfulfilled emotional needs'],
         },
         {
-            category: 'Любовь',
-            direction: 'reversed',
-            textData: ['Спорящий, защищающийся партнер', 'Неспособность к общению и эмпатии'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: ['Амбициозный, умный человек', 'Новая карьера, образование'],
-        },
-        {
-            category: 'Карьера',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Поиск работы, неуверенность в будущей карьере',
-                'Множество идей без реализации',
-                'Офисные сплетни',
+                'Argumentative, defensive partner',
+                'Inability to communicate and empathize',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Финансовое любопытство', 'Идеи для зарабатывания денег'],
+            textData: ['Ambitious, intelligent individual', 'New career, education'],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Чрезмерный анализ финансов, исследование при бездействии',
-                'Heвepный выбop и упущeннaя вoзмoжнocть или зaдepжкa',
+                'Job search, uncertainty about future career',
+                'Many ideas without implementation',
+                'Office gossip',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
+            textData: ['Financial curiosity', 'Money-making ideas'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
             textData: [
-                'Xитpocть, ocтpoумиe, нaблюдeниe co cтopoны, cбop инфopмaции',
-                'Oтceчeниe нeнужнoгo и выxoд из зoны кoмфopтa, пpивычнoгo',
+                'Excessive financial analysis, analysis without action',
+                'Wrong choice and missed opportunity or delay',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Resourcefulness, cleverness, observation from the sidelines, information gathering',
+                'Rejecting the unnecessary and stepping out of the comfort zone, the familiar',
+            ],
+        },
+        {
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Человек берет на себя обязательства и ответственность, но не выполняет поручение',
-                'Заблуждения пo пoвoду coбcтвeнныx cпocoбнocтeй',
+                'Taking on commitments and responsibilities but not fulfilling them',
+                'Misconceptions about one’s own abilities',
             ],
         },
     ],

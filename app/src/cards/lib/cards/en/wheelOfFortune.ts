@@ -1,92 +1,89 @@
 import { CardData } from 'shared/types/cards';
 
 export const wheelOfFortune: CardData = {
-    name: 'КОЛЕСО ФОРТУНЫ',
-    altNames: ['колесо фортуны', 'колесо судьбы', 'фортуна'],
+    name: 'The Wheel of Fortune',
+    altNames: ['wheel of fortune', 'wheel of destiny', 'fortune'],
     arcana: { type: 'major', suit: undefined },
-    subTitle: 'Дух идущий навстречу судьбе',
+    subTitle: 'The Spirit Moving Towards Destiny',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Предстоящие изменения, неожиданные события',
-                'Разрешение ситуации, новое начало',
-                'Судьба, решающие моменты, удача',
+                'Upcoming changes, unexpected events',
+                'Resolution of the situation, a new beginning',
+                'Fate, decisive moments, luck',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Цепляние за прошлое, нежелательные изменения',
-                'Невезение, тупик, застой',
-                'Попытки удержать контроль',
-                'Сбой, непоследовательность',
+                'Clinging to the past, unwanted changes',
+                'Misfortune, deadlock, stagnation',
+                'Attempts to maintain control',
+                'Failure, inconsistency',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Неожиданные сильные изменения в отношениях',
-                'Внесение коррективов и совместный поиск решения помогут стать ещё ближе',
-                'Судьбоносная встреча, удачный роман',
+                'Unexpected strong changes in relationships',
+                'Making corrections and jointly seeking solutions will bring you closer',
+                'Fateful encounter, a successful romance',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Застой, рутина, скука',
-                'Неожиданные сильные/переломные изменения в отношениях',
-                'Внешнее влияние на отношения',
+                'Stagnation, routine, boredom',
+                'Unexpected strong/breakthrough changes in relationships',
+                'External influence on relationships',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Адаптация к изменения в карьерном пути, удача',
-                'Необходимо оставаться информированным об имеющихся возможностях, и уметь говорить им "да"',
+                'Adapting to changes in your career path, luck',
+                'It\'s important to stay informed about available opportunities and be able to say "yes" to them',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: [
-                'Желание удержаться за прошлые решения',
-                'Неспособность адаптироваться на работе',
-            ],
+            textData: ['Desire to cling to past decisions', 'Inability to adapt at work'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Неожиданные изменения в материальном положении',
-                'Следует следить за своими финансами -- откладывать накопления и не отчаиваться, так проблемы не вечны',
+                'Unexpected changes in your financial situation',
+                "You should manage your finances well — save and don't despair, as problems are not permanent",
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Неожиданные финансовые траты',
-                'Следует подготовиться и запасти финансовую подушку',
+                'Unexpected financial expenses',
+                'You should prepare and have a financial cushion',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Следует действовать быстро, не поддаваясь эмоциям',
-                'Следует прислушаться к первой идее, которая возникла как решение проблемы',
+                'You should act quickly without succumbing to emotions',
+                'You should listen to the first idea that comes to you as a solution to the problem',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
-            textData: ['Множество трудностей и неприятностей', 'Отсутствие доверия'],
+            textData: ['Many difficulties and unpleasantness', 'Lack of trust'],
         },
     ],
 };

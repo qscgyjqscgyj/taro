@@ -1,91 +1,85 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsSeven: CardData = {
-    name: 'СЕМЁРКА ЖЕЗЛОВ',
-    altNames: [
-        'семерка жезлов',
-        'семерка палок',
-        'семерка посохов',
-        'семерка скипетров',
-        'семёрка жезлов',
-        'семёрка палок',
-        'семёрка посохов',
-        'семёрка скипетров',
-    ],
+    name: 'Seven of Wands',
+    altNames: ['seven of wands', 'seven of rods', 'seven of staffs', 'seven of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Устойчивость',
+    subTitle: 'Steadfastness',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Стоять за себя, защищать себя, территорию и имущество',
-                'Мужество, стойкость, преодоление',
-                'Прибыль',
+                'Stand up for yourself, defend yourself, your territory, and possessions',
+                'Courage, resilience, overcoming',
+                'Profit',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Трусость, стыд, уход от проблем, нерешительность',
-                'Сдаваться, уступать, отсутствие веры в себя',
+                'Cowardice, shame, avoidance of problems, indecision',
+                'Giving up, yielding, lack of self-belief',
             ],
         },
         {
-            category: 'Любовь',
-            direction: 'normal',
-            textData: ['Установление границ в отношениях', 'Борьба за отношения с внешними силами'],
-        },
-        {
-            category: 'Любовь',
-            direction: 'reversed',
-            textData: [
-                'Настороженность',
-                'Отсутствие прочного фундамента в отношениях, разочарование',
-                'Разрыв из-за внешнего давления',
-            ],
-        },
-        {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: ['Борьба с конкурентами, противостояние', 'Защита своих интересов'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: ['Конкурентная среда', 'Неспособность удержать свои позиции', 'Зависть'],
-        },
-        {
-            category: 'Финансы',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Финансовой стабильности, пассивный доход',
-                'Долгосрочный успех',
-                'Зависть вашему положению',
+                'Establishing boundaries in relationships',
+                'Struggle for relationships against external forces',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Некоторая потеря сбережений',
-                'Излишняя самоуверенность, ведущая к потере',
-                'Импульсивные траты',
+                'Caution',
+                'Lack of a strong foundation in relationships, disappointment',
+                'Separation due to external pressure',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Career',
+            direction: 'normal',
+            textData: ['Competing with competitors, confrontation', 'Defending your interests'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
+            textData: ['Competitive environment', 'Inability to hold your positions', 'Envy'],
+        },
+        {
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Самостоятельное успешное решение непростых задач. Вам хватит и сил, и желания, и компетенции для этого',
+                'Financial stability, passive income',
+                'Long-term success',
+                'Envy of your position',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Чувство вины в собственных неудачах. Карта подталкивает на принятие верного решения в ситуации',
+                'Some loss of savings',
+                'Excessive self-confidence leading to loss',
+                'Impulsive spending',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Independent successful resolution of challenging tasks. You have the strength, desire, and competence for it',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'Feeling guilty about your own failures. The card encourages making the right decision in the situation',
             ],
         },
     ],

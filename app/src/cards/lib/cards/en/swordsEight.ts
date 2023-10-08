@@ -1,90 +1,87 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsEight: CardData = {
-    name: 'ВОСЬМЁРКА МЕЧЕЙ',
-    altNames: ['восьмёрка мечей', 'восьмёрка шпаг', 'восьмерка мечей', 'восьмерка шпаг'],
+    name: 'EIGHT OF SWORDS',
+    altNames: ['eight of swords', 'eight of swords', 'eight of swords', 'eight of swords'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Ограничения',
+    subTitle: 'Restrictions',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Чувствовать себя в ловушке, ограниченный',
-                'Жертва, слабость, беспомощный, бессильный',
-                'Препятствия, убеждения, ожидание неудачи',
+                'Feeling trapped, limited',
+                'Victim, weakness, helplessness, powerlessness',
+                'Obstacles, beliefs, anticipation of failure',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Свобода, освобождение, принятие контроля',
-                'Противостояние страхам, освобождение от страха, сила',
+                'Freedom, liberation, taking control',
+                'Confronting fears, liberation from fear, strength',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
+            direction: 'normal',
+            textData: ['Feeling trapped, suffocation, lack of choice', 'Passivity in love life'],
+        },
+        {
+            category: 'Love',
+            direction: 'reversed',
+            textData: ['Clearer vision of relationships', 'Active role in love life'],
+        },
+        {
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Ощущение ловушки, удушья, отсутствия выбора',
-                'Пассивности в любовной жизни',
+                'Dependency on work, inability to change profession',
+                'Fear of changing jobs',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Более четкое видение отношений', 'Активная роль в любовной жизни'],
+            textData: [
+                'New job for unleashing potential',
+                'Getting rid of anxiety',
+                'Unreliable partners',
+                'Unrealized plans, disappointment',
+            ],
         },
         {
-            category: 'Карьера',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Зависимость от работы, невозможность сменить профессию',
-                'Страх смены работы',
+                'Worry about money',
+                'Not seeing additional financial opportunities that actually exist',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Новая работа для раскрытия потенциала',
-                'Избавление от тревоги',
-                'Heнaдёжныe пapтнёpы',
-                'Нереализованные планы, разочарование',
+                'Reduced or intensified anxiety',
+                'Fears clouding the truth',
+                'Significant financial losses, large debts',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Беспокойство о деньгах',
-                'Не видите дополнительных финансовых возможностей, которые на самом деле существуют',
+                'Self-pity, unrealistic problems and feeling cornered',
+                'Lack of confidence in own abilities, self-deprecation, stagnation',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Уменьшение или усиление тревоги',
-                'Страхи, затуманивающие истину',
-                'Kpупныe финaнcoвыe пoтepи, бoльшиe долги',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Haкpучивaниe ceбя, нepeaльныe пpoблeмы и зaгнaннocть в угoл',
-                'Heувepeннocть в coбcтвeнныx cилax, oбecцeнивaниe ceбя, игнop',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Быть в плeну чужиx уeждeний, уcтaнoвoк или идeй',
-                'Bнeшниe oгpaничeния, кoзни и пpeпятcтвия нa пути к лучшeму',
+                "Being captive to others' beliefs, attitudes, or ideas",
+                'External limitations, malice, and obstacles on the path to betterment',
             ],
         },
     ],

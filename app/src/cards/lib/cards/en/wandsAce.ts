@@ -1,87 +1,87 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsAce: CardData = {
-    name: 'ТУЗ ЖЕЗЛОВ',
-    altNames: ['туз жезлов', 'туз палок', 'туз посохов', 'туз скипетров'],
+    name: 'ACE OF WANDS',
+    altNames: ['ace of wands', 'ace of rods', 'ace of staffs', 'ace of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Отвага начать путешествие',
+    subTitle: 'Courage to Begin a Journey',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Вдохновение, творческая искра',
-                'Новая инициатива, новая страсть',
-                'Энергия, сила, энтузиазм',
-                'Наследство, перемены',
+                'Inspiration, creative spark',
+                'New initiative, new passion',
+                'Energy, strength, enthusiasm',
+                'Inheritance, changes',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Отсутствие страсти, недостаток энергии',
-                'Нерешительность, творческие блоки, задержки',
-                'Бессилие, пессимизм, упрямство, туманные перспективы',
+                'Lack of passion, lack of energy',
+                'Indecision, creative blocks, delays',
+                'Helplessness, pessimism, stubbornness, unclear prospects',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Волнующие, чувственные отношения', 'Флирт, романтика, влечение'],
+            textData: ['Exciting, sensual relationships', 'Flirting, romance, attraction'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Кратковременная страстная любовная связь',
-                'Отсутствие волнения в любви, для решение которого требуется приложить усилие',
+                'Short-lived passionate love affair',
+                'Lack of excitement in love, requiring effort to resolve',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: [
-                'Вдохновение, страстный подход к работе, развитие карьеры',
-                'Творческие проекты',
-            ],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: ['Утрата вдохновения на работе', 'Застой, отсутствие прогресса'],
-        },
-        {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Финансовое облегчение, подспорье в решении финансовой проблемы',
-                'Прекращение борьбы',
-                'Вдохновение в зарабатывании денег',
+                'Inspiration, passionate approach to work, career development',
+                'Creative projects',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'reversed',
-            textData: [
-                'Возможное ухудшение финансового положения',
-                'Избегать рискованных финансовые решения',
-            ],
+            textData: ['Loss of inspiration at work', 'Stagnation, lack of progress'],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Человек с мощными энергетическим потенциалом',
-                'Всё задуманное можно осуществить благодаря своей активности и вдохновению',
+                'Financial relief, assistance in resolving financial issues',
+                'End of struggle',
+                'Inspiration in earning money',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Ситуацию можно изменить, «взяв себя в руки»',
-                'Восстановление и отдых помогут прийти в себя и закончить начатое',
+                'Possible deterioration of financial situation',
+                'Avoid risky financial decisions',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'A person with powerful energy potential',
+                'Everything planned can be achieved through one’s activity and inspiration',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'The situation can be changed by "pulling oneself together"',
+                'Restoration and rest will help regain composure and finish what has been started',
             ],
         },
     ],

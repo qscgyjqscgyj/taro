@@ -1,90 +1,81 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsKing: CardData = {
-    name: 'КОРОЛЬ ЖЕЗЛОВ',
-    altNames: ['король жезлов', 'король палок', 'король посохов', 'король скипетров'],
+    name: 'KING OF WANDS',
+    altNames: ['king of wands', 'king of rods', 'king of staffs', 'king of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Лидерство',
+    subTitle: 'Leadership',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Лидерство, принятие решений, смелые идеи',
-                'Гордость, честолюбие',
-                'Активность, оптимизм, быстрая реакция',
+                'Leadership, decision-making, bold ideas',
+                'Pride, ambition',
+                'Activity, optimism, quick reaction',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Властный, доминирующий, тиран',
-                'Бессильный, неэффективный, слабый лидер',
-                'Вспыльчивость, строгость, нетерпимость',
+                'Authoritative, dominating, tyrannical',
+                'Powerless, ineffective, weak leader',
+                'Impulsiveness, strictness, intolerance',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
+            direction: 'normal',
+            textData: ['Energetic, charismatic, and passionate lover who takes initiative in love'],
+        },
+        {
+            category: 'Love',
+            direction: 'reversed',
+            textData: ['Arrogant, authoritative lover', 'Issues with control and pressure'],
+        },
+        {
+            category: 'Career',
+            direction: 'normal',
+            textData: ['Success in career', 'Respect at work, high position', 'Mentorship'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
+            textData: [
+                'Lack of leadership qualities at work',
+                'Dependency on others, passivity at work',
+                "More self-belief and reliance on one's own abilities needed",
+            ],
+        },
+        {
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Энергичный, харизматичный и темпераментный любовник, проявляющий инициативу в любви',
+                'Financial stability',
+                'Wisdom in financial decisions',
+                'Generosity towards others',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Finances',
             direction: 'reversed',
-            textData: ['Высокомерный, властный любовник', 'Проблемы с контролем и давлением'],
+            textData: ['Lack of financial responsibility, passivity', 'Lack of financial goals'],
         },
         {
-            category: 'Карьера',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Достижение в карьере',
-                'Уважение на работе, высокая должность',
-                'Наставничество',
+                'Time for active actions, possible mentorship or patronage',
+                'A person is required to overcome their negative character traits on the path to spiritual growth',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Отсутствие лидерских качеств на работе',
-                'Зависимость от других, пассивность на работе',
-                'Следует больше верить в себя и рассчитывать на свои силы',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: [
-                'Стабильность в материальных вопросах',
-                'Мудрость в финансовых решениях',
-                'Щедрость для других',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: [
-                'Отсутствие чувства ответственности за свои финансы, пассивность',
-                'Отсутствие финансовых целей',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Время для активных действий, возможна помощь наставника/покровителя',
-                'Человеку предстоит «взять верх» над своими отрицательными чертами характера на пути к духовному росту',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Сейчас не самое лучшее время для реализации творческих задумок, солидных капиталовложений, принятия важных решений',
-                'Возможны ссоры и конфликты, которых можно избежать, проявив сдержанность',
+                'Now is not the best time for implementing creative ideas, significant capital investments, or making important decisions',
+                'Arguments and conflicts are possible, but they can be avoided by showing restraint',
             ],
         },
     ],

@@ -1,80 +1,77 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsTwo: CardData = {
-    name: 'ДВОЙКА ЖЕЗЛОВ',
-    altNames: ['двойка жезлов', 'двойка палок', 'двойка посохов', 'двойка скипетров'],
+    name: 'Two of Wands',
+    altNames: ['two of wands', 'two of rods', 'two of staffs', 'two of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Возможности',
+    subTitle: 'Possibilities',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Планирование, принятие решений',
-                'Первые шаги, выход из комфорта, принятие рисков',
-                'Достижение целей и потребностей',
+                'Planning, decision-making',
+                'First steps, stepping out of comfort, taking risks',
+                'Achieving goals and needs',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Плохое планирование, чрезмерный анализ',
-                'Бездействие, перестраховка, избегание риска',
-                'Неприятные новости, конфликты, непонимание',
+                'Poor planning, excessive analysis',
+                'Inaction, overcaution, risk avoidance',
+                'Unpleasant news, conflicts, misunderstanding',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Романтические цели', 'Планы на совместное будущее'],
+            textData: ['Romantic goals', 'Plans for a shared future'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Тайм-аут для раздумья и планирования личной жизни',
-                'Отсутствие долгосрочных перспектив или идей о будущем',
+                'A timeout for reflection and planning personal life',
+                'Lack of long-term perspectives or ideas about the future',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Карьерные планы и мечты', 'Первые шаги в своей карьере'],
+            textData: ['Career plans and dreams', 'First steps in your career'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Неожиданные препятствия и невыполнение карьерных планов',
-                'Чрезмерный анализ и попытка контроля всего и вся',
+                'Unexpected obstacles and failure to achieve career plans',
+                'Excessive analysis and an attempt to control everything',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
-            textData: [
-                'Планирование в долгосрочной перспективе',
-                'Закладывание фундамента вашего будущего',
-            ],
+            textData: ['Long-term financial planning', 'Laying the foundation for your future'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
-            textData: ['Отсутствие контроля над финансами', 'Неудачное финансовое планирование'],
+            textData: ['Lack of control over finances', 'Unsuccessful financial planning'],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Стремление достичь своих целей любыми путями. Следует тщательно продумывайте и взвешивайте каждый шаг прежде чем действовать',
+                'A determination to achieve your goals by any means necessary. Carefully consider and weigh each step before taking action',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Подвешенное состояние в вопросе. Ситуация сильно зависит от внешних факторов',
+                'A suspended state in the matter. The situation is highly dependent on external factors',
             ],
         },
     ],

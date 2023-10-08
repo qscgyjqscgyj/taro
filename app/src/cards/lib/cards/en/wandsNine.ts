@@ -1,87 +1,90 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsNine: CardData = {
-    name: 'ДЕВЯТКА ЖЕЗЛОВ',
-    altNames: ['девятка жезлов', 'девятка палок', 'девятка посохов', 'девятка скипетров'],
+    name: 'Nine of Wands',
+    altNames: ['nine of wands', 'nine of rods', 'nine of staffs', 'nine of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Резерв силы',
+    subTitle: 'Reserve of Strength',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Упорство,  настойчивость, близость к успеху, усталость',
-                'Смелость, стойкость',
-                'Спокойствие, готовность к защите, финансовый успех',
+                'Persistence, determination, proximity to success, fatigue',
+                'Courage, perseverance',
+                'Calmness, readiness for defense, financial success',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Упрямство, ригидность, отказ от компромисса',
-                'Оборонительность, упертость, подозрительность',
-                'Неудача, опустошение, усталость',
+                'Stubbornness, rigidity, refusal to compromise',
+                'Defensiveness, obstinacy, suspicion',
+                'Failure, emptiness, fatigue',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Напоминание, что любовь и отношения — результат работы над ними',
-                'Готовность к серьёзным шагам, самосовершенствование',
+                'A reminder that love and relationships are the result of work on them',
+                'Readiness for serious steps, self-improvement',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Отношения не оправдывают ожиданий, несмотря на то, что один из партнеров прилагает усилия',
-                'Ощущение усталости и изнурения от отношений',
+                "Relationships don't meet expectations, despite one of the partners making efforts",
+                'Feeling of exhaustion and weariness from the relationship',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Нахождение на середине пути вашего карьерного проекта',
-                'Усталость от работы, чувство опустошенности',
+                'Being halfway through your career project',
+                'Fatigue from work, a feeling of emptiness',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Чувство истощения и усталости на работе, борьба', 'Близость к выгоранию'],
+            textData: [
+                'Feeling of exhaustion and fatigue at work, struggle',
+                'Approaching burnout',
+            ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Финансовое давление',
-                'Идею об обращении к своей финансовой подушке или займе стоит заменить поиском альтернативных вариантов дохода',
+                'Financial pressure',
+                'The idea of turning to your financial cushion or taking a loan should be replaced by searching for alternative income options',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Избегание финансовой ответственности, попытки избежать финансового стресса',
-                'Совет мудро распоряжаться финансами и не делать сейчас импульсивных и неуместных трат',
+                'Avoiding financial responsibility, attempts to avoid financial stress',
+                'Advice to manage finances wisely and avoid impulsive and inappropriate spending at this time',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Прилив сил для воплощения всего задуманного',
-                'Заслуженное вознаграждение за труд принесёт доход, но стоит внимательно относиться к своему самочувствию, чтобы не остаться физически опустошенным',
+                'A surge of strength to achieve everything planned',
+                'Deserved rewards for hard work will bring income, but it is important to pay attention to your well-being to avoid physical exhaustion',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Нарушена связь человека с внешним миром. Возможно, он взял на себя слишком много или строит чрезмерные ожидания от других',
+                'The person has lost their connection with the outside world. Perhaps they have taken on too much or have unrealistic expectations of others',
             ],
         },
     ],

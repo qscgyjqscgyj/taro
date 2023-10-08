@@ -1,76 +1,76 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsFour: CardData = {
-    name: 'ЧЕТВЕРКА МЕЧЕЙ',
-    altNames: ['четверка мечей', 'четверка шпаг', 'четвёрка мечей', 'четвёрка шпаг'],
+    name: 'FOUR OF SWORDS',
+    altNames: ['four of swords', 'four of spades', '4 of swords', '4 of spades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Отдых',
+    subTitle: 'Rest',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Отдых, расслабление, путешествие, успокоение',
-                'Убежище, восстановление, самозащита, самосозерцание',
+                'Rest, relaxation, travel, tranquility',
+                'Refuge, recovery, self-defense, self-contemplation',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Восстановление, возвращение в мир, исцеление',
-                'Освобождение от изоляции, беспокойства, выгорания',
+                'Recovery, return to the world, healing',
+                'Release from isolation, anxiety, burnout',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Отдых от чрезмерного усердия, передышка', 'Уединение, личное время'],
+            textData: ['Rest from excessive zeal, respite', 'Solitude, personal time'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Отказ от давящего любовника',
-                'Окончание периода отдыха, наполненность энергией',
-                'Выход из рутины и возрождение страсти',
+                'Rejecting an oppressive lover',
+                'End of the rest period, energy replenishment',
+                'Breaking routine and reigniting passion',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Совет сделать передышку, взять отпуск или отгул и провести их с заботой о себе',
+                'Advice to take a break, take a vacation or day off, and spend them taking care of yourself',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Свежий взгляд на задачи после отдыха', 'Выгорание'],
+            textData: ['Fresh perspective on tasks after a break', 'Burnout'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
-            textData: ['Беспокойство о финансах, избегать чрезмерных размышлений о деньгах'],
+            textData: ['Financial concerns, avoid excessive money-related thoughts'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
-            textData: ['Непринятие поддержки', 'Восстановление после финансового давления'],
+            textData: ['Unwillingness to accept support', 'Recovery after financial pressure'],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Cтpeмлeниe зaкpытьcя, oтoйти oт дeл или кoнкpeтныx людeй',
-                'Пoгpужeниe в глубины paзумa или paзoтoждecтвлeниe c тeлoм',
+                'Desire to withdraw, step away from tasks or specific people',
+                'Delving into the depths of the mind or disconnecting from the body',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Необходимо расставить приоритеты так, чтобы не навредить своему здоровью — перезарядиться, и затем вернуться к бою с новыми силами',
+                "Prioritize in a way that won't harm your health - recharge, then come back to the battle with renewed strength",
             ],
         },
     ],

@@ -1,7 +1,7 @@
 import { CardData } from 'shared/types/cards';
 
 export const tower: CardData = {
-    name: 'БАШНЯ>',
+    name: 'БАШНЯ',
     altNames: ['башня', 'сгоревший храм'],
     arcana: { type: 'major', suit: undefined },
     subTitle: 'Разрушение',

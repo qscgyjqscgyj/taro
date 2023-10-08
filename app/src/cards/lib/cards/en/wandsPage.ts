@@ -1,88 +1,88 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsPage: CardData = {
-    name: 'ПАЖ ЖЕЗЛОВ',
-    altNames: ['паж жезлов', 'паж палок', 'паж посохов', 'паж скипетров'],
+    name: 'Page of Wands',
+    altNames: ['page of wands', 'page of rods', 'page of staffs', 'page of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Воодушевление',
+    subTitle: 'Inspiration',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Приключения, энергичность, экстравертированность',
-                'Энтузиазм, смелость',
-                'Азарт, свежие идеи, жизнерадостность',
+                'Adventures, energy, extroversion',
+                'Enthusiasm, courage',
+                'Zest, fresh ideas, joyfulness',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Поспешность, нетерпеливость, истерики',
-                'Отсутствие идей, лень, скука, переутомление',
-                'Ненадежность, рассеянность, хвастовство',
+                'Haste, impatience, tantrums',
+                'Lack of ideas, laziness, boredom, exhaustion',
+                'Unreliability, scatterbrained, boasting',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Романтические приключения в любви',
-                'Мимолетная роман',
-                'Желание и возможность привнести новизну в отношения',
+                'Romantic adventures in love',
+                'Fleeting romance',
+                'Desire and the opportunity to bring novelty into relationships',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Неспособность взять на себя обязательства',
-                'Ненадежный любовник',
-                'Скука в отношениях, требующая усилий и внимания',
+                'Inability to take on commitments',
+                'Unreliable lover',
+                'Boredom in relationships requiring effort and attention',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Новая должность или проект, стремление к вызову',
-                'Принятие риска на работе',
+                'New position or project, a desire for challenges at work',
+                'Taking risks at work',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Скука на работе', 'Отсутствие энергии для достижении карьерных целей'],
+            textData: ['Boredom at work', 'Lack of energy to achieve career goals'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Небольшие финансовые вознаграждения-сюрпризы',
-                'Искушения в отношении расходов, которые стоит преодолеть и оставить сбережения на будущее',
+                'Small financial surprises',
+                'Temptations regarding expenses that should be overcome to save for the future',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Финансовая нестабильность',
-                'Перерасход средств в прошлом создал проблемы в настоящем. Стоит помнить об этом в будущем',
+                'Financial instability',
+                "Overspending in the past has created problems in the present. It's important to remember this for the future",
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Трудная, но интересная работа, которая принесет ему признание и удовольствие. Новое дело позволит гадающему в полной мере проявить свои таланты',
+                'Challenging but interesting work that will bring recognition and enjoyment. The new endeavor will allow the querent to fully showcase their talents',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Плохие перспективы начинания, неумении правильно подойти к делу, отсутствии необходимых навыков',
+                'Poor prospects for the undertaking, an inability to approach the task correctly, lack of necessary skills',
             ],
         },
     ],

@@ -1,88 +1,85 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsNine: CardData = {
-    name: 'ДЕВЯТКА МЕЧЕЙ',
-    altNames: ['девятка мечей', 'девятка шпаг'],
+    name: 'Nine of Swords',
+    altNames: ['nine of swords', 'nine of spades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Отчаяние',
+    subTitle: 'Despair',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Страх, тревога, негатив',
-                'Переломный момент, отчаяние',
-                'Кошмары, надумывание, преувеличение',
-                'Страдания, сомнения, стыд, вина',
+                'Fear, anxiety, negativity',
+                'Turning point, despair',
+                'Nightmares, exaggeration, overthinking',
+                'Suffering, doubts, shame, guilt',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Выздоровление, научиться справляться, противостоять жизни',
-                'Найти помощь, стыд, чувство вины',
-                'Надежда, утешение',
+                'Recovery, learning to cope, facing life',
+                'Finding help, shame, feelings of guilt',
+                'Hope, consolation',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Недоверие к партнеру, подозрительность', 'Сожаление о прошлом'],
+            textData: ['Distrust of the partner, suspicion', 'Regret about the past'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Открыться партнёру, помощь и поддержка от него',
-                'Снятие стресса путем обмена опытом',
+                'Opening up to the partner, help and support from them',
+                'Relieving stress through sharing experiences',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: [
-                'Тревога, паранойя, стресс из-за работы',
-                'Отсутствие механизмов преодоления трудностей',
-            ],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: [
-                'Ясность в отношении работы',
-                'Разрешение проблем, обретение покоя',
-                'Стрессы становятся реальностью, усиление проблем',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: ['Паника по поводу финансов, заботы', 'Чувство обделенности'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: [
-                'Ясность в отношении финансов',
-                'Ухудшение или улучшение финансовой страхов',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Oпуcтoшeниe и тpaуp, пpинятиe нeизбeжнocти в cвoeй жизни',
-                'Эмoциoнaльнo тяжёлый тpуд и пepeживaния зa дpугиx людeй',
+                'Anxiety, paranoia, work-related stress',
+                'Lack of mechanisms to overcome difficulties',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Пoлнaя пoгpужённocть в нeгaтив и oгpaничeннoe мышлeниe',
-                'Нeвoзмoжнocть пpинять дaннocть',
-                'Улучшение ситуации, разрешение опасений',
+                'Clarity about work',
+                'Problem resolution, finding peace',
+                'Stresses become a reality, problems intensify',
+            ],
+        },
+        {
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Financial panic, worries', 'Feeling deprived'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: ['Clarity about finances', 'Worsening or improving financial security'],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                "Devastation and trauma, accepting inevitability in one's life",
+                'Emotionally heavy burden and experiences for others',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'Complete immersion in negativity and limited thinking',
+                'Inability to accept reality',
+                'Improvement in the situation, resolving anxieties',
             ],
         },
     ],

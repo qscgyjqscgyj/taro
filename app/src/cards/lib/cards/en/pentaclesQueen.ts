@@ -1,85 +1,85 @@
 import { CardData } from 'shared/types/cards';
 
 export const pentaclesQueen: CardData = {
-    name: 'КОРОЛЕВА ПЕНТАКЛЕЙ',
-    altNames: ['королева пентаклей', 'королева монет', 'королева денариев'],
+    name: 'QUEEN OF PENTACLES',
+    altNames: ['queen of pentacles', 'queen of coins', 'queen of denarii'],
     arcana: { type: 'minor', suit: 'pentacles' },
-    subTitle: 'Практичное руководство',
+    subTitle: 'Practical Guidance',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Щедрый, роскошный',
-                'Заботливый, верный, воспитанный, добрый',
-                'Домосед, гостеприимный, сердечность',
-                'С хорошим деловым чутьем, практичный, разумный, трудолюбивый',
+                'Generous, luxurious',
+                'Caring, loyal, well-mannered, kind',
+                'Homebody, hospitable, cordiality',
+                'With good business sense, practical, sensible, hardworking',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Эгоистичный, ревнивый, жадный, неуверенный в себе, материалист',
-                'Неопрятный, нетерпимый, самовлюбленный, хвастливый, завистливый',
-                'Недоверие',
+                'Selfish, jealous, greedy, insecure, materialistic',
+                'Untidy, intolerant, self-centered, boastful, envious',
+                'Distrust',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Стабильность и изобилие',
-                'Забота, добрый партнер, домашний уют',
-                'Отличное время для поиска/выбора партнёра',
+                'Stability and abundance',
+                'Care, kind partner, home comfort',
+                'Excellent time for searching/choosing a partner',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
-            textData: ['Поверхностный и эгоистичный партнер', 'Отношения по неправильным причинам'],
+            textData: ['Superficial and selfish partner', 'Relationships for the wrong reasons'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Талантливый деловой человек', 'Наставник, коллега'],
+            textData: ['Talented businessman', 'Mentor, colleague'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Хаос на работе, который требует сил и внимания больше обычного',
-                'Плохой деловой партнер',
-                'Ненадежный или завистливый коллега',
+                'Chaos at work, which requires more strength and attention than usual',
+                'Poor business partner',
+                'Unreliable or envious colleague',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: [
-                'Финансовая безопасность и ответственное отношение к деньгам',
-                'Выгодные сделки',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: ['Нерациональное использование денег', 'Накопительство вещей'],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Проявление силы характера в разных обстоятельствах',
-                'Рассудительный и организованный человек, способный достигнуть своих целей',
+                'Financial security and responsible attitude towards money',
+                'Beneficial deals',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
+            direction: 'reversed',
+            textData: ['Irrational use of money', 'Accumulation of things'],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Demonstration of character strength in various circumstances',
+                'Prudent and organized person, capable of achieving their goals',
+            ],
+        },
+        {
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Безответственность, неоправданные претензии и самомнение',
-                'Спешка и несдержанность в высказываниях наносят вред',
+                'Irresponsibility, unwarranted claims, and self-importance',
+                'Haste and indiscretion in statements cause harm',
             ],
         },
     ],

@@ -1,89 +1,79 @@
 import { CardData } from 'shared/types/cards';
 
 export const lovers: CardData = {
-    name: 'ВЛЮБЛЕННЫЕ',
-    altNames: ['влюблённые', 'возлюбленный'],
+    name: 'LOVERS',
+    altNames: ['lovers', 'beloved'],
     arcana: { type: 'major', suit: undefined },
-    subTitle: 'Баланс между двумя силами',
+    subTitle: 'Balance between two forces',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Доверие, безопасность, отношения',
-                'Выбор между противоположностями',
-                'Проблемы с решением',
-                'Гармония, совершенство',
-                'Ложь, обман, болезненные прозрения',
+                'Trust, safety, relationships',
+                'Choice between opposites',
+                'Issues with decision making',
+                'Harmony, perfection',
+                'Lies, deception, painful realizations',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Дисбаланс',
-                'Конфликт, нетерпение',
-                'Измена',
-                'Отстраненность',
-                'Неверный выбор',
-                'Нерешительность',
+                'Imbalance',
+                'Conflict, impatience',
+                'Betrayal',
+                'Detachment',
+                'Wrong choice',
+                'Indecision',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
+            direction: 'normal',
+            textData: ['Balanced, loving, supportive relationships', 'Choice regarding love'],
+        },
+        {
+            category: 'Love',
+            direction: 'reversed',
+            textData: ['Cold, detached partner', 'Too many admirers', 'Imbalance in relationships'],
+        },
+        {
+            category: 'Career',
+            direction: 'normal',
+            textData: ['Business partnership', 'Romance at work', 'Career choice'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
+            textData: ['Conflicts among colleagues', 'Romance at work leading to troubles'],
+        },
+        {
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Mutually exclusive financial choice'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: ['Impulsive financial choice, not responsible for finances'],
+        },
+        {
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Сбалансированные, любящие, поддерживающие отношения',
-                'Выбор в отношении любви',
+                'Your wisdom will help make the right choice',
+                'Cooperation and mutual assistance will aid in a positive resolution of the situation',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Холодный, отстраненный партнер',
-                'Слишком много поклонников',
-                'Дисбаланс в отношениях',
-            ],
-        },
-        {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: ['Деловое партнерство', 'Романтика на работе', 'Выбор карьеры'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: [
-                'Конфликты между коллегами',
-                'Романтика на работе, приводящая к неприятностям',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: ['Взаимоисключающий финансовый выбор'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: ['Импульсивный финансовый выбор, не отвечающий за финансы'],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Ваша мудрость поможет сделать правильный выбор',
-                'Сотрудничество и взаимопомощь помогут в позитивном решении ситуации',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Негативное значение карты. Говорит о ваших заблуждениях и неверных действиях',
-                'Сулит сильное разочарование, вызванное поспешными действиями',
-                'Отсутствие доверия',
+                'Negative meaning of the card. Speaks of your misconceptions and wrong actions',
+                'Predicts strong disappointment caused by hasty actions',
+                'Lack of trust',
             ],
         },
     ],

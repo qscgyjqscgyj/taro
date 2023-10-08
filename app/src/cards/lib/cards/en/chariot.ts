@@ -2,17 +2,17 @@ import { CardData } from 'shared/types/cards';
 
 export const chariot: CardData = {
     name: 'CHARIOT',
-    altNames: ['chariot', 'cart', 'charioteer'],
+    altNames: ['chariot', 'cart', 'driver'],
     arcana: { type: 'major', suit: undefined },
-    subTitle: 'Triumph of Reason',
+    subTitle: 'Triumph of the Mind',
     description: [
         {
             category: 'General',
             direction: 'normal',
             textData: [
-                'Willpower, ambition, determination',
+                'Will, ambition, determination',
                 'Direction, movement',
-                'Control, focus',
+                'Control, concentration',
                 'Success, breakthrough',
             ],
         },
@@ -29,15 +29,15 @@ export const chariot: CardData = {
             category: 'Love',
             direction: 'normal',
             textData: [
-                'Control over your personal life - understanding your desires, taking initiative',
-                "In relationships, don't lose your individuality and values. It's important to balance them",
+                "Control over one's personal life — understanding one's desires, showing initiative",
+                'In relationships, one should not lose their individuality and values. They should be balanced',
             ],
         },
         {
             category: 'Love',
             direction: 'reversed',
             textData: [
-                'Difficulties in making the right decisions',
+                'Difficulty in making the right decision',
                 'Relationship problems related to spontaneous decisions or actions',
             ],
         },
@@ -45,44 +45,44 @@ export const chariot: CardData = {
             category: 'Career',
             direction: 'normal',
             textData: [
-                'Your ambitions and motivation will help you succeed in your work',
-                'New experiences',
-                'Independent field of activity, self-employment',
-                'Change of profession',
+                'Your ambition and motivation will help you achieve success in your job',
+                'New experience',
+                'Independent line of work, self-employment',
+                'Change of activity',
             ],
         },
         {
             category: 'Career',
             direction: 'reversed',
-            textData: ['Futility of efforts made', 'Lack or excess of ambition and focus'],
+            textData: ['Futility of efforts', 'Lack or excess of ambition and focus'],
         },
         {
             category: 'Finances',
             direction: 'normal',
             textData: [
-                'A sign to tackle financial obstacles. You will have the motivation, focus, and determination to overcome these difficulties',
+                'A sign to address financial obstacles. You will have the motivation, focus, and determination to overcome these difficulties',
             ],
         },
         {
             category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Beware of impulsive and hasty purchases',
-                'Indicates indecision in financial matters',
+                'Beware of rash and hasty purchases',
+                'Indicates indecision on the financial front',
             ],
         },
         {
-            category: 'Current Situation',
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'The card indicates a collision of the inner and outer worlds. It is important to define your goal and pursue it with focus. Listening to your inner voice will help you achieve your desires.',
+                'The card indicates a clash of the inner and outer worlds. It is important to determine a goal and concentrate on it. Listening to your inner voice will assist in achieving the desired outcome.',
             ],
         },
         {
-            category: 'Current Situation',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                "Loss of control over the situation/your actions. It's important to examine your pace and diligence and make adjustments",
+                'Loss of control over the situation/actions. One should take a closer look at their pace and effort and adjust them accordingly',
             ],
         },
     ],

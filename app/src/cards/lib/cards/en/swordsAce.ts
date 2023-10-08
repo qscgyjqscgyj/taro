@@ -1,85 +1,82 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsAce: CardData = {
-    name: 'ТУЗ МЕЧЕЙ',
-    altNames: ['туз мечей', 'туз шпаг'],
+    name: 'ACE OF SWORDS',
+    altNames: ['ace of swords', 'ace of spades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Триумф',
+    subTitle: 'Triumph',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Ясность, прорыв, новая идея, свобода',
-                'Концентрация, видение, сила, фокус, истина',
-                'Решение проблемы, завоевание, решительность',
+                'Clarity, breakthrough, new idea, freedom',
+                'Concentration, vision, strength, focus, truth',
+                'Problem solving, conquest, determination',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Путаница, недопонимание, враждебность, споры, расставание',
-                'Разрушение, жестокость, удар судьбы, проблемы, неудача в делах',
+                'Confusion, misunderstanding, hostility, disputes, parting',
+                'Destruction, cruelty, stroke of fate, problems, business failure',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Честное отношение к проблемам',
-                'Дискуссия, общение',
-                'Избавление от токсичного окружения',
+                'Honest attitude to problems',
+                'Discussion, communication',
+                'Getting rid of a toxic environment',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
-            textData: ['Несовпадение взглядов, неумение выстроить диалог, болезненные слова'],
+            textData: ['Mismatch of views, inability to establish a dialogue, painful words'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Стимулирующая рабочая среда, вызовы',
-                'Чёткая коммуникация',
-                'Сосредоточенность на процессе',
+                'Stimulating work environment, challenges',
+                'Clear communication',
+                'Focus on the process',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Недопонимание, неспособность ясно выражать свои мысли', 'Скука'],
+            textData: ['Misunderstanding, inability to clearly express thoughts', 'Boredom'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Priority on rationality', 'Avoid emotional decisions regarding money'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: [
+                'Double-check finances, statements or legal documents',
+                'Get rid of misunderstandings in financial matters',
+            ],
+        },
+        {
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Приоритет на рациональность',
-                'Избегать эмоциональных решений в отношении денег',
+                'Time to express oneself. Decisive actions either lead to success or to something new and insanely interesting',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Перепроверять финансы, выписки или юридические документы',
-                'Избавиться от недопонимания в финансовых вопросах',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: [
-                'Время для проявления себя. Решительные действия либо увенчаются успехом, либо приведут к чему-то новому и безумно интересному',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
-            direction: 'reversed',
-            textData: [
-                'Следует проявлять осторожность в своих словах и действиях',
-                'Возможно, что кто-то близкий пользуется вами в своих целях',
+                'Should be cautious in words and actions',
+                'Perhaps someone close is using you for their own purposes',
             ],
         },
     ],

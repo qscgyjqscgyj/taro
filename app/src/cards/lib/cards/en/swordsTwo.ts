@@ -1,83 +1,86 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsTwo: CardData = {
-    name: 'ДВОЙКА МЕЧЕЙ',
-    altNames: ['двойка мечей', 'двойка шпаг'],
+    name: 'Two of Swords',
+    altNames: ['Two Swords', 'Two of Spades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Безысходность',
+    subTitle: 'Stalemate',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Тупик, трудный выбор, застрять посередине',
-                'Отрицание, скрытая информация',
-                'Сдерживание эмоций',
+                'Deadlock, difficult choice, getting stuck in the middle',
+                'Denial, hidden information',
+                'Emotional restraint',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Нерешительность, колебания, нет правильного выбора',
-                'Беспокойство, слишком много информации, истина раскрыта',
+                'Indecision, hesitation, no right choice',
+                'Anxiety, too much information, truth revealed',
             ],
         },
         {
-            category: 'Любовь',
-            direction: 'normal',
-            textData: ['Застрять в принятии решения, избегать выбора', 'Тупиковая ситуация'],
-        },
-        {
-            category: 'Любовь',
-            direction: 'reversed',
-            textData: [
-                'Отсутствие выбора, непривлекательные варианты',
-                'Неумение расставить приоритеты между сферами жизни',
-                'Чем дольше оттягиваешь выбор, тем больше и неприятнее последствия от этого',
-            ],
-        },
-        {
-            category: 'Карьера',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Выбор между карьерными путями',
-                'Конфликты на работе, принятие чьей-либо стороны',
-                'Недостаточная осведомленность',
+                'Getting stuck in decision-making, avoiding choices',
+                'A deadlock situation',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Love',
             direction: 'reversed',
-            textData: ['Выбор без выигрыша', 'Стрессовые решения'],
+            textData: [
+                'Lack of choice, unattractive options',
+                'Inability to prioritize between life areas',
+                'The longer you delay the choice, the bigger and more unpleasant the consequences become',
+            ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Избегание принятия финансовых решений',
-                'Отсутствие ясного понимания в финансовых делах',
+                'Choosing between career paths',
+                "Conflicts at work, taking someone's side",
+                'Insufficient awareness',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'reversed',
-            textData: ['Осознание истины', 'Принятие финансового положения'],
+            textData: ['A choice without a win', 'Stressful decisions'],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Умение разрешать конфликтные ситуации, используя свои сильные качества',
-                'Подходящий период для смелых действия',
+                'Avoiding financial decisions',
+                'Lack of clear understanding in financial matters',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
+            direction: 'reversed',
+            textData: ['Realization of the truth', 'Acceptance of the financial situation'],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Resolving conflict situations using your strengths',
+                'A suitable period for bold actions',
+            ],
+        },
+        {
+            category: 'Current Situation',
             direction: 'reversed',
             textData: [
-                'Доверчивость может привести к заблуждению',
-                'Стрессовые ситуации, сильные эмоции',
+                'Gullibility can lead to deception',
+                'Stressful situations, strong emotions',
             ],
         },
     ],

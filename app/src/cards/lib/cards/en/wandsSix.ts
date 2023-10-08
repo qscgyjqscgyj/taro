@@ -1,91 +1,80 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsSix: CardData = {
-    name: 'ШЕСТЁРКА ЖЕЗЛОВ',
-    altNames: [
-        'шестерка жезлов',
-        'шестерка палок',
-        'шестерка посохов',
-        'шестерка скипетров',
-        'шестёрка жезлов',
-        'шестёрка палок',
-        'шестёрка посохов',
-        'шестёрка скипетров',
-    ],
+    name: 'Six of Wands',
+    altNames: ['six of wands', 'six of rods', 'six of staffs', 'six of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Победа',
+    subTitle: 'Victory',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Успех, победа, триумф, завершение',
-                'Вознаграждение, признание, похвала, одобрение, гордость',
-                'Лидерские качества, мудрые решения',
+                'Success, victory, triumph, completion',
+                'Reward, recognition, praise, approval, pride',
+                'Leadership qualities, wise decisions',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Неудача, отсутствие признания, отсутствие вознаграждения, отсутствие достижений',
-                'Неприятности, предательство, провал, поражение',
+                'Failure, lack of recognition, lack of reward, lack of achievements',
+                'Troubles, betrayal, failure, defeat',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Успех в романтическом плане', 'Достижение целей в отношениях'],
+            textData: ['Success in romance', 'Achievement of goals in relationships'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Чувство несоответствия желаемого с действительным',
-                'Чувствовать себя нелюбимым, что им пренебрегают, что его не замечают',
+                'Feeling of mismatch between desired and actual',
+                'Feeling unloved, neglected, unnoticed',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Карьерные достижения, вознаграждение', 'Удачное завершение проекта'],
+            textData: ['Career achievements, rewards', 'Successful project completion'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Неудачный рабочий проект',
-                'Работа без вознаграждения',
-                'Неудовлетворение работой и достижениями',
+                'Unsuccessful work project',
+                'Work without reward',
+                'Dissatisfaction with work and achievements',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'normal',
-            textData: ['Финансовая стабильность', 'Материальное вознаграждение'],
+            textData: ['Financial stability', 'Material rewards'],
         },
         {
-            category: 'Финансы',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Следует произвести анализ финансового состояния',
-                'Потери, неудачные инвестиции, неудовлетворение покупкой',
+                'Analysis of financial situation is needed',
+                'Losses, unsuccessful investments, dissatisfaction with purchases',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'normal',
             textData: [
-                'Успешное разрешение долгосрочного проекта',
-                'Необходимость принять серьезное и неотложное решение для благоприятного исхода',
+                'Successful resolution of a long-term project',
+                'Necessity to make a serious and urgent decision for a favorable outcome',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current Situation',
             direction: 'reversed',
-            textData: [
-                'Сомнения в себе, недостаток материальных средств, череда неприятных мелочей',
-            ],
+            textData: ['Self-doubt, lack of financial resources, a series of unpleasant details'],
         },
     ],
 };

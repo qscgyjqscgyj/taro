@@ -1,89 +1,89 @@
 import { CardData } from 'shared/types/cards';
 
 export const cupsFour: CardData = {
-    name: 'ЧЕТВЁРКА КУБКОВ',
-    altNames: ['четвёрка кубков', 'четвёрка чаш', 'четверка кубков', 'четверка чаш'],
+    name: 'FOUR OF CUPS',
+    altNames: ['four of cups', 'four of chalices', 'quartet of cups', 'quartet of chalices'],
     arcana: { type: 'minor', suit: 'cups' },
-    subTitle: 'Недовольство',
+    subTitle: 'Dissatisfaction',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Апатия, скука, чувство разъединения, меланхолия, безразличие',
-                'Недовольство, обида, неуверенность в себе, замкнутость',
+                'Apathy, boredom, feeling of disconnection, melancholy, indifference',
+                'Dissatisfaction, resentment, self-doubt, introversion',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Ясность, осознание, принятие',
-                'Депрессивные настроения, негативность',
-                'Чувство упущенного шанса, жалость к себе',
+                'Clarity, awareness, acceptance',
+                'Depressive moods, negativity',
+                'Feeling of missed opportunity, self-pity',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Скука в личной жизни', 'Отсутствие ярких эмоций в отношениях'],
+            textData: ['Boredom in personal life', 'Lack of vivid emotions in relationships'],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Пробуждение и активность в романтической сфере',
-                'Новое открытие, свежий взгляд на отношения',
+                'Awakening and activity in the romantic sphere',
+                'New discovery, fresh perspective on relationships',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: [
-                'Скука на работе',
-                'Чувство неудовлетворенности работой или карьерой',
-                'Отсутствие прогресса',
-            ],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: [
-                'Вдохновение или творчество',
-                'Осознание карьеры, новый подход',
-                'Корректировки',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: ['Чувство разочарования в деньгах', 'Зависть к другим людям'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: [
-                'Позитивный подход к финансам',
-                'Сила воли для достижения финансовых целей',
-                'Ориентир на собственные решения',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Kpизиc личнocти, вoпpocы o cвoём мecтe в жизни, пoиcк cмыcлa',
-                'Cкукa, нaдoeдaющиe люди, пpиeвшиecя oтнoшeния, гипepoпeкa, нaвязчивocть',
-                'Дoтoшнocть, нeпpeклoннocть, opиeнтиp тoлькo нa cвoё мнeниe',
+                'Boredom at work',
+                'Feeling of dissatisfaction with work or career',
+                'Lack of progress',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Второе дыхание, открывающее новые силы, новые возможности, которые нельзя упускать',
-                'Пoдвepжeннocть чужoму влиянию, несправедливый кoмпpoмиcc',
-                'Peгpeccия, погруженность в воспоминания, вспоминание предыдущего oпытa',
+                'Inspiration or creativity',
+                'Career realization, new approach',
+                'Adjustments',
+            ],
+        },
+        {
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Feeling of disappointment in money', 'Envy towards other people'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: [
+                'Positive approach to finances',
+                'Willpower to achieve financial goals',
+                'Focus on personal decisions',
+            ],
+        },
+        {
+            category: 'Current situation',
+            direction: 'normal',
+            textData: [
+                "Identity crisis, questions about one's place in life, search for meaning",
+                'Boredom, tiresome people, worn-out relationships, overprotection, intrusiveness',
+                "Fastidiousness, inflexibility, focus only on one's opinion",
+            ],
+        },
+        {
+            category: 'Current situation',
+            direction: 'reversed',
+            textData: [
+                'Second wind, revealing new strengths, new opportunities that should not be missed',
+                'Susceptibility to external influence, unfair compromise',
+                'Regression, immersion in memories, recalling past experience',
             ],
         },
     ],

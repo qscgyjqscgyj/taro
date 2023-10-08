@@ -1,82 +1,81 @@
 import { CardData } from 'shared/types/cards';
 
 export const swordsSeven: CardData = {
-    name: 'СЕМЁРКА МЕЧЕЙ',
-    altNames: ['семёрка мечей', 'семёрка шпаг', 'семерка мечей', 'семерка шпаг'],
+    name: 'SEVEN OF SWORDS',
+    altNames: ['seven of swords', 'seven of blades', '7 of swords', '7 of blades'],
     arcana: { type: 'minor', suit: 'swords' },
-    subTitle: 'Кража',
+    subTitle: 'Deception',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
-            textData: [
-                'Ложь, хитрость, интрига',
-                'Стратегия, изворотливость',
-                'Коварство, хитрость',
-            ],
+            textData: ['Deceit, cunning, intrigue', 'Strategy, resourcefulness', 'Cunning, deceit'],
         },
         {
-            category: 'Общее',
-            direction: 'reversed',
-            textData: ['Признание, совесть, сожаление', 'Злонамеренность, обман, сокрытие истины'],
-        },
-        {
-            category: 'Любовь',
-            direction: 'normal',
-            textData: [
-                'Ложь, подозрительность, измена',
-                'Стоит быть осторожным в отношениях и честно оценивать свои действия, если обман исходит от вас',
-            ],
-        },
-        {
-            category: 'Любовь',
-            direction: 'reversed',
-            textData: ['Ложь раскрыта, признание', 'Отказ от притворства, честность'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: [
-                'Сплетни, саботаж',
-                'Стоит быть осторожным в доверии, предательство может произойти от того, от кого не ждёшь',
-            ],
-        },
-        {
-            category: 'Карьера',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Разоблачение лжецов',
-                'Принятие последствий',
-                'Изменение подхода, старые методы больше не работают',
+                'Acknowledgment, conscience, remorse',
+                'Malice, deception, concealment of truth',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: ['Сомнительные деловые сделки', 'Мошенничество, воровство, аферы'],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: [
-                'Последствия нечестности в финансовой сфере',
-                'Стоит погасить долги, заплатить налоги, проверить не обманываете ли вы кого-то',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Heтpивиaльнocть, нecтaндapтный пoдxoд, умeниe извopaчивaтьcя',
-                'Oбxoд пpaвил, нeoбычный плaн, снижение накала aгpeccии, злобы',
+                'Lies, suspicion, betrayal',
+                'Be cautious in relationships and honestly evaluate your actions if deception comes from you',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Love',
+            direction: 'reversed',
+            textData: ['Lies exposed, confession', 'Abandonment of pretense, honesty'],
+        },
+        {
+            category: 'Career',
+            direction: 'normal',
+            textData: [
+                'Gossip, sabotage',
+                'Be cautious in trust, betrayal may come from an unexpected source',
+            ],
+        },
+        {
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Oбмaн, пpeдaтeльcтвo близкиx людeй, зaвиcтливocть и мecть',
-                'Oтcутcтвиe этики, чecти',
+                'Exposure of liars',
+                'Facing consequences',
+                'Change of approach, old methods no longer work',
+            ],
+        },
+        {
+            category: 'Finances',
+            direction: 'normal',
+            textData: ['Doubtful business deals', 'Fraud, theft, scams'],
+        },
+        {
+            category: 'Finances',
+            direction: 'reversed',
+            textData: [
+                'Consequences of dishonesty in financial matters',
+                "Pay off debts, pay taxes, check if you're not deceiving someone",
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Unpredictability, unconventional approach, ability to twist situations',
+                'Bypassing rules, unusual plan, reduction of aggression and anger',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'Deception, betrayal of close people, envy and hatred',
+                'Lack of ethics, honor',
             ],
         },
     ],

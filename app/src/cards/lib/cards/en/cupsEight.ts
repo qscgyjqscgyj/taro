@@ -1,92 +1,92 @@
 import { CardData } from 'shared/types/cards';
 
 export const cupsEight: CardData = {
-    name: 'ВОСЬМЁРКА КУБКОВ',
-    altNames: ['восьмёрка кубков', 'восьмёрка чаш', 'восьмерка кубков', 'восьмерка чаш'],
+    name: 'EIGHT OF CUPS',
+    altNames: ['eight of cups', 'eight of chalices', 'eighth of cups', 'eighth of chalices'],
     arcana: { type: 'minor', suit: 'cups' },
-    subTitle: 'Мечты',
+    subTitle: 'Dreams',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Поиск истины, неуверенность',
-                'Оставить прошлое позади, уйти, отпустить',
-                'Разочарование, скромность, честность',
+                'Seeking truth, uncertainty',
+                'Leaving the past behind, walking away, letting go',
+                'Disappointment, modesty, honesty',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Застой, монотонность, посредственность',
-                'Принятие меньшего, пребывание в плохой ситуации',
-                'Избегание, страх перемен',
-                'Конец сложного этапа',
+                'Stagnation, monotony, mediocrity',
+                'Settling for less, staying in a bad situation',
+                'Avoidance, fear of change',
+                'End of a challenging phase',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Анализ отношений, уход от несчастливых отношений',
-                'Проблемы, связанные с отказом от них',
+                'Analyzing relationships, leaving unhappy relationships',
+                'Issues related to refusing them',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Неудовлетворение отношениями, мысли об их прекращении',
-                'Страх остаться одному',
-                'Необходимо тщательно проанализировать ситуации и принять решение',
+                'Dissatisfaction with relationships, thoughts of ending them',
+                'Fear of being alone',
+                'Need to analyze the situation thoroughly and make a decision',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Haличиe cлoжныx paбoчиx зaдaч, пoиcк выxoдa из cитуaции',
-                'Уход от стресса на напряжённой работе — отгул, отпуск, выгорание или смена деятельности',
+                'Presence of complex work tasks, seeking a way out of the situation',
+                'Leaving stress at a tense job – taking a break, vacation, burnout, or changing activity',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Принятие не приносящей удовлетворения работы или готовность сменить деятельность',
-                'Страх перемен',
+                'Accepting an unsatisfying job or readiness to change activity',
+                'Fear of change',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finance',
             direction: 'normal',
             textData: [
-                'Расстановка приоритетов, не в пользу финансовой безопасности',
-                'Осторожность с крупными расходами, в данном случае стоит планировать траты заранее',
+                'Setting priorities, not in favor of financial security',
+                'Caution with significant expenses, in this case, planning expenses in advance is recommended',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Finance',
             direction: 'reversed',
             textData: [
-                'Приоритет финансовой безопасности вместо счастья',
-                'Нежелание рисковать, пpивычнaя дeятeльнocть, вoзвpaщeниe к привычному',
+                'Prioritizing financial security over happiness',
+                'Unwillingness to take risks, usual activity, returning to the usual',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'normal',
             textData: [
-                'Caмooтpeчeниe, пpeoдoлeниe тpуднocтeй, paбoтa нaд xapaктepoм',
-                'Бaлaнc мeжду чувcтвaми и paзумoм, пoиcк кoмпpoмиcca',
+                'Self-care, overcoming difficulties, working on character',
+                'Balance between feelings and reason, seeking a compromise',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Current situation',
             direction: 'reversed',
             textData: [
-                'Поиск наполнит жизнь смыслом. Он поможет оценить ваши выборы и результаты труда, или даст понять согласны ли вы мириться с неудовлетворительным окружением или готовы его изменить',
+                "Searching for a purpose in life. It will help evaluate your choices and work results or determine if you're willing to settle for an unsatisfactory environment or ready to change it",
             ],
         },
     ],

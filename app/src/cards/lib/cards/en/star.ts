@@ -1,80 +1,83 @@
 import { CardData } from 'shared/types/cards';
 
 export const star: CardData = {
-    name: 'ЗВЕЗДА',
-    altNames: ['звезда'],
+    name: 'STAR',
+    altNames: ['star'],
     arcana: { type: 'major', suit: undefined },
-    subTitle: 'Надежда',
+    subTitle: 'Hope',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Вера, вдохновение, светлые перспективы',
-                'Смешение прошлого и настоящего, многообещающая возможность',
-                'Позитивность, вдохновение',
-                'Обновление, исцеление',
-                'Образование, духовность, творчество',
+                'Faith, inspiration, bright prospects',
+                'Mix of past and present, promising opportunity',
+                'Positivity, inspiration',
+                'Renewal, healing',
+                'Education, spirituality, creativity',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Потери, сомнения',
-                'Пессимизм, уныние, отсутствие веры',
-                'Несбывшиеся надежды, разочарование, отсутствие возможностей',
+                'Losses, doubts',
+                'Pessimism, despondency, lack of faith',
+                'Unfulfilled hopes, disappointment, lack of opportunities',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
-            textData: ['Оптимистичный взгляд на личную жизнь', 'Исцеление от прошлых ран'],
+            textData: ['Optimistic view of personal life', 'Healing from past wounds'],
         },
         {
-            category: 'Любовь',
-            direction: 'reversed',
-            textData: ['Утрата надежды на отношения, потеря веры в себя', 'Крайняя критичность'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: ['Позитивность перспективы', 'Спокойная работа'],
-        },
-        {
-            category: 'Карьера',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Излишний пессимизм по поводу работы',
-                'Отсутствие энтузиазма и мотивации, влияющее на работу',
+                'Loss of hope in relationships, loss of faith in oneself',
+                'Extreme criticism',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'normal',
+            textData: ['Positive prospects', 'Steady work'],
+        },
+        {
+            category: 'Career',
+            direction: 'reversed',
             textData: [
-                'Оптимистичный настрой и благодарность уже существующим успехам',
-                'Достижение финансовых целей',
+                'Excessive pessimism about work',
+                'Lack of enthusiasm and motivation affecting work',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'reversed',
+            category: 'Finances',
+            direction: 'normal',
             textData: [
-                'Отчаяние по поводу финансового положения, которое можно изменить поиском решения при более оптимистичном настрое',
+                'Optimistic attitude and gratitude for existing successes',
+                'Achievement of financial goals',
             ],
         },
         {
-            category: 'Текущая ситуация',
-            direction: 'normal',
-            textData: ['Улучшение ситуации, благоприятные изменения, позитивный исход'],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Утрата веры, уныние',
-                'Потеря выгодной возможности из-за излишней самокритичность',
+                'Despair about financial position, which can be changed by seeking solutions with a more optimistic attitude',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: ['Improvement of the situation, favorable changes, positive outcome'],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'Loss of faith, despondency',
+                'Loss of a valuable opportunity due to excessive self-criticism',
             ],
         },
     ],

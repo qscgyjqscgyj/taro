@@ -1,93 +1,93 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsKnight: CardData = {
-    name: 'РЫЦАРЬ ЖЕЗЛОВ',
-    altNames: ['рыцарь жезлов', 'рыцарь палок', 'рыцарь посохов', 'рыцарь скипетров'],
+    name: 'KNIGHT OF WANDS',
+    altNames: ['knight of wands', 'knight of rods', 'knight of staffs', 'knight of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Избавление от проблем',
+    subTitle: 'Overcoming Problems',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Мужественный, энергичный, обаятельный',
-                'Мятежный, вспыльчивый, свободный дух',
-                'Риск, нетерпение, крайности',
+                'Brave, energetic, charming',
+                'Rebellious, impulsive, free-spirited',
+                'Risk, impatience, extremes',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Высокомерный, безрассудный, нетерпеливый',
-                'Отсутствие самоконтроля, пассивный, непостоянный',
-                'Властный, ревнивый, подозрительный',
-                'Препятствия',
+                'Arrogant, reckless, impatient',
+                'Lack of self-control, passive, inconsistent',
+                'Authoritative, jealous, suspicious',
+                'Obstacles',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Бесстрашный, мужественный любовник',
-                'Трудность взять на себя обязательства',
-                'Неустойчивые отношения',
+                'Fearless, brave lover',
+                'Difficulty taking on commitments',
+                'Unstable relationships',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Бегство от обязательств',
-                'Нетерпение',
-                'Ощущение нестабильности в отношениях',
+                'Avoidance of commitments',
+                'Impatience',
+                'Feeling of instability in relationships',
             ],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'normal',
-            textData: ['Прилив энтузиазма к работе', 'Новые смелые решения'],
+            textData: ['Surge of enthusiasm for work', 'Bold new decisions'],
         },
         {
-            category: 'Карьера',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Отсутствие направления в карьере, неопределенность',
-                'Спешка в работе',
-                'Ненадежная работа',
+                'Lack of direction in career, uncertainty',
+                'Haste at work',
+                'Unreliable job',
             ],
         },
         {
-            category: 'Финансы',
-            direction: 'normal',
-            textData: [
-                'Внезапный приток денег',
-                'Отличное время для путешествия и расширения горизонтов',
-            ],
-        },
-        {
-            category: 'Финансы',
-            direction: 'reversed',
-            textData: [
-                'Излишняя уверенность в деньгах',
-                'Растрата средств, финансовые потери',
-                'Стоит избегать трат, по мере возможности',
-            ],
-        },
-        {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Удачное время для начинаний — новое проекты будут успешно воплощены в жизнь',
-                'Перемены к лучшему',
+                'Sudden inflow of money',
+                'Excellent time for travel and expanding horizons',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'reversed',
             textData: [
-                'Отсутствие удовлетворения от выполнения своих обязанностей',
-                'Переживания и беспокойства могут ухудшить ситуацию',
+                'Excessive confidence in money',
+                'Money wastage, financial losses',
+                'Avoid unnecessary expenses when possible',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'A favorable time for new beginnings - new projects will be successfully realized',
+                'Changes for the better',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: [
+                'Lack of satisfaction from fulfilling one’s duties',
+                'Worries and anxieties can worsen the situation',
             ],
         },
     ],

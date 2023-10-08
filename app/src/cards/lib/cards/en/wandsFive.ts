@@ -1,99 +1,93 @@
 import { CardData } from 'shared/types/cards';
 
 export const wandsFive: CardData = {
-    name: 'ПЯТЁРКА ЖЕЗЛОВ',
-    altNames: [
-        'пятерка жезлов',
-        'пятерка палок',
-        'пятерка посохов',
-        'пятерка скипетров',
-        'пятёрка жезлов',
-        'пятёрка палок',
-        'пятёрка посохов',
-        'пятёрка скипетров',
-    ],
+    name: 'FIVE OF WANDS',
+    altNames: ['five of wands', 'five of rods', 'five of staffs', 'five of scepters'],
     arcana: { type: 'minor', suit: 'wands' },
-    subTitle: 'Притворная драка',
+    subTitle: 'Pretend Fight',
     description: [
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'normal',
             textData: [
-                'Конфликт, конкуренция, соперники',
-                'Споры, агрессия, напряжение',
-                'Неприятности, потери, отсутствие почвы под ногами',
+                'Conflict, competition, rivals',
+                'Disputes, aggression, tension',
+                'Troubles, losses, feeling lost',
             ],
         },
         {
-            category: 'Общее',
+            category: 'General',
             direction: 'reversed',
             textData: [
-                'Прекращение конфликта, избежание конфликтов',
-                'Сотрудничество, соглашения, перемирия, гармония, мир',
-                'Старание, стойкость',
+                'Resolution of conflict, avoidance of conflicts',
+                'Cooperation, agreements, truces, harmony, peace',
+                'Effort, perseverance',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'normal',
             textData: [
-                'Соперничество с другими за внимание со своим потенциальным партнёром',
-                'Конфликт между влюбленными',
-                'Игривое подшучивание',
+                'Competition with others for attention from your potential partner',
+                'Conflict between lovers',
+                'Playful teasing',
             ],
         },
         {
-            category: 'Любовь',
+            category: 'Love',
             direction: 'reversed',
             textData: [
-                'Избегание конфликтов, которое не помогает решить его',
-                'Совет прикладывать силы и уделять внимание партнёру для разрешения разногласий',
+                'Avoiding conflicts that don’t help resolve them',
+                'Advice to put effort and attention into resolving disagreements with your partner',
             ],
         },
         {
-            category: 'Карьера',
-            direction: 'normal',
-            textData: ['Элемент соперничество в работе, конкурентная среда', 'Конфликт на работе'],
-        },
-        {
-            category: 'Карьера',
-            direction: 'reversed',
-            textData: [
-                'Разрешение конфликта, уменьшение конкуренции на рабочем месте',
-                'Отсутствие значимых результатов в работе',
-                'Избегание конфликтов на работе',
-            ],
-        },
-        {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'normal',
             textData: [
-                'Финансовая нестабильность',
-                'Приложить много усилий для заработка',
-                'Конфликты из-за денег',
+                'Element of competition at work, a competitive environment',
+                'Conflict at work',
             ],
         },
         {
-            category: 'Финансы',
+            category: 'Career',
             direction: 'reversed',
             textData: [
-                'Облегчение и спокойствие после финансового стресса',
-                'Эскалация конфликтов по финансовым вопросам',
+                'Resolution of conflict, reduced competition in the workplace',
+                'Lack of significant results at work',
+                'Avoiding conflicts at work',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'normal',
             textData: [
-                'Конфликты и пересечение интересов',
-                'Борьба, соперничество',
-                'Толчок к активным действиям и продуктивности',
+                'Financial instability',
+                'Putting in a lot of effort to earn money',
+                'Conflicts over money',
             ],
         },
         {
-            category: 'Текущая ситуация',
+            category: 'Finances',
             direction: 'reversed',
-            textData: ['Скрытое соперничество, пассивная конфронтация'],
+            textData: [
+                'Relief and peace after financial stress',
+                'Escalation of conflicts over financial matters',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'normal',
+            textData: [
+                'Conflicts and overlapping interests',
+                'Struggle, competition',
+                'Push for active actions and productivity',
+            ],
+        },
+        {
+            category: 'Current Situation',
+            direction: 'reversed',
+            textData: ['Hidden competition, passive confrontation'],
         },
     ],
 };
