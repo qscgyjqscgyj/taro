@@ -7,6 +7,7 @@ import { Cards } from 'src/components/Cards';
 import { Card } from 'src/components/Cards/Card';
 import { CardsCountSelector } from 'src/components/Set/CardsCountSelector';
 import { SetCardsList } from 'src/components/Set/SetCardsList';
+import { useTranslation } from 'src/services/localization/hooks';
 
 import { useSet } from './hooks';
 import { styles } from './styles';
@@ -30,6 +31,8 @@ export function Set(props: SetProps) {
         modalComponentType,
     } = useSet(props);
 
+    const { t } = useTranslation();
+
     return (
         <>
             <View style={styles.container}>
@@ -40,7 +43,7 @@ export function Set(props: SetProps) {
                                 <TouchableOpacity onPress={generateRandomSetModalOpen}>
                                     <View style={styles.purpleButton}>
                                         <Text style={styles.buttonText}>
-                                            Сгенерировать случайный расклад
+                                            {t('setsMainGenerateSetButton')}
                                         </Text>
                                     </View>
                                 </TouchableOpacity>
@@ -49,7 +52,9 @@ export function Set(props: SetProps) {
                             <View style={styles.buttonWrapper}>
                                 <TouchableOpacity onPress={clearActiveSet}>
                                     <View style={styles.purpleButton}>
-                                        <Text style={styles.buttonText}>Сбросить карты</Text>
+                                        <Text style={styles.buttonText}>
+                                            {t('setsMainClearCurrentSetButton')}
+                                        </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>

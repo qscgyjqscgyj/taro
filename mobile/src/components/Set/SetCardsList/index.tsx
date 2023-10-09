@@ -1,6 +1,7 @@
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 
 import { CachedImage } from 'src/components/CachedImage';
+import { useTranslation } from 'src/services/localization/hooks';
 
 import { whitePlusIcon } from './images';
 import { useSetCardsList } from './hooks';
@@ -12,6 +13,8 @@ export function SetCardsList(props: SetCardsListProps) {
 
     const { cardWidth, handleCardWrapperLayout, onCardPressHandler, onCardDeletePressHandler } =
         useSetCardsList(props);
+
+    const { t } = useTranslation();
 
     return (
         <View style={styles.cardsWrapper}>
@@ -62,7 +65,9 @@ export function SetCardsList(props: SetCardsListProps) {
                             >
                                 <Image style={styles.emptyCardAddIcon} source={whitePlusIcon} />
 
-                                <Text style={styles.emptyCardText}>добавить карту</Text>
+                                <Text style={styles.emptyCardText}>
+                                    {t('setCardsListAddCardText')}
+                                </Text>
                             </View>
                         </TouchableOpacity>
                     </View>

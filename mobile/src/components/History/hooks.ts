@@ -2,29 +2,32 @@ import { useEffect, useMemo, useState } from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
+import { CardData, SetData } from 'shared/types/cards';
+
 import { useModal } from 'src/components/Modal/hooks';
 import { getHistory } from 'src/services/storage/history';
-import { CardData, SetData } from 'shared/types/cards';
+import { useTranslation } from 'src/services/localization/hooks';
 
 import { HistoryRecord, HistoryTab } from './types';
 import { RootStackParamList } from '../App/types';
 
-const HISTORY_TABS: HistoryTab[] = [
-    {
-        id: 'cards',
-        name: 'Карты',
-        tabIndex: 0,
-    },
-    {
-        id: 'sets',
-        name: 'Расклады',
-        tabIndex: 1,
-    },
-];
-
 export function useHistory() {
+    const { t } = useTranslation();
+    const historyTabs: HistoryTab[] = [
+        {
+            id: 'cards',
+            name: t('historyCardsTab'),
+            tabIndex: 0,
+        },
+        {
+            id: 'sets',
+            name: t('historySetsTab'),
+            tabIndex: 1,
+        },
+    ];
+
     const [history, setHistory] = useState<(HistoryRecord | SetData)[]>([]);
-    const [activeTab, setActiveTab] = useState<HistoryTab>(HISTORY_TABS[0]);
+    const [activeTab, setActiveTab] = useState<HistoryTab>(historyTabs[0]);
 
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
@@ -32,11 +35,11 @@ export function useHistory() {
 
     const { openModal, closeModal, isModalOpen } = useModal();
 
-    const tabsValues = HISTORY_TABS.map((tab) => tab.name);
+    const tabsValues = historyTabs.map((tab) => tab.name);
 
     const switchTab = () => {
         const newTab = activeTab.tabIndex === 0 ? 1 : 0;
-        setActiveTab(HISTORY_TABS[newTab]);
+        setActiveTab(historyTabs[newTab]);
     };
 
     const activeHistory = useMemo(() => {

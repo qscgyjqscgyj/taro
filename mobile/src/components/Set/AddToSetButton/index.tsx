@@ -3,6 +3,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { HeaderProps } from 'src/components/Header/types';
 import { ModalComponent } from 'src/components/Modal';
 import { Dialog } from 'src/components/Modal/Dialog';
+import { useTranslation } from 'src/services/localization/hooks';
 
 import { useAddToSetButton } from './hooks';
 import { plusIcon } from './images';
@@ -17,6 +18,8 @@ export function AddToSetButton(props: HeaderProps) {
         createNewSetHandler,
         addActiveCardToActiveSetHandler,
     } = useAddToSetButton(props);
+
+    const { t } = useTranslation();
 
     if (activeCard === undefined) {
         return null;
@@ -34,10 +37,10 @@ export function AddToSetButton(props: HeaderProps) {
             <ModalComponent
                 component={() => (
                     <Dialog
-                        title="У вас уже есть расклад"
-                        leftButtonTitle="создать новый расклад"
+                        title={t('addToSetAlreadyExistsModalTitle')}
+                        leftButtonTitle={t('addToSetAlreadyExistsModalCreateNewSet')}
                         leftButtonHandler={createNewSetHandler}
-                        rightButtonTitle="добавить в текущий"
+                        rightButtonTitle={t('addToSetAlreadyExistsModalAddToExistingSet')}
                         rightButtonHandler={addActiveCardToActiveSetHandler}
                         closeModal={closeModal}
                     />
